@@ -19,6 +19,7 @@ import {
   History,
   Menu,
   Toolbox,
+  Inbox,
 } from "lucide-react";
 
 interface HeaderProps {
@@ -391,9 +392,7 @@ export default function Header({
               </Link>
             </nav>
 
-            {/* 3. RIGHT HAND PANEL and Buttons */}
             <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2.5 shrink-0">
-              {/* Compact, High Visibility Search Pill */}
               <div className="relative w-[85px] xs:w-[115px] sm:w-[170px] md:w-[220px] shrink-0">
                 <div className="absolute inset-y-0 left-0 pl-2.5 sm:pl-3 flex items-center pointer-events-none text-slate-400">
                   <svg
@@ -538,7 +537,6 @@ export default function Header({
                 )}
               </div>
 
-              {/* Sleek Inbox/Chat access icon button with premium image-like design */}
               <Link
                 href="/#dashboard/inbox"
                 onClick={() => {
@@ -550,28 +548,10 @@ export default function Header({
                 className="relative rounded-full text-white bg-primary hover:bg-primary-hover hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center h-8.5 w-8.5 sm:h-9.5 sm:w-9.5 shadow-[0_3px_10px_rgba(255,102,0,0.3)] border border-orange-500/10 shrink-0"
                 title="Open Chat Inbox"
               >
-                <div className="relative flex items-center justify-center w-full h-full p-2">
-                  <svg
-                    viewBox="0 0 100 100"
-                    className="w-[90%] h-[90%] text-white fill-current transition-transform"
-                  >
-                    {/* Rounded pill capsule */}
-                    <rect
-                      x="20"
-                      y="26"
-                      width="60"
-                      height="34"
-                      rx="17"
-                      fill="currentColor"
-                    />
-                    {/* Elegant hand-crafted Triangle Tail */}
-                    <path d="M 48 58 L 57 74 L 57 58 Z" fill="currentColor" />
-                    {/* Three dots inside, colored orange to match button background */}
-                    <circle cx="37" cy="43" r="4.2" fill="var(--primary)" />
-                    <circle cx="50" cy="43" r="4.2" fill="var(--primary)" />
-                    <circle cx="63" cy="43" r="4.2" fill="var(--primary)" />
-                  </svg>
+                <div className="relative flex items-center justify-center w-full h-full">
+                  <Inbox className="w-4 h-4 text-white" strokeWidth={2.5} />
                 </div>
+
                 {unreadChatsCount > 0 && (
                   <span className="absolute -top-1 -right-1 flex h-4.5 w-4.5 z-10">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-90"></span>
@@ -582,7 +562,6 @@ export default function Header({
                 )}
               </Link>
 
-              {/* Post Ad Button (Always orange like the user mockup - Hidden on mobile of < 768px for clean responsive flow) */}
               <Link
                 id="header-post-ad-btn"
                 href="/#dashboard/post-ad"
