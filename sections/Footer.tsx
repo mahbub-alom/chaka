@@ -292,7 +292,7 @@ export default function Footer({
               </div>
               <div className="flex items-center gap-2">
                 <PhoneCall className="w-4 h-4 text-primary shrink-0" />
-                <span className="font-bold">01886666018</span>
+                <span className="font-bold">01319075810</span>
               </div>
             </div>
           </div>

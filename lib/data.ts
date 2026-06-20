@@ -2181,7 +2181,7 @@ export const INITIAL_AD_SLOTS: AdvertisementSlot[] = [
     title: 'bKash Auto Premium Insurance',
     description: 'Get up to 20% Discount on Car Insurance through bKash payment this June!',
     imageUrl: 'https://images.unsplash.com/photo-1557804506-6fd96a1a44e1?auto=format&fit=crop&q=80&w=1000',
-    targetUrl: 'tel:01886666018',
+    targetUrl: 'tel:01319075810',
     adType: 'banner',
     isActive: true,
     impressions: 1242,

@@ -1160,7 +1160,7 @@ export default function DashboardAdmin({
                         className={`w-full text-xs font-semibold px-3 py-2 rounded-lg border focus:outline-none focus:ring-1 focus:ring-primary ${
                           isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-900'
                         }`}
-                        placeholder="e.g. tel:01886666018, or https://chaka.bd/promo"
+                        placeholder="e.g. tel:01319075810, or https://chaka.bd/promo"
                         required
                       />
                     </div>
@@ -1244,7 +1244,7 @@ export default function DashboardAdmin({
                     
                     <div className="flex justify-between items-end z-10 pt-2 border-t border-orange-500/10 mt-1.5">
                       <span className="font-heavy text-[12.5px] tracking-tight text-white flex items-center gap-1.5">
-                        📞 01886666018
+                        📞 01319075810
                       </span>
                       <span className="text-[7.5px] bg-[#f4b830] text-slate-900 font-extrabold px-1.5 py-0.5 rounded uppercase">Default Ad</span>
                     </div>
