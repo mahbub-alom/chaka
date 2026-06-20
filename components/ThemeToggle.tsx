@@ -21,13 +21,11 @@ export default function ThemeToggle({ isDarkMode, onToggle }: ThemeToggleProps) 
     >
       <span className="sr-only">Toggle theme mode</span>
 
-      {/* Background Micro Stars/Clouds indicator */}
       <div className="absolute inset-0 flex justify-between items-center px-1.5 pointer-events-none text-slate-400">
         <Sun className={`w-3.5 h-3.5 transition-all duration-300 ${!isDarkMode ? 'text-amber-500 scale-100 drop-shadow' : 'text-slate-700 opacity-20 scale-95'}`} />
         <Moon className={`w-3.5 h-3.5 transition-all duration-300 ${isDarkMode ? 'text-indigo-400 scale-100 drop-shadow-glow' : 'text-slate-400 opacity-20 scale-95'}`} />
       </div>
 
-      {/* Floating Active Handle Knob */}
       <motion.div
         layout
         transition={{ type: 'spring', stiffness: 450, damping: 25 }}

@@ -131,7 +131,7 @@ export default function Header({
             </div>
 
             {/* Simulation Role Selector */}
-            <div className="hidden xs:flex items-center gap-1.5 bg-slate-800 dark:bg-slate-950 p-1 px-2 rounded-md border border-slate-700/60 max-h-7">
+            <div className="flex items-center gap-1.5 bg-slate-800 dark:bg-slate-955 p-1 px-2 rounded-md border border-slate-700/60 max-h-7">
               <span className="text-[8.5px] text-slate-400 uppercase tracking-wider font-extrabold">{t('roleLabel')}</span>
               <select
                 value={currentRole}
