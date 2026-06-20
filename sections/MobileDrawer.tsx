@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { 
   Home, 
   Car, 
@@ -15,7 +15,8 @@ import {
   HelpCircle,
   FileText,
   Shield,
-  Briefcase
+  Briefcase,
+  Toolbox
 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -46,6 +47,17 @@ export default function MobileDrawer({
 }: MobileDrawerProps) {
   const { language, t } = useLanguage();
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const menuItems = [
@@ -53,7 +65,7 @@ export default function MobileDrawer({
     { id: 'car', label: language === 'bn' ? 'রিকন্ডিশন গাড়ি' : 'Cars / Vehicles', icon: Car, iconColor: 'text-blue-500', view: 'browse', cat: 'car' },
     { id: 'bike', label: language === 'bn' ? 'মোটরসাইকেল' : 'Bikes / Scooters', icon: Bike, iconColor: 'text-orange-500', view: 'browse', cat: 'bike' },
     { id: 'parts', label: language === 'bn' ? 'পার্টস ও এক্সেসরিজ' : 'Parts & Spares', icon: Wrench, iconColor: 'text-amber-500', view: 'browse', cat: 'parts' },
-    { id: 'service', label: language === 'bn' ? 'অটোমোবাইল সেবা' : 'Services', icon: Wrench, iconColor: 'text-indigo-500', view: 'browse', cat: 'service' },
+    { id: 'service', label: language === 'bn' ? 'অটোমোবাইল সেবা' : 'Services', icon: Toolbox, iconColor: 'text-indigo-500', view: 'browse', cat: 'service' },
     { id: 'auction-verify', label: language === 'bn' ? 'জাপানি অকশন ভেরিফাই' : 'Auction Verify', icon: ShieldCheck, iconColor: 'text-teal-500', view: 'auction-verify' },
   ];
 
@@ -71,7 +83,6 @@ export default function MobileDrawer({
 
   return (
     <div className="fixed inset-0 z-[190] lg:hidden">
-      {/* Premium Backdrop blur */}
       <div 
         className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300"
         onClick={onClose}
@@ -254,8 +265,9 @@ export default function MobileDrawer({
           {/* Clean hotline */}
           <div className="p-3.5 rounded-xl bg-gradient-to-br from-primary/10 to-orange-500/5 border border-primary/20 text-center space-y-2">
             <span className="text-[10px] font-extrabold text-primary dark:text-orange-400 block">
-              {language === 'bn' ? '📞 চাকা সাপোর্ট হটলাইন' : '📞 Chaka Live Support'}
+              {language === 'bn' ? '📞 চাকা সাপোর্ট হটলাইন' : `📞 Chaka Live Support`}
             </span>
+            
             <a 
               href="tel:01886666018"
               className="flex items-center justify-center gap-2 py-1.5 px-3 rounded-lg bg-primary text-white hover:bg-primary-hover text-[11px] font-black transition-all shadow-xs"

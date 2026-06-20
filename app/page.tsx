@@ -907,8 +907,7 @@ export default function Home() {
 
   return (
     <div className={`font-sans transition-colors duration-300 ${isDarkMode ? 'dark bg-slate-950 text-slate-100' : 'bg-[#faf8f5] text-slate-900'}`}>
-      
-      {/* Top Header Panel Navigation */}
+    
       <Header 
         isDarkMode={isDarkMode} 
         onThemeToggle={() => setIsDarkMode(!isDarkMode)} 
@@ -931,7 +930,6 @@ export default function Home() {
         onMobileMenuToggle={() => setIsMobileMenuOpen(prev => !prev)}
       />
 
-      {/* Side Menu Drawer overlay panel for mobile devices */}
       <MobileDrawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
