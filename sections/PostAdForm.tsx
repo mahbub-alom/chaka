@@ -301,7 +301,7 @@ export default function PostAdForm({
       description: formData.description || `Excellent service matching all demands. Located at ${formData.location}, ${formData.division}. Contact seller on ${formData.sellerPhone}`,
       images: finalImages,
       // Handle Haq Bay Motors' specific showroom logic
-      sellerName: sellerType === 'showroom' ? (showroomProfile?.name || 'Haq Bay Motors') : (userProfile?.name || 'Sujan Ahmed'),
+      sellerName: sellerType === 'showroom' ? (showroomProfile?.name || 'Haq Bay Motors') : (userProfile?.name || 'Towsif Mahbub'),
       sellerPhone: formData.sellerPhone,
       sellerType: sellerType,
       showroomName: sellerType === 'showroom' ? (showroomProfile?.name || 'Haq Bay Motors') : undefined,

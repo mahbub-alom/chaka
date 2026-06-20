@@ -156,7 +156,7 @@ export default function UserProfile({
     : '5.0';
 
   const displayName = isCurrentUser 
-    ? (userProfile?.name || 'Sujan Ahmed')
+    ? (userProfile?.name || 'Towsif Mahbub')
     : isCurrentShowroom
       ? (showroomProfile?.name || 'Haq Bay Motors')
       : isShowroom 

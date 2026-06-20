@@ -98,7 +98,6 @@ export default function Header({
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-md">
-      {/* 1. Thin Top Navigation Bar (Chikon Navigation) */}
       <div className={`w-full py-1 border-b select-none transition-colors duration-300 ${
         isDarkMode 
           ? 'bg-slate-950 border-slate-900 text-slate-300' 

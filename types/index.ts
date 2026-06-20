@@ -121,3 +121,15 @@ export interface SearchFilters {
   partsTarget?: 'all' | 'car' | 'bike';
   subCategory?: string | 'all';
 }
+
+export interface PriceAlert {
+  id: string;
+  listingId: string;
+  brand: string;
+  model: string;
+  targetPrice: number;
+  originalPrice: number;
+  triggered: boolean;
+  createdAt: string;
+}
+

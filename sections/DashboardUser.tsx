@@ -59,12 +59,12 @@ export default function DashboardUser({
 
   // Local states for editing our member profiles
   const [profileForm, setProfileForm] = useState({
-    name: userProfile?.name || 'Sujan Ahmed',
-    email: userProfile?.email || 'thehrsujan@gmail.com',
+    name: userProfile?.name || 'Towsif Mahbub',
+    email: userProfile?.email || 'towsifmahbub@gmail.com',
     phone: userProfile?.phone || '01712345678',
     location: userProfile?.location || 'Gulshan',
     division: userProfile?.division || 'Dhaka',
-    avatarUrl: userProfile?.avatarUrl || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150',
+    avatarUrl: userProfile?.avatarUrl || 'https://i.ibb.co.com/hf583h7/towsif.jpg',
     coverUrl: userProfile?.coverUrl || 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=1000',
     isSubscribed: userProfile?.isSubscribed || false,
   });
@@ -88,7 +88,7 @@ export default function DashboardUser({
         phone: userProfile.phone || '',
         location: userProfile.location || '',
         division: userProfile.division || 'Dhaka',
-        avatarUrl: userProfile.avatarUrl || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150',
+        avatarUrl: userProfile.avatarUrl || 'https://i.ibb.co.com/hf583h7/towsif.jpg',
         coverUrl: userProfile.coverUrl || 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=1000',
         isSubscribed: userProfile.isSubscribed || false,
       });
@@ -463,7 +463,7 @@ export default function DashboardUser({
       features: computedFeatures,
       description: formData.description || 'Pristine vehicle condition. All papers are legally fully up to date.',
       images: [formData.imageUrl || (formData.type === 'car' ? 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=600' : 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=600')],
-      sellerName: 'Sujan Ahmed',
+      sellerName: 'Towsif Mahbub',
       sellerPhone: formData.sellerPhone,
       sellerType: 'private',
       isFeatured: false,
@@ -531,12 +531,12 @@ export default function DashboardUser({
               <img referrerPolicy="no-referrer" src={userProfile.avatarUrl} alt={userProfile.name} className="w-full h-full object-cover" />
             ) : (
               <div className="w-full h-full bg-[#ff6600]/10 flex items-center justify-center text-[#ff6600] font-black text-sm">
-                {(userProfile?.name || 'Sujan Ahmed').slice(0, 2).toUpperCase()}
+                {(userProfile?.name || 'Towsif Mahbub').slice(0, 2).toUpperCase()}
               </div>
             )}
           </div>
           <div>
-            <h4 className={`text-xs font-extrabold ${isDarkMode ? 'text-slate-100' : 'text-slate-900'}`}>{userProfile?.name || 'Sujan Ahmed'}</h4>
+            <h4 className={`text-xs font-extrabold ${isDarkMode ? 'text-slate-100' : 'text-slate-900'}`}>{userProfile?.name || 'Towsif Mahbub'}</h4>
             <span className="text-[10px] text-orange-400 font-extrabold flex items-center gap-1">
               <Shield className="w-3.5 h-3.5" /> Registered Member
             </span>
@@ -1355,7 +1355,7 @@ export default function DashboardUser({
                             <div className="w-20 h-20 md:w-26 md:h-26 rounded-full shadow-lg overflow-hidden bg-slate-950">
                               <img 
                                 referrerPolicy="no-referrer"
-                                src={profileForm.avatarUrl || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150"} 
+                                src={profileForm.avatarUrl || "https://i.ibb.co.com/hf583h7/towsif.jpg"} 
                                 alt="Avatar preview" 
                                 className="w-full h-full object-cover"
                               />
@@ -1380,7 +1380,7 @@ export default function DashboardUser({
 
                           <div className="mb-2 hidden md:block">
                             <h4 className="text-sm font-black text-white drop-shadow-md flex items-center gap-1">
-                              {profileForm.name || 'Sujan Ahmed'}
+                              {profileForm.name || 'Towsif Mahbub'}
                               <span className="text-[9px] bg-orange-500 text-neutral-900 px-1.5 py-0.5 rounded font-black uppercase">Live Preview</span>
                             </h4>
                             <p className="text-[10px] text-slate-200 drop-shadow-xs">{profileForm.location}, {profileForm.division}</p>
@@ -1391,7 +1391,7 @@ export default function DashboardUser({
                       {/* Display live preview info block on mobile below top-aligned visual elements */}
                       <div className="pt-2 md:hidden">
                         <h4 className={`text-xs font-black flex items-center gap-1 ${isDarkMode ? 'text-white' : 'text-slate-800'}`}>
-                          {profileForm.name || 'Sujan Ahmed'}
+                          {profileForm.name || 'Towsif Mahbub'}
                           <span className="text-[8px] bg-orange-500 text-neutral-900 px-1 py-0.5 rounded font-black uppercase inline-block">Preview</span>
                         </h4>
                         <p className="text-[9px] text-slate-400">{profileForm.location}, {profileForm.division}</p>
