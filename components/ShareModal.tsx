@@ -116,7 +116,7 @@ export default function ShareModal({
           />
           <button
             onClick={handleCopyLink}
-            className="text-[10.5px] font-black text-[#ff6600] px-3 py-1.5 hover:bg-[#ff6600]/10 rounded-xl transition-colors shrink-0 cursor-pointer"
+            className="text-[10.5px] font-black text-primary px-3 py-1.5 hover:bg-primary/10 rounded-xl transition-colors shrink-0 cursor-pointer"
           >
             Copy
           </button>

@@ -152,12 +152,12 @@ export default function BottomNav({
       <div className="absolute left-1/2 -top-[15px] -translate-x-1/2 z-50 flex flex-col items-center">
         <button
           onClick={handlePostAdClick}
-          className="w-10 h-10 bg-[#ff6600]/95 hover:bg-[#eb5e00] text-white flex items-center justify-center rounded-full shadow-md shadow-orange-500/25 ring-3 ring-white dark:ring-[#0a0f1d] hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+          className="w-10 h-10 bg-primary/95 hover:bg-primary-hover text-white flex items-center justify-center rounded-full shadow-md shadow-orange-500/25 ring-3 ring-white dark:ring-[#0a0f1d] hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
           title={language === 'bn' ? 'আপনার গাড়ির বিজ্ঞাপন দিন' : 'Post Your Vehicle Ad'}
         >
           <Plus className="w-5.5 h-5.5 stroke-[3px]" />
         </button>
-        <span className="text-[8px] font-extrabold text-[#ff6600] dark:text-orange-400 mt-0.5 tracking-tight uppercase">
+        <span className="text-[8px] font-extrabold text-primary dark:text-orange-400 mt-0.5 tracking-tight uppercase">
           {language === 'bn' ? 'বিক্রয়' : 'Sell'}
         </span>
       </div>
@@ -170,12 +170,12 @@ export default function BottomNav({
           onClick={handleHomeClick}
           className={`relative flex flex-col items-center justify-center flex-1 h-full pt-1.2 transition-all cursor-pointer ${
             isHomeActive 
-              ? 'text-[#ff6600]' 
+              ? 'text-primary' 
               : 'text-slate-450 dark:text-slate-500 hover:text-slate-500'
           }`}
         >
           {isHomeActive && (
-            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-0.5 bg-[#ff6600] rounded-full shadow-3xs" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-0.5 bg-primary rounded-full shadow-3xs" />
           )}
           <Home className="w-4.5 h-4.5 shrink-0 transition-transform duration-200 active:scale-90" />
           <span className="text-[9.5px] font-bold mt-0.5 tracking-tight leading-none">
@@ -188,12 +188,12 @@ export default function BottomNav({
           onClick={handleBrowseClick}
           className={`relative flex flex-col items-center justify-center flex-1 h-full pt-1.2 transition-all cursor-pointer ${
             isBrowseActive 
-              ? 'text-[#ff6600]' 
+              ? 'text-primary' 
               : 'text-slate-450 dark:text-slate-500 hover:text-slate-500'
           }`}
         >
           {isBrowseActive && (
-            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-0.5 bg-[#ff6600] rounded-full shadow-3xs" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-0.5 bg-primary rounded-full shadow-3xs" />
           )}
           <Search className="w-4.5 h-4.5 shrink-0 transition-transform duration-200 active:scale-90" />
           <span className="text-[9.5px] font-bold mt-0.5 tracking-tight leading-none">
@@ -209,12 +209,12 @@ export default function BottomNav({
           onClick={handleChatsClick}
           className={`relative flex flex-col items-center justify-center flex-1 h-full pt-1.2 transition-all cursor-pointer ${
             isChatsActive 
-              ? 'text-[#ff6600]' 
+              ? 'text-primary' 
               : 'text-slate-450 dark:text-slate-500 hover:text-slate-500'
           }`}
         >
           {isChatsActive && (
-            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-0.5 bg-[#ff6600] rounded-full shadow-3xs" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-0.5 bg-primary rounded-full shadow-3xs" />
           )}
           <div className="relative">
             <svg 
@@ -232,7 +232,7 @@ export default function BottomNav({
               <circle cx="63" cy="44" r="4.5" fill={isChatsActive ? (isDarkMode ? '#0a0f1d' : '#ffffff') : 'currentColor'} stroke="none" />
             </svg>
             {unreadChatsCount > 0 && (
-              <span className="absolute -top-1.5 -right-2 bg-[#ff6600] text-white font-black text-[8px] h-3.5 w-3.5 rounded-full flex items-center justify-center ring-1.5 ring-white dark:ring-[#0a0f1d] animate-pulse">
+              <span className="absolute -top-1.5 -right-2 bg-primary text-white font-black text-[8px] h-3.5 w-3.5 rounded-full flex items-center justify-center ring-1.5 ring-white dark:ring-[#0a0f1d] animate-pulse">
                 {unreadChatsCount}
               </span>
             )}
@@ -247,12 +247,12 @@ export default function BottomNav({
           onClick={handleAccountClick}
           className={`relative flex flex-col items-center justify-center flex-1 h-full pt-1.2 transition-all cursor-pointer ${
             isAccountActive 
-              ? 'text-[#ff6600]' 
+              ? 'text-primary' 
               : 'text-slate-450 dark:text-slate-500 hover:text-slate-500'
           }`}
         >
           {isAccountActive && (
-            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-0.5 bg-[#ff6600] rounded-full shadow-3xs" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-0.5 bg-primary rounded-full shadow-3xs" />
           )}
           <User className="w-4.5 h-4.5 shrink-0 transition-transform duration-200 active:scale-90" />
           <span className="text-[9.5px] font-bold mt-0.5 tracking-tight leading-none">

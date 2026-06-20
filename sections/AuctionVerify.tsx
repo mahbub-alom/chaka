@@ -325,7 +325,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
       <div className={`p-6 sm:p-8 rounded-3xl border ${
         isDarkMode 
           ? 'bg-gradient-to-br from-slate-900 to-slate-950 border-slate-800' 
-          : 'bg-gradient-to-br from-[#ff6600]/5 via-white to-orange-50/15 border-slate-200 shadow-xs'
+          : 'bg-gradient-to-br from-primary/5 via-white to-orange-50/15 border-slate-200 shadow-xs'
         }`}
       >
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
@@ -339,7 +339,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
             
             <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 dark:text-slate-100">
               {language === 'bn' ? 'জাপানি অকশন শিট ' : 'Japanese Auction Sheet '}
-              <span className="text-[#ff6600] dark:text-orange-400">
+              <span className="text-primary dark:text-orange-400">
                 {language === 'bn' ? 'যাচাইকরণ পোর্টাল' : 'Verification Portal'}
               </span>
             </h1>
@@ -397,7 +397,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                     className={`w-full pl-3 pr-10 py-3 rounded-xl text-sm font-mono outline-none transition-all border ${
                       isDarkMode 
                         ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-orange-500/50 placeholder-slate-700' 
-                        : 'bg-slate-50 border-slate-200 text-slate-800 focus:border-[#ff6600] placeholder-slate-400'
+                        : 'bg-slate-50 border-slate-200 text-slate-800 focus:border-primary placeholder-slate-400'
                     }`}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter') handleVerify(searchInput);
@@ -417,7 +417,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
               <button
                 onClick={() => handleVerify(searchInput)}
                 disabled={loading}
-                className="w-full py-3 px-4 rounded-xl text-xs sm:text-sm font-extrabold text-white bg-[#ff6600] hover:bg-[#eb5e00] active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-md shadow-orange-950/20 disabled:opacity-50 cursor-pointer"
+                className="w-full py-3 px-4 rounded-xl text-xs sm:text-sm font-extrabold text-white bg-primary hover:bg-primary-hover active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-md shadow-orange-950/20 disabled:opacity-50 cursor-pointer"
               >
                 {loading ? (
                   <>
@@ -460,7 +460,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                   }`}
                 >
                   <div className="space-y-1">
-                    <span className="text-xs font-mono font-black text-[#ff6600] dark:text-orange-400 uppercase tracking-tight block">
+                    <span className="text-xs font-mono font-black text-primary dark:text-orange-400 uppercase tracking-tight block">
                       {sheet.chassisNo}
                     </span>
                     <span className={`text-[10px] font-bold ${isDarkMode ? 'text-slate-400' : 'text-slate-650'} block`}>
@@ -492,7 +492,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
             <div className={`p-16 text-center border rounded-2xl min-h-[450px] flex flex-col items-center justify-center gap-4 ${
               isDarkMode ? 'bg-slate-900/15 border-slate-800' : 'bg-white border-slate-200'
             }`}>
-              <div className="w-14 h-14 bg-[#ff6600]/10 text-[#ff6600] rounded-full flex items-center justify-center animate-bounce">
+              <div className="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center animate-bounce">
                 <ShieldCheck className="w-8 h-8" />
               </div>
               <div className="space-y-2">
@@ -539,7 +539,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                 
                 {/* Visual authenticity header badge */}
                 <div className={`p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-white ${
-                  searchedSheet.status === 'Mended' ? 'bg-yellow-600' : 'bg-[#ff6600]'
+                  searchedSheet.status === 'Mended' ? 'bg-yellow-600' : 'bg-primary'
                 }`}>
                   <div className="flex items-center gap-2.5">
                     <div className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center">
@@ -567,7 +567,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
 
                     <div className={`p-3 rounded-xl border ${isDarkMode ? 'bg-slate-950/60 border-slate-800/80' : 'bg-slate-50/80 border-slate-100'}`}>
                       <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block">{language === 'bn' ? 'অকশন লট নাম্বার' : 'Auction Lot Number'}</span>
-                      <span className="text-sm font-mono font-black text-[#ff6600] dark:text-orange-400 block mt-0.5">#{searchedSheet.lotNo}</span>
+                      <span className="text-sm font-mono font-black text-primary dark:text-orange-400 block mt-0.5">#{searchedSheet.lotNo}</span>
                     </div>
 
                     <div className={`p-3 rounded-xl border ${isDarkMode ? 'bg-slate-950/60 border-slate-800/80' : 'bg-slate-50/80 border-slate-100'}`}>
@@ -597,7 +597,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                         isDarkMode ? 'bg-slate-950/40 border-slate-800/60' : 'bg-white border-slate-200'
                       }`}>
                         <div className="flex justify-between items-center mb-3">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-[#ff6600] dark:text-orange-400">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-primary dark:text-orange-400">
                             {language === 'bn' ? 'বডি ইন্সপেকশন মার্কিং চার্ট (車両展開図)' : 'BODY INSPECTION MARKINGS CHART (車両展開図)'}
                           </span>
                           <span className="text-[9px] text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded font-mono">
@@ -651,7 +651,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                           <div className={`absolute bottom-3 right-3 p-2 rounded border border-dashed flex items-center gap-1 bg-white/90 dark:bg-slate-900/90 shadow-sm ${
                             searchedSheet.status === 'Mended' ? 'border-yellow-500' : 'border-orange-600'
                           }`}>
-                            <div className={`w-2.5 h-2.5 rounded-full ${searchedSheet.status === 'Mended' ? 'bg-yellow-500' : 'bg-[#ff6600]'}`} />
+                            <div className={`w-2.5 h-2.5 rounded-full ${searchedSheet.status === 'Mended' ? 'bg-yellow-500' : 'bg-primary'}`} />
                             <span className="text-[9px] font-black tracking-widest text-slate-600 dark:text-slate-300 uppercase">
                               {language === 'bn' ? 'যাচাই সম্পন্ন' : 'INSPECTED'}
                             </span>
@@ -662,7 +662,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                         <div className={`text-[11px] p-2 rounded-lg border flex items-center gap-2 ${
                           isDarkMode ? 'bg-slate-950/80 border-slate-800 text-slate-300' : 'bg-slate-50 border-slate-100 text-slate-700'
                         }`}>
-                          <Info className="w-3.5 h-3.5 text-[#ff6600] shrink-0" />
+                          <Info className="w-3.5 h-3.5 text-primary shrink-0" />
                           <span>
                             <strong>{language === 'bn' ? 'ইন্সপেকশন নোট:' : 'Inspection Annotation:'}</strong> {searchedSheet.diagramScratch}
                           </span>
@@ -701,7 +701,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                           </div>
                           <div>
                             <span className="text-slate-400 block text-[10px]/none mt-1">{language === 'bn' ? 'অকশন তারিখ' : 'Auctioned Date'}</span>
-                            <span className="font-extrabold text-[#ff6600] dark:text-orange-400 font-mono">{searchedSheet.auctionDate}</span>
+                            <span className="font-extrabold text-primary dark:text-orange-400 font-mono">{searchedSheet.auctionDate}</span>
                           </div>
                         </div>
                       </div>
@@ -737,7 +737,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                     {searchedSheet.status === 'Mended' ? (
                       <AlertTriangle className="w-5 h-5 text-yellow-600 dark:text-yellow-400 shrink-0 mt-0.5" />
                     ) : (
-                      <CheckCircle2 className="w-5 h-5 text-[#ff6600] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     )}
                     <div className="space-y-1">
                       <h4 className="text-xs font-black uppercase tracking-wider leading-none">
@@ -758,14 +758,14 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                   {/* Verification certification stamp section details */}
                   <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center pt-3 border-t border-slate-200/55 dark:border-slate-800/80 gap-3.5">
                     <div className="flex items-center gap-2">
-                      <div className="w-3.5 h-3.5 rounded-full bg-[#ff6600]" />
+                      <div className="w-3.5 h-3.5 rounded-full bg-primary" />
                       <span className="text-[10px] text-slate-400 dark:text-slate-450 uppercase tracking-widest font-black font-mono">
                         {language === 'bn' ? 'সিকিউর হ্যাশ কোড:' : 'Verification Hash:'} Sha256-uss-{searchedSheet.chassisNo}-{searchedSheet.lotNo}
                       </span>
                     </div>
 
                     <div className="flex items-center gap-2 self-end">
-                      <span className="text-xs text-[#ff6600] dark:text-orange-400 font-bold">
+                      <span className="text-xs text-primary dark:text-orange-400 font-bold">
                         {language === 'bn' ? '✓ নিরাপদ অকশন শিট ভেরিফাইড' : '✓ Secure Sheet Verified'}
                       </span>
                     </div>
@@ -799,7 +799,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                 ? 'bg-slate-900/10 border-slate-800/80 text-slate-400' 
                 : 'bg-slate-50/40 border-slate-200/80 text-slate-600'
             }`}>
-              <div className="w-16 h-16 rounded-3xl bg-orange-500/10 flex items-center justify-center text-[#ff6600]">
+              <div className="w-16 h-16 rounded-3xl bg-orange-500/10 flex items-center justify-center text-primary">
                 <FileText className="w-10 h-10 text-orange-600 dark:text-orange-400" />
               </div>
               
@@ -818,7 +818,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
               {/* Dynamic steps graphics */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-xl w-full mt-4">
                 <div className={`p-4 rounded-xl text-xs text-left space-y-1.5 border border-dashed ${isDarkMode ? 'bg-slate-900/30' : 'bg-white'}`}>
-                  <div className="w-5 h-5 rounded-full bg-[#ff6600] text-white flex items-center justify-center text-[10px] font-black">1</div>
+                  <div className="w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-black">1</div>
                   <strong className="text-slate-700 dark:text-slate-300">
                     {language === 'bn' ? 'চ্যাসিস কোড ইনপুট' : 'Input Chassis Code'}
                   </strong>
@@ -830,7 +830,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                 </div>
                 
                 <div className={`p-4 rounded-xl text-xs text-left space-y-1.5 border border-dashed ${isDarkMode ? 'bg-slate-900/30' : 'bg-white'}`}>
-                  <div className="w-5 h-5 rounded-full bg-[#ff6600] text-white flex items-center justify-center text-[10px] font-black">2</div>
+                  <div className="w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-black">2</div>
                   <strong className="text-slate-700 dark:text-slate-300">
                     {language === 'bn' ? 'ডাটাবেস অনুসন্ধান' : 'Database Search'}
                   </strong>
@@ -842,7 +842,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                 </div>
 
                 <div className={`p-4 rounded-xl text-xs text-left space-y-1.5 border border-dashed ${isDarkMode ? 'bg-slate-900/30' : 'bg-white'}`}>
-                  <div className="w-5 h-5 rounded-full bg-[#ff6600] text-white flex items-center justify-center text-[10px] font-black">3</div>
+                  <div className="w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-black">3</div>
                   <strong className="text-slate-700 dark:text-slate-300">
                     {language === 'bn' ? 'যাচাইকৃত ফলাফল' : 'Verified Results'}
                   </strong>
@@ -868,8 +868,8 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
       }`}>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-dashed border-slate-250 dark:border-slate-800">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#ff6600]/10 text-[#ff6600] flex items-center justify-center">
-              <Settings className="w-5 h-5 text-[#ff6600]" />
+            <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+              <Settings className="w-5 h-5 text-primary" />
             </div>
             <div>
               <h3 className="text-sm font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">
@@ -888,7 +888,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
             className={`px-4 py-2 rounded-xl text-xs font-black flex items-center gap-1.5 transition-colors cursor-pointer ${
               showConfig 
                 ? 'bg-rose-500/10 text-rose-500 hover:bg-rose-500/20' 
-                : 'bg-[#ff6600]/10 text-[#ff6600] hover:bg-[#ff6600]/20'
+                : 'bg-primary/10 text-primary hover:bg-primary/20'
             }`}
           >
             <Code className="w-4 h-4" />
@@ -901,8 +901,8 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
             
             {/* API Settings Form */}
             <div className="space-y-4">
-              <h4 className="text-xs font-extrabold text-[#ff6600] dark:text-orange-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Database className="w-4 h-4 text-[#ff6600] dark:text-orange-400" />
+              <h4 className="text-xs font-extrabold text-primary dark:text-orange-400 uppercase tracking-wider flex items-center gap-1.5">
+                <Database className="w-4 h-4 text-primary dark:text-orange-400" />
                 {language === 'bn' ? 'এপিআই কানেকশন সেটিংস' : 'Connection Configuration'}
               </h4>
 
@@ -925,7 +925,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                   <button
                     onClick={() => setApiEnabled(!apiEnabled)}
                     className={`w-12 h-6.5 rounded-full p-1 transition-colors cursor-pointer ${
-                      apiEnabled ? 'bg-[#ff6600] flex justify-end' : 'bg-slate-300 dark:bg-slate-800 flex justify-start'
+                      apiEnabled ? 'bg-primary flex justify-end' : 'bg-slate-300 dark:bg-slate-800 flex justify-start'
                     }`}
                   >
                     <div className="w-4.5 h-4.5 rounded-full bg-white shadow-md" />
@@ -946,7 +946,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                       className={`w-full pl-9 pr-3 py-2.5 rounded-xl text-xs font-mono border outline-none transition-all ${
                         isDarkMode 
                           ? 'bg-slate-950 border-slate-800 focus:border-orange-500/50 text-slate-200' 
-                          : 'bg-white border-slate-200 focus:border-[#ff6600] text-slate-800 shadow-xs'
+                          : 'bg-white border-slate-200 focus:border-primary text-slate-800 shadow-xs'
                       }`}
                     />
                     <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
@@ -974,7 +974,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                       className={`w-full pl-9 pr-10 py-2.5 rounded-xl text-xs font-mono border outline-none transition-all ${
                         isDarkMode 
                           ? 'bg-slate-950 border-slate-800 focus:border-orange-500/50 text-slate-200' 
-                          : 'bg-white border-slate-200 focus:border-[#ff6600] text-slate-800 shadow-xs'
+                          : 'bg-white border-slate-200 focus:border-primary text-slate-800 shadow-xs'
                       }`}
                     />
                     <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
@@ -997,7 +997,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                     const secret = (document.getElementById('api-secret-field') as HTMLInputElement)?.value || '';
                     saveApiConfig(endpoint, secret);
                   }}
-                  className="w-full py-2.5 px-4 rounded-xl text-xs font-black text-white bg-[#ff6600] hover:bg-[#eb5e00] transition-all cursor-pointer flex items-center justify-center gap-1.5 active:scale-98"
+                  className="w-full py-2.5 px-4 rounded-xl text-xs font-black text-white bg-primary hover:bg-primary-hover transition-all cursor-pointer flex items-center justify-center gap-1.5 active:scale-98"
                 >
                   <Database className="w-3.5 h-3.5 text-white" />
                   <span>{language === 'bn' ? 'সেটিংস এবং কী সেভ করুন' : 'Save Connection Credentials'}</span>
@@ -1007,8 +1007,8 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
 
             {/* API Directory & Guides - Where to get Japanese Auction API */}
             <div className="space-y-4">
-              <h4 className="text-xs font-extrabold text-[#ff6600] dark:text-orange-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Info className="w-4 h-4 text-[#ff6600] dark:text-orange-400" />
+              <h4 className="text-xs font-extrabold text-primary dark:text-orange-400 uppercase tracking-wider flex items-center gap-1.5">
+                <Info className="w-4 h-4 text-primary dark:text-orange-400" />
                 {language === 'bn' ? 'অকশন শিট এপিআই কোথায় পাওয়া যাবে?' : 'Where to Find Japanese Auction API?'}
               </h4>
 
@@ -1025,7 +1025,7 @@ export default function AuctionVerify({ isDarkMode, showToast }: AuctionVerifyPr
                       ? 'জাপানি গাড়ির ডাটা USS, Auctions, AUCNET, এবং TAA থেকে সরাসরি সাধারণ মানুষের ব্রাউজারে উন্মুক্ত থাকে না। বিশ্বস্ত এপিআই অ্যাক্সেস কিনতে পাওয়া যায় এই বড় সাইটগুলোতে:' 
                       : 'Japanese auto auctions (USS, Aucnet, ARAI, TAA) are private. To establish a genuine live database lookup, you can purchase standard API access or data feeds from:'}
                   </p>
-                  <ul className="list-disc list-inside text-[11px] text-[#ff6600] dark:text-orange-400 pl-1 font-bold space-y-1 mt-1">
+                  <ul className="list-disc list-inside text-[11px] text-primary dark:text-orange-400 pl-1 font-bold space-y-1 mt-1">
                     <li><strong className="text-slate-800 dark:text-slate-200">Aleado API (aleado.com / aleado.co.jp)</strong> — {language === 'bn' ? 'সবচেয়ে বড় জাপানি অকশন ট্রান্সলেশন ও হিস্ট্রি এপিআই।' : 'Largest Japanese auction history & metadata feed.'}</li>
                     <li><strong className="text-slate-800 dark:text-slate-200">Carinfo.jp / Carvector</strong> — {language === 'bn' ? 'রিয়েল-টাইম চেসিস আইডি সার্চ এবং পিডিএফ ডাউনলোড জেনারেটর।' : 'Chassis search endpoints with pre-translated auction card outputs.'}</li>
                     <li><strong className="text-slate-800 dark:text-slate-200">JAAI & JEVIC Bangladesh Portal</strong> — {language === 'bn' ? 'মাইলেজ ডিক্লারেশন হিস্ট্রি ডাটাবেস এপিআই।' : 'Import tracking & authentic mileage verification records.'}</li>

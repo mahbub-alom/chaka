@@ -75,7 +75,7 @@ export default function ReportModal({
 
         <div className="space-y-4 my-4 text-xs">
           <div>
-            <label className="block text-[10px] uppercase font-black tracking-widest text-[#ff6600] mb-1.5">Select Abuse Type / Reason</label>
+            <label className="block text-[10px] uppercase font-black tracking-widest text-primary mb-1.5">Select Abuse Type / Reason</label>
             <div className="relative">
               <select
                 value={reportReason}
@@ -98,7 +98,7 @@ export default function ReportModal({
           </div>
 
           <div>
-            <label className="block text-[10px] uppercase font-black tracking-widest text-[#ff6600] mb-1.5">Describe custom details / proof</label>
+            <label className="block text-[10px] uppercase font-black tracking-widest text-primary mb-1.5">Describe custom details / proof</label>
             <textarea
               value={reportDetails}
               onChange={(e) => setReportDetails(e.target.value)}

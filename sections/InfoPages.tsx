@@ -184,7 +184,7 @@ export default function InfoPages({
           className={`flex items-center gap-2 text-xs font-bold px-4 py-2.5 rounded-xl transition-all cursor-pointer border ${
             isDarkMode 
               ? 'bg-slate-900 border-slate-800 text-slate-300 hover:text-orange-400 hover:border-orange-500/30' 
-              : 'bg-white border-slate-200 text-slate-700 hover:text-[#ff6600] hover:border-orange-600 shadow-xs'
+              : 'bg-white border-slate-200 text-slate-700 hover:text-primary hover:border-orange-600 shadow-xs'
           }`}
         >
           <ArrowLeft className="w-3.5 h-3.5" />
@@ -205,7 +205,7 @@ export default function InfoPages({
           onClick={() => onChangeView('terms')}
           className={`h-full text-[11px] sm:text-xs font-extrabold flex items-center justify-center gap-2 rounded-xl cursor-pointer transition-all ${
             activeSubView === 'terms'
-              ? 'bg-[#ff6600] text-white shadow-xs'
+              ? 'bg-primary text-white shadow-xs'
               : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
           }`}
         >
@@ -217,7 +217,7 @@ export default function InfoPages({
           onClick={() => onChangeView('privacy')}
           className={`h-full text-[11px] sm:text-xs font-extrabold flex items-center justify-center gap-2 rounded-xl cursor-pointer transition-all ${
             activeSubView === 'privacy'
-              ? 'bg-[#ff6600] text-white shadow-xs'
+              ? 'bg-primary text-white shadow-xs'
               : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
           }`}
         >
@@ -229,7 +229,7 @@ export default function InfoPages({
           onClick={() => onChangeView('help')}
           className={`h-full text-[11px] sm:text-xs font-extrabold flex items-center justify-center gap-2 rounded-xl cursor-pointer transition-all ${
             activeSubView === 'help'
-              ? 'bg-[#ff6600] text-white shadow-xs'
+              ? 'bg-primary text-white shadow-xs'
               : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
           }`}
         >
@@ -241,7 +241,7 @@ export default function InfoPages({
           onClick={() => onChangeView('safety')}
           className={`h-full text-[11px] sm:text-xs font-extrabold flex items-center justify-center gap-2 rounded-xl cursor-pointer transition-all ${
             activeSubView === 'safety'
-              ? 'bg-[#ff6600] text-white shadow-xs'
+              ? 'bg-primary text-white shadow-xs'
               : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
           }`}
         >
@@ -261,7 +261,7 @@ export default function InfoPages({
         >
           <div className="space-y-3 max-w-3xl">
             <h1 className="text-2xl sm:text-3.5xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
-              <FileText className="w-7 h-7 text-[#ff6600]" />
+              <FileText className="w-7 h-7 text-primary" />
               <span>{language === 'bn' ? 'সার্ভিস ব্যবহারের শর্তাবলী' : 'Automobile Marketplace Terms of Service'}</span>
             </h1>
             <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
@@ -277,12 +277,12 @@ export default function InfoPages({
               <div className={`p-5 rounded-2xl border ${
                 isDarkMode ? 'bg-slate-900/40 border-slate-800/80' : 'bg-slate-50 border-slate-200'
               }`}>
-                <h3 className="text-xs font-bold uppercase tracking-widest text-[#ff6600] dark:text-orange-500 mb-3.5">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-primary dark:text-orange-500 mb-3.5">
                   {language === 'bn' ? 'শর্তগুলোর তালিকা' : 'Key Index of Terms'}
                 </h3>
                 <ul className="space-y-3 text-xs font-bold text-slate-500 dark:text-slate-400">
                   <li className="flex items-center gap-2 text-slate-800 dark:text-slate-200">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff6600]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                     <span>১. {language === 'bn' ? 'ভূমিকা ও চুক্তি' : 'Acceptance & Agreements'}</span>
                   </li>
                   <li className="flex items-center gap-2">
@@ -305,8 +305,8 @@ export default function InfoPages({
               </div>
 
               {/* Status card */}
-              <div className="p-5 rounded-2xl bg-[#ff6600]/10 dark:bg-orange-950/20 border border-orange-500/10 text-xs space-y-3">
-                <div className="flex items-center gap-2 text-[#ff6600] dark:text-orange-400 font-extrabold">
+              <div className="p-5 rounded-2xl bg-primary/10 dark:bg-orange-950/20 border border-orange-500/10 text-xs space-y-3">
+                <div className="flex items-center gap-2 text-primary dark:text-orange-400 font-extrabold">
                   <HeartHandshake className="w-5 h-5 shrink-0" />
                   <span>{language === 'bn' ? 'আমাদের অঙ্গীকার' : 'User Security Promise'}</span>
                 </div>
@@ -379,7 +379,7 @@ export default function InfoPages({
         >
           <div className="space-y-3 max-w-3xl">
             <h1 className="text-2xl sm:text-3.5xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
-              <Shield className="w-7 h-7 text-[#ff6600]" />
+              <Shield className="w-7 h-7 text-primary" />
               <span>{language === 'bn' ? 'ব্যক্তিগত গোপনীয়তা নীতিমালা' : 'Data Privacy Policy & Protection'}</span>
             </h1>
             <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
@@ -395,7 +395,7 @@ export default function InfoPages({
               <div className={`p-6 rounded-3xl border text-slate-800 dark:text-slate-200 text-xs space-y-4 ${
                 isDarkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-50 border-slate-200'
               }`}>
-                <div className="flex items-center gap-2 text-[#ff6600] dark:text-orange-500 font-black tracking-wider uppercase text-[10px]">
+                <div className="flex items-center gap-2 text-primary dark:text-orange-500 font-black tracking-wider uppercase text-[10px]">
                   <Settings className="w-4 h-4" />
                   <span>{language === 'bn' ? 'গোপনীয়তা কন্ট্রোল সেন্টার' : 'Privacy Control Panel'}</span>
                 </div>
@@ -423,7 +423,7 @@ export default function InfoPages({
                       );
                     }}
                     className={`w-9.5 h-5.5 rounded-full p-0.5 flex items-center transition-colors duration-200 cursor-pointer ${
-                      isCookieTrackingEnabled ? 'bg-[#ff6600]' : 'bg-slate-350 dark:bg-slate-800'
+                      isCookieTrackingEnabled ? 'bg-primary' : 'bg-slate-350 dark:bg-slate-800'
                     }`}
                   >
                     <div className={`bg-white w-4.5 h-4.5 rounded-full shadow-xs transform duration-200 ${
@@ -450,7 +450,7 @@ export default function InfoPages({
                       );
                     }}
                     className={`w-9.5 h-5.5 rounded-full p-0.5 flex items-center transition-colors duration-200 cursor-pointer ${
-                      isLocationTrackingEnabled ? 'bg-[#ff6600]' : 'bg-slate-350 dark:bg-slate-800'
+                      isLocationTrackingEnabled ? 'bg-primary' : 'bg-slate-350 dark:bg-slate-800'
                     }`}
                   >
                     <div className={`bg-white w-4.5 h-4.5 rounded-full shadow-xs transform duration-200 ${
@@ -481,7 +481,7 @@ export default function InfoPages({
             <div className="lg:col-span-7 space-y-5">
               <div className="space-y-4">
                 <div className="flex gap-4 items-start">
-                  <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-900 text-[#ff6600] dark:text-orange-500 flex items-center justify-center shrink-0 font-extrabold text-sm">
+                  <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-900 text-primary dark:text-orange-500 flex items-center justify-center shrink-0 font-extrabold text-sm">
                     ১
                   </div>
                   <div>
@@ -497,7 +497,7 @@ export default function InfoPages({
                 </div>
 
                 <div className="flex gap-4 items-start">
-                  <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-900 text-[#ff6600] dark:text-orange-500 flex items-center justify-center shrink-0 font-extrabold text-sm">
+                  <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-900 text-primary dark:text-orange-500 flex items-center justify-center shrink-0 font-extrabold text-sm">
                     ২
                   </div>
                   <div>
@@ -513,7 +513,7 @@ export default function InfoPages({
                 </div>
 
                 <div className="flex gap-4 items-start">
-                  <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-900 text-[#ff6600] dark:text-orange-500 flex items-center justify-center shrink-0 font-extrabold text-sm">
+                  <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-900 text-primary dark:text-orange-500 flex items-center justify-center shrink-0 font-extrabold text-sm">
                     ৩
                   </div>
                   <div>
@@ -544,7 +544,7 @@ export default function InfoPages({
         >
           <div className="space-y-4 max-w-2xl">
             <h1 className="text-2xl sm:text-3.5xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
-              <HelpCircle className="w-7 h-7 text-[#ff6600]" />
+              <HelpCircle className="w-7 h-7 text-primary" />
               <span>{language === 'bn' ? 'সহায়তা কেন্দ্র ও সাধারণ প্রশ্নোত্তর' : 'Help Center & Frequently Asked'}</span>
             </h1>
             <p className="text-sm text-slate-500 dark:text-slate-450 font-medium leading-relaxed">
@@ -565,7 +565,7 @@ export default function InfoPages({
               className={`w-full pl-11 pr-5 py-3 rounded-2xl border text-xs sm:text-sm font-semibold outline-none transition-all ${
                 isDarkMode 
                   ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-orange-500' 
-                  : 'bg-white border-slate-200 text-slate-800 focus:border-[#ff6600] focus:bg-slate-50/50 shadow-xs'
+                  : 'bg-white border-slate-200 text-slate-800 focus:border-primary focus:bg-slate-50/50 shadow-xs'
               }`}
             />
           </div>
@@ -584,7 +584,7 @@ export default function InfoPages({
                       onClick={() => setActiveFaqCategory(catKey as any)}
                       className={`px-3 py-1.5 rounded-lg text-xs font-bold leading-normal transition-all cursor-pointer ${
                         isActive 
-                          ? 'bg-[#ff6600] text-white shadow-xs'
+                          ? 'bg-primary text-white shadow-xs'
                           : 'bg-slate-100 dark:bg-slate-900/60 text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
                       }`}
                     >
@@ -622,7 +622,7 @@ export default function InfoPages({
                         >
                           <span>{question}</span>
                           {isExpanded ? (
-                            <ChevronUp className="w-4 h-4 text-[#ff6600] shrink-0" />
+                            <ChevronUp className="w-4 h-4 text-primary shrink-0" />
                           ) : (
                             <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
                           )}
@@ -671,7 +671,7 @@ export default function InfoPages({
                       className={`w-full px-3.5 py-2.5 rounded-xl border text-xs font-bold outline-none transition-all ${
                         isDarkMode 
                           ? 'bg-slate-900 border-slate-800 text-slate-200 focus:border-orange-500' 
-                          : 'bg-white border-slate-200 text-slate-800 focus:border-[#ff6600] shadow-xs'
+                          : 'bg-white border-slate-200 text-slate-800 focus:border-primary shadow-xs'
                       }`}
                     />
                   </div>
@@ -689,7 +689,7 @@ export default function InfoPages({
                       className={`w-full px-3.5 py-2.5 rounded-xl border text-xs font-bold outline-none transition-all ${
                         isDarkMode 
                           ? 'bg-slate-900 border-slate-800 text-slate-200 focus:border-orange-500' 
-                          : 'bg-white border-slate-200 text-slate-800 focus:border-[#ff6600] shadow-xs'
+                          : 'bg-white border-slate-200 text-slate-800 focus:border-primary shadow-xs'
                       }`}
                     />
                   </div>
@@ -704,7 +704,7 @@ export default function InfoPages({
                       className={`w-full px-3.5 py-2.5 rounded-xl border text-xs font-bold outline-none transition-all ${
                         isDarkMode 
                           ? 'bg-slate-900 border-slate-800 text-slate-200 focus:border-orange-500' 
-                          : 'bg-white border-slate-200 text-slate-800 focus:border-[#ff6600] shadow-xs'
+                          : 'bg-white border-slate-200 text-slate-800 focus:border-primary shadow-xs'
                       }`}
                     >
                       <option value="general">{language === 'bn' ? 'সাধারণ জিজ্ঞাসা' : 'General Inquiries'}</option>
@@ -727,7 +727,7 @@ export default function InfoPages({
                       className={`w-full px-3.5 py-2.5 rounded-xl border text-xs font-semibold outline-none transition-all resize-none ${
                         isDarkMode 
                           ? 'bg-slate-900 border-slate-800 text-slate-200 focus:border-orange-500' 
-                          : 'bg-white border-slate-200 text-slate-800 focus:border-[#ff6600] shadow-xs'
+                          : 'bg-white border-slate-200 text-slate-800 focus:border-primary shadow-xs'
                       }`}
                     />
                   </div>
@@ -735,7 +735,7 @@ export default function InfoPages({
                   <button
                     type="submit"
                     disabled={isSubmittingSupport}
-                    className="w-full py-2.5 bg-[#ff6600] hover:bg-orange-600 text-white font-extrabold text-[11px] uppercase tracking-wider rounded-xl cursor-pointer transition-all flex items-center justify-center gap-2 shadow-xs"
+                    className="w-full py-2.5 bg-primary hover:bg-orange-600 text-white font-extrabold text-[11px] uppercase tracking-wider rounded-xl cursor-pointer transition-all flex items-center justify-center gap-2 shadow-xs"
                   >
                     {isSubmittingSupport ? (
                       <span>{trans.submitting}</span>
@@ -764,7 +764,7 @@ export default function InfoPages({
         >
           <div className="space-y-3 max-w-3xl">
             <h1 className="text-2xl sm:text-3.5xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
-              <ShieldCheck className="w-7 h-7 text-[#ff6600]" />
+              <ShieldCheck className="w-7 h-7 text-primary" />
               <span>{language === 'bn' ? 'নিরাপদ গাড়ি ক্রয় গাইডলাইন' : 'Interactive Automobile Purchase Safety Guide'}</span>
             </h1>
             <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
@@ -797,7 +797,7 @@ export default function InfoPages({
             <div className="lg:col-span-7 space-y-5">
               <div className={`p-6 rounded-3xl border ${isDarkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-50/45 border-slate-200 bg-white'}`}>
                 <h3 className="text-sm font-black text-slate-900 dark:text-white mb-2 flex items-center gap-2">
-                  <Sliders className="w-4.5 h-4.5 text-[#ff6600]" />
+                  <Sliders className="w-4.5 h-4.5 text-primary" />
                   <span>{language === 'bn' ? 'যাচাইকরণ চেকলিস্ট (গাড়ি কেনার দিন)' : 'Mandatory Auto Inspection Checklist'}</span>
                 </h3>
                 <p className="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400 font-semibold mb-4">
@@ -848,7 +848,7 @@ export default function InfoPages({
                         }`}
                       >
                         <div className={`w-4.5 h-4.5 rounded-md border flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
-                          isChecked ? 'bg-[#ff6600] border-[#ff6600] text-white' : 'border-slate-350 dark:border-slate-700 bg-white dark:bg-slate-900'
+                          isChecked ? 'bg-primary border-primary text-white' : 'border-slate-350 dark:border-slate-700 bg-white dark:bg-slate-900'
                         }`}>
                           {isChecked && <Check className="w-3 h-3 stroke-[3]" />}
                         </div>
@@ -862,7 +862,7 @@ export default function InfoPages({
 
                 {/* Checklist score state feedback */}
                 {checkedSafetyItems.length > 0 && (
-                  <div className="mt-4 pt-3 border-t border-dashed border-slate-200 dark:border-slate-800 flex items-center justify-between text-[11px] font-black text-[#ff6600]">
+                  <div className="mt-4 pt-3 border-t border-dashed border-slate-200 dark:border-slate-800 flex items-center justify-between text-[11px] font-black text-primary">
                     <span>
                       {language === 'bn' 
                         ? `${checkedSafetyItems.length} টি আইটেম সম্পূর্ণভাবে ভেরিফাইড!` 
@@ -882,7 +882,7 @@ export default function InfoPages({
             {/* Seller & Showroom safety rules lists */}
             <div className="lg:col-span-5 space-y-4">
               <div className={`p-6 rounded-3xl border ${isDarkMode ? 'border-slate-800 bg-slate-900/10' : 'border-slate-200 bg-white'}`}>
-                <h3 className="text-xs font-black uppercase tracking-widest text-[#ff6600] dark:text-orange-500 mb-3 block">
+                <h3 className="text-xs font-black uppercase tracking-widest text-primary dark:text-orange-500 mb-3 block">
                   🛡️ {language === 'bn' ? 'নিরাপদ লেনদেনের ৪টি সূত্র' : 'The Golden Code of buying'}
                 </h3>
                 <ol className="space-y-4 text-xs font-semibold text-slate-500 dark:text-slate-400 leading-normal">

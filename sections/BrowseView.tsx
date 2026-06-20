@@ -112,7 +112,7 @@ export default function BrowseView({
               { id: 'ev', label: language === 'bn' ? 'ইলেকট্রিক' : 'EVs', rawLabel: language === 'bn' ? 'ইলেকট্রিক গাড়ি (EVs)' : 'Electric Vehicles', count: listings.filter(l => l.type === 'ev').length, emoji: '⚡', icon: <Zap className="w-4 h-4 text-amber-400" /> },
               { id: 'threewheeler', label: language === 'bn' ? '৩-হুইলার' : '3-Wheelers', rawLabel: language === 'bn' ? 'সিএনজি ও ৩-হুইলার' : 'Three Wheelers', count: listings.filter(l => l.type === 'threewheeler').length, emoji: '🛺', icon: <Compass className="w-4 h-4 text-orange-500" /> },
               { id: 'bicycle', label: language === 'bn' ? 'সাইকেল' : 'Bicycles', rawLabel: language === 'bn' ? 'বাইসাইকেল' : 'Bicycles', count: listings.filter(l => l.type === 'bicycle').length, emoji: '🚲', icon: <Bike className="w-4 h-4 text-indigo-500" /> },
-              { id: 'parts', label: language === 'bn' ? 'পার্টস' : 'Parts Spares', rawLabel: language === 'bn' ? 'যন্ত্রাংশ ও পার্টস' : 'Parts Spares', count: listings.filter(l => l.type === 'parts').length, emoji: '⚙️', icon: <Wrench className="w-4 h-4 text-[#ff6600]" /> },
+              { id: 'parts', label: language === 'bn' ? 'পার্টস' : 'Parts Spares', rawLabel: language === 'bn' ? 'যন্ত্রাংশ ও পার্টস' : 'Parts Spares', count: listings.filter(l => l.type === 'parts').length, emoji: '⚙️', icon: <Wrench className="w-4 h-4 text-primary" /> },
               { id: 'service', label: language === 'bn' ? 'সার্ভিস' : 'Workshop', rawLabel: language === 'bn' ? 'অটোমোবাইল সার্ভিসিং' : 'Services', count: listings.filter(l => l.type === 'service').length, emoji: '🛠️', icon: <ShieldCheck className="w-4 h-4 text-orange-400" /> },
             ].map((cat) => {
               const isSelected = filters.type === cat.id;
@@ -125,7 +125,7 @@ export default function BrowseView({
                   }}
                   className={`flex items-center gap-2 px-3.5 py-2.5 rounded-2xl text-xs font-black transition-all border shadow-xs cursor-pointer ${
                     isSelected
-                      ? 'bg-[#ff6600] border-[#ff6600] text-white shadow-md shadow-orange-500/10'
+                      ? 'bg-primary border-primary text-white shadow-md shadow-orange-500/10'
                       : isDarkMode
                         ? 'bg-slate-900 border-slate-800 text-slate-300 hover:text-white'
                         : 'bg-white border-slate-200 text-slate-700 hover:text-slate-900 shadow-sm'
@@ -153,7 +153,7 @@ export default function BrowseView({
           }`}>
             <div>
               <h3 className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-505 mb-3 border-b border-dashed border-slate-100 dark:border-slate-800 pb-2 flex items-center gap-1">
-                <List className="w-3.5 h-3.5 text-[#ff6600]" /> Catalog Category
+                <List className="w-3.5 h-3.5 text-primary" /> Catalog Category
               </h3>
 
               <div className="flex flex-col gap-1 rounded-2xl overflow-hidden">
@@ -211,7 +211,7 @@ export default function BrowseView({
                     id: 'parts', 
                     label: language === 'bn' ? 'পার্টস ও লুব্রিকেন্টস' : 'Parts & Accessories', 
                     count: listings.filter(l => l.type === 'parts').length, 
-                    icon: <Wrench className="w-5 h-5 text-[#ff6600]" />,
+                    icon: <Wrench className="w-5 h-5 text-primary" />,
                     iconBg: 'bg-[#a3e635]/15'
                   },
                   { 
@@ -230,8 +230,8 @@ export default function BrowseView({
                         className={`w-full text-left py-3 px-3 flex items-center justify-between transition-all cursor-pointer relative group ${
                           isActive 
                             ? isDarkMode
-                              ? 'bg-[#ff6600]/10 text-orange-400 font-extrabold border-l-4 border-solid border-[#ff6600]'
-                              : 'bg-orange-50/70 text-orange-900 font-extrabold border-l-4 border-solid border-[#ff6600]'
+                              ? 'bg-primary/10 text-orange-400 font-extrabold border-l-4 border-solid border-primary'
+                              : 'bg-orange-50/70 text-orange-900 font-extrabold border-l-4 border-solid border-primary'
                             : isDarkMode 
                               ? 'hover:bg-slate-805/40 text-slate-200 border-l-4 border-transparent' 
                               : 'hover:bg-slate-50 text-slate-800 border-l-4 border-transparent'
@@ -240,7 +240,7 @@ export default function BrowseView({
                         <div className="flex items-center gap-3">
                           <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-105 duration-200 ${
                             isActive 
-                              ? 'bg-[#ff6600]/20' 
+                              ? 'bg-primary/20' 
                               : isDarkMode ? 'bg-slate-800' : 'bg-slate-100'
                           }`}>
                             {cat.icon}
@@ -249,13 +249,13 @@ export default function BrowseView({
                           <div>
                             <h4 className={`text-xs font-black tracking-tight ${
                               isActive 
-                                ? 'text-[#ff6600] dark:text-orange-400' 
+                                ? 'text-primary dark:text-orange-400' 
                                 : isDarkMode ? 'text-slate-100' : 'text-slate-800'
                             }`}>
                               {cat.label}
                             </h4>
                             <span className={`text-[10px] block font-medium ${
-                              isActive ? 'text-[#ff6600]/85 dark:text-orange-400/85' : 'text-slate-400 dark:text-slate-500'
+                              isActive ? 'text-primary/85 dark:text-orange-400/85' : 'text-slate-400 dark:text-slate-500'
                             }`}>
                               {cat.count.toLocaleString()} ads
                             </span>
@@ -265,7 +265,7 @@ export default function BrowseView({
                         <div className="flex items-center gap-1">
                           <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${
                             isActive 
-                              ? 'translate-x-0.5 text-[#ff6600] dark:text-orange-400 rotate-90' 
+                              ? 'translate-x-0.5 text-primary dark:text-orange-400 rotate-90' 
                               : 'text-slate-300 dark:text-slate-600 group-hover:translate-x-0.5'
                           }`} />
                         </div>
@@ -284,7 +284,7 @@ export default function BrowseView({
                               onClick={() => setFilters({ ...filters, subCategory: 'all' })}
                               className={`w-full text-left px-2.5 py-1.5 rounded-lg text-[11px] font-bold transition-all ${
                                 !filters.subCategory || filters.subCategory === 'all'
-                                  ? 'bg-[#ff6600] text-white font-black'
+                                  ? 'bg-primary text-white font-black'
                                   : isDarkMode
                                     ? 'text-slate-350 hover:bg-slate-800 hover:text-slate-100'
                                     : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
@@ -315,7 +315,7 @@ export default function BrowseView({
                                 onClick={() => setFilters({ ...filters, subCategory: pSub.value })}
                                 className={`w-full text-left px-2.5 py-1.5 rounded-lg text-[10.5px] font-bold transition-all flex items-center gap-2 ${
                                   filters.subCategory === pSub.value
-                                    ? 'bg-[#ff6600]/15 text-[#ff6600] dark:text-orange-400 font-black border-l-2 border-[#ff6600]'
+                                    ? 'bg-primary/15 text-primary dark:text-orange-400 font-black border-l-2 border-primary'
                                     : isDarkMode
                                       ? 'text-slate-400 hover:bg-slate-800/65 hover:text-slate-200'
                                       : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
@@ -342,7 +342,7 @@ export default function BrowseView({
                 value={filters.brand || 'all'}
                 onChange={(e) => setFilters({ ...filters, brand: e.target.value })}
                 className={`w-full px-2 py-2 rounded-lg text-xs font-bold border outline-none transition-all cursor-pointer ${
-                  isDarkMode ? 'bg-slate-950 border-slate-800 text-white focus:border-[#ff6600]' : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                  isDarkMode ? 'bg-slate-950 border-slate-800 text-white focus:border-primary' : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
                 }`}
               >
                 <option value="all">All Brands</option>
@@ -381,7 +381,7 @@ export default function BrowseView({
                 <span className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500">
                   💰 Budget
                 </span>
-                <span className="text-[11px] font-black text-[#ff6600]">
+                <span className="text-[11px] font-black text-primary">
                   {filters.priceMax >= 6000000 
                     ? 'No Limit' 
                     : `BDT ${filters.priceMax.toLocaleString()}`
@@ -395,7 +395,7 @@ export default function BrowseView({
                 step="5000"
                 value={filters.priceMax || 6000000}
                 onChange={(e) => setFilters({ ...filters, priceMax: Number(e.target.value) })}
-                className="w-full accent-[#ff6600] cursor-pointer h-1 bg-slate-200 dark:bg-slate-800 rounded-lg"
+                className="w-full accent-primary cursor-pointer h-1 bg-slate-200 dark:bg-slate-800 rounded-lg"
               />
               <div className="flex justify-between text-[9px] font-bold text-slate-400 mt-1 select-none">
                 <span>2,000 BDT</span>
@@ -419,7 +419,7 @@ export default function BrowseView({
                     onClick={() => setFilters({ ...filters, condition: cond.id as any })}
                     className={`text-left py-1.5 px-2.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
                       filters.condition === cond.id
-                        ? 'text-[#ff6600] bg-orange-500/10 font-black'
+                        ? 'text-primary bg-orange-500/10 font-black'
                         : isDarkMode ? 'text-slate-400 hover:text-slate-300' : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
@@ -461,7 +461,7 @@ export default function BrowseView({
             <div className="flex flex-wrap items-center gap-2.5 self-start sm:self-auto">
               <div className="flex items-center gap-1.5 bg-slate-900/10 dark:bg-slate-900/40 p-1 rounded-xl border border-slate-200 dark:border-slate-800">
                 <span className="text-[10px] uppercase tracking-wider font-black text-slate-400 dark:text-slate-500 px-1.5 flex items-center gap-1">
-                  <SlidersHorizontal className="w-3 h-3 text-[#ff6600] dark:text-orange-505" />
+                  <SlidersHorizontal className="w-3 h-3 text-primary dark:text-orange-505" />
                   <span>{language === 'bn' ? 'বাছাই:' : 'Sort By:'}</span>
                 </span>
                 <select
@@ -492,8 +492,8 @@ export default function BrowseView({
                   onClick={() => setViewMode('grid')}
                   className={`p-1.5 rounded-lg transition-all cursor-pointer ${
                     viewMode === 'grid'
-                      ? 'bg-[#ff6600] text-white shadow-xs'
-                      : 'text-slate-500 dark:text-slate-404 hover:text-[#ff6600]'
+                      ? 'bg-primary text-white shadow-xs'
+                      : 'text-slate-500 dark:text-slate-404 hover:text-primary'
                   }`}
                   title="Grid layout"
                 >
@@ -503,8 +503,8 @@ export default function BrowseView({
                   onClick={() => setViewMode('list')}
                   className={`p-1.5 rounded-lg transition-all cursor-pointer ${
                     viewMode === 'list'
-                      ? 'bg-[#ff6600] text-white shadow-xs'
-                      : 'text-slate-500 dark:text-slate-404 hover:text-[#ff6600]'
+                      ? 'bg-primary text-white shadow-xs'
+                      : 'text-slate-500 dark:text-slate-404 hover:text-primary'
                   }`}
                   title="List layout"
                 >
@@ -524,7 +524,7 @@ export default function BrowseView({
               transition={{ duration: 0.35, ease: 'easeOut' }}
               className="text-center py-20 text-slate-500"
             >
-              <Compass className="w-12 h-12 text-[#ff6600] opacity-45 mx-auto mb-3" />
+              <Compass className="w-12 h-12 text-primary opacity-45 mx-auto mb-3" />
               <p className="text-xs font-bold leading-normal text-slate-400">No matching vehicles found!</p>
               <p className="text-[11px] text-slate-500 mt-1">Please expand your search budget or clear some filter values to review alternative listings.</p>
             </motion.div>
@@ -622,7 +622,7 @@ export default function BrowseView({
                             )}
                             
                             <h4 className={`text-xs font-black tracking-tight mb-1 truncate transition-colors ${
-                              isDarkMode ? 'text-slate-100 group-hover:text-orange-400' : 'text-slate-900 group-hover:text-[#ff6600]'
+                              isDarkMode ? 'text-slate-100 group-hover:text-orange-400' : 'text-slate-900 group-hover:text-primary'
                             }`}>
                               {adSelected.title}
                             </h4>

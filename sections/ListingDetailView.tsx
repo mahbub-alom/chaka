@@ -130,7 +130,7 @@ export default function ListingDetailView({
               : 'bg-white border-slate-100 text-slate-770 hover:bg-slate-50/80 shadow-xs'
           }`}
         >
-          <ChevronLeft className="w-4 h-4 text-[#ff6600]" /> {getReturnButtonLabel()}
+          <ChevronLeft className="w-4 h-4 text-primary" /> {getReturnButtonLabel()}
         </button>
 
         <div className="flex items-center gap-2 text-[11px] font-bold text-slate-400">
@@ -203,15 +203,15 @@ export default function ListingDetailView({
 
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-3 text-[11px] sm:text-xs text-slate-500 dark:text-slate-404">
           <span className="flex items-center gap-1 bg-slate-50 dark:bg-slate-950 px-2 py-1 rounded-lg border border-slate-100 dark:border-slate-900 font-semibold shadow-2xs">
-            <Calendar className="w-3.5 h-3.5 text-[#ff6600] shrink-0" />
+            <Calendar className="w-3.5 h-3.5 text-primary shrink-0" />
             {activeListingItem.year}
           </span>
           <span className="flex items-center gap-1 bg-slate-50 dark:bg-slate-950 px-2 py-1 rounded-lg border border-slate-100 dark:border-slate-900 font-semibold shadow-2xs">
-            <Gauge className="w-3.5 h-3.5 text-[#ff6600] shrink-0" />
+            <Gauge className="w-3.5 h-3.5 text-primary shrink-0" />
             {activeListingItem.mileage ? (activeListingItem.mileage >= 1000 ? `${Math.round(activeListingItem.mileage / 1000)}k` : activeListingItem.mileage) : '0'} km
           </span>
           <span className="flex items-center gap-1 bg-slate-50 dark:bg-slate-950 px-2 py-1 rounded-lg border border-slate-100 dark:border-slate-900 font-semibold shadow-2xs">
-            <MapPin className="w-3.5 h-3.5 text-[#ff6600] shrink-0" />
+            <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
             {activeListingItem.location}, {activeListingItem.division}
           </span>
           <span className={`inline-flex items-center gap-1 text-[10px] uppercase px-2 py-0.5 rounded-lg font-black border ${
@@ -368,7 +368,7 @@ export default function ListingDetailView({
                     className={`h-9 px-4 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
                       is360Rotating 
                         ? 'bg-orange-500/10 text-orange-500 border border-orange-500/20 cursor-wait' 
-                        : 'bg-[#ff6600] hover:bg-[#eb5e00] text-white shadow-xs'
+                        : 'bg-primary hover:bg-primary-hover text-white shadow-xs'
                     }`}
                   >
                     <Sparkles className={`w-3.5 h-3.5 text-white/90 ${is360Rotating ? 'animate-spin' : 'animate-bounce-subtle'}`} />
@@ -386,7 +386,7 @@ export default function ListingDetailView({
                     isDarkMode ? 'bg-slate-900 border-slate-800' : 'bg-[#fcfbf9] border-slate-200/60 shadow-xs'
                   }`}>
                     <div>
-                      <span className="text-[9px] font-black uppercase tracking-widest text-[#ff6600] dark:text-orange-400 block mb-1">AUCTION REPORT GRADE</span>
+                      <span className="text-[9px] font-black uppercase tracking-widest text-primary dark:text-orange-400 block mb-1">AUCTION REPORT GRADE</span>
                       <span className={`text-2xl font-black ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>{activeListingItem.auctionGrade}</span>
                     </div>
                     <span className="text-[10px] text-slate-500 font-semibold">Verified via Japanese Database</span>
@@ -396,7 +396,7 @@ export default function ListingDetailView({
                     isDarkMode ? 'bg-slate-900 border-slate-800' : 'bg-[#fcfbf9] border-slate-200/60 shadow-xs'
                   }`}>
                     <div>
-                      <span className="text-[9px] font-black uppercase tracking-widest text-[#ff6600] dark:text-orange-400 block mb-1">EXTERIOR / INTERIOR GRADE</span>
+                      <span className="text-[9px] font-black uppercase tracking-widest text-primary dark:text-orange-400 block mb-1">EXTERIOR / INTERIOR GRADE</span>
                       <span className={`text-2xl font-black ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>{activeListingItem.auctionExteriorInterior || 'A / B'}</span>
                     </div>
                     <span className="text-[10px] text-slate-500 font-semibold">Mint Japanese Condition Rating</span>
@@ -498,11 +498,11 @@ export default function ListingDetailView({
               className="flex items-center gap-2.5 cursor-pointer group hover:bg-orange-500/5 p-1.5 -m-1.5 rounded-2xl transition-all flex-1 min-w-0"
               title={language === 'bn' ? 'বিক্রেতার প্রোফাইল' : 'Visit Seller Profile'}
             >
-              <div className="w-9 h-9 rounded-full bg-orange-500/10 flex items-center justify-center font-black text-[#ff6600] border border-orange-500/20 text-xs shrink-0 group-hover:scale-102 transition-transform">
+              <div className="w-9 h-9 rounded-full bg-orange-500/10 flex items-center justify-center font-black text-primary border border-orange-500/20 text-xs shrink-0 group-hover:scale-102 transition-transform">
                 {activeListingItem.showroomName ? 'SR' : 'PV'}
               </div>
               <div className="min-w-0">
-                <h4 className={`text-xs font-black group-hover:text-[#ff6600] transition-colors truncate ${isDarkMode ? 'text-slate-100' : 'text-slate-900'}`}>
+                <h4 className={`text-xs font-black group-hover:text-primary transition-colors truncate ${isDarkMode ? 'text-slate-100' : 'text-slate-900'}`}>
                   {activeListingItem.showroomName || activeListingItem.sellerName}
                 </h4>
                 <span className="text-[9px] text-slate-500 dark:text-slate-500 block uppercase tracking-wider font-extrabold mt-0.5 truncate">
@@ -515,7 +515,7 @@ export default function ListingDetailView({
 
             <button
               onClick={() => changeView('profile', activeListingItem.userId)}
-              className="shrink-0 h-7.5 px-3 rounded-lg text-[9px] bg-orange-500/10 hover:bg-orange-500/20 text-[#ff6600] dark:text-orange-404 border border-orange-500/22 font-black transition-all active:scale-95 cursor-pointer uppercase tracking-wider"
+              className="shrink-0 h-7.5 px-3 rounded-lg text-[9px] bg-orange-500/10 hover:bg-orange-500/20 text-primary dark:text-orange-404 border border-orange-500/22 font-black transition-all active:scale-95 cursor-pointer uppercase tracking-wider"
             >
               Visit
             </button>
@@ -575,14 +575,14 @@ export default function ListingDetailView({
             <div className="py-2.5 border-t border-dashed border-slate-200 dark:border-slate-800 space-y-1.5">
               <div className="flex justify-between items-center text-[11px] text-slate-500">
                 <span className="flex items-center gap-1.5 font-bold text-slate-700 dark:text-slate-300">
-                  <MapPin className="w-3.5 h-3.5 text-[#ff6600]" /> 
+                  <MapPin className="w-3.5 h-3.5 text-primary" /> 
                   {activeListingItem.location}, {activeListingItem.division}
                 </span>
                 <span className="flex items-center gap-1.5 font-bold"><Eye className="w-3.5 h-3.5 text-slate-400" /> {activeListingItem.views} views</span>
               </div>
               {activeListingItem.address && (
                 <div className="bg-slate-50 dark:bg-slate-900/60 p-2.5 rounded-xl border border-dashed border-slate-200 dark:border-slate-800 text-[10.5px] text-slate-600 dark:text-slate-404 leading-normal font-semibold">
-                  <span className="text-[#ff6600] dark:text-orange-500 font-black uppercase text-[9px] tracking-wider block mb-0.5">Custom Detailed Address:</span>
+                  <span className="text-primary dark:text-orange-500 font-black uppercase text-[9px] tracking-wider block mb-0.5">Custom Detailed Address:</span>
                   {activeListingItem.address}
                 </div>
               )}
@@ -592,7 +592,7 @@ export default function ListingDetailView({
               <div className="flex gap-2">
                 <button
                   onClick={() => handleStartListingChat(activeListingItem)}
-                  className="flex-1 h-11 text-center font-black py-2.5 px-4 bg-[#ff6600] hover:bg-[#eb5e00] text-white rounded-xl transition-all flex items-center justify-center gap-1.5 text-xs cursor-pointer shadow-xs"
+                  className="flex-1 h-11 text-center font-black py-2.5 px-4 bg-primary hover:bg-primary-hover text-white rounded-xl transition-all flex items-center justify-center gap-1.5 text-xs cursor-pointer shadow-xs"
                 >
                   <MessageSquare className="w-3.5 h-3.5 text-white/90 shrink-0" />
                   <span>Chat</span>
@@ -615,7 +615,7 @@ export default function ListingDetailView({
                 <button
                   type="button"
                   onClick={() => setRevealDetailPhone(true)}
-                  className="w-full h-11 flex items-center justify-center gap-2 bg-[#ff6600] hover:bg-[#eb5e00] text-white font-extrabold text-[12.5px] rounded-xl cursor-pointer transition-all duration-150 shadow-xs"
+                  className="w-full h-11 flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-extrabold text-[12.5px] rounded-xl cursor-pointer transition-all duration-150 shadow-xs"
                 >
                   <EyeOff className="w-4 h-4 text-white shrink-0" />
                   <span>Show Phone Number</span>
@@ -625,14 +625,14 @@ export default function ListingDetailView({
                   href={`tel:${activeListingItem.sellerPhone}`}
                   className="w-full h-11 text-center font-bold py-2.5 px-4 bg-slate-950 dark:bg-slate-955/60 hover:bg-slate-900 border border-slate-800 text-slate-200 rounded-xl transition-all flex items-center justify-center gap-2 text-xs"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#ff6600]" /> {activeListingItem.sellerPhone}
+                  <Phone className="w-3.5 h-3.5 text-primary" /> {activeListingItem.sellerPhone}
                 </a>
               )}
             </div>
 
             <div className="mt-3.5 pt-3.5 border-t border-dashed border-slate-200 dark:border-slate-800 space-y-2.5">
               <div className="flex items-center gap-1.5">
-                <Bell className="w-4 h-4 text-[#ff6600] shrink-0 animate-bounce-subtle" />
+                <Bell className="w-4 h-4 text-primary shrink-0 animate-bounce-subtle" />
                 <span className={`text-[11px] font-black uppercase tracking-wider ${isDarkMode ? 'text-slate-200' : 'text-slate-800'}`}>
                   {language === 'bn' ? 'মূল্য অ্যালার্ট সেট করুন' : 'Set Price Alert'}
                 </span>
@@ -643,7 +643,7 @@ export default function ListingDetailView({
                   isDarkMode ? 'bg-orange-955/20 border-orange-800/40 text-slate-350' : 'bg-orange-50/40 border-orange-100 text-slate-705'
                 }`}>
                   <div className="flex items-center justify-between">
-                    <span className="font-extrabold text-[#ff6600] dark:text-orange-404 flex items-center gap-1 text-[10px]">
+                    <span className="font-extrabold text-primary dark:text-orange-404 flex items-center gap-1 text-[10px]">
                       <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
                       {language === 'bn' ? 'অ্যালার্টটি সচল রয়েছে' : 'Price Alert Active'}
                     </span>
@@ -707,7 +707,7 @@ export default function ListingDetailView({
                         className={`w-full pl-3 pr-12 py-2 text-xs font-bold rounded-xl outline-none border transition-all ${
                           isDarkMode 
                             ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-orange-500' 
-                            : 'bg-slate-50 border-slate-205 focus:border-[#ff6600] focus:bg-white text-slate-800'
+                            : 'bg-slate-50 border-slate-205 focus:border-primary focus:bg-white text-slate-800'
                         }`}
                       />
                       <span className="absolute right-3.5 top-2 py-0.5 text-[8.5px] font-black text-slate-500 dark:text-slate-500 select-none">BDT</span>
@@ -761,7 +761,7 @@ export default function ListingDetailView({
               )}
             </div>
             
-            <span className="text-[9px] text-[#ff6600] text-center block leading-relaxed pt-2 border-t border-solid border-slate-100 dark:border-slate-800/40">
+            <span className="text-[9px] text-primary text-center block leading-relaxed pt-2 border-t border-solid border-slate-100 dark:border-slate-800/40">
               Safety Warning: Always inspect papers and verify the physical vehicle before initiating any secure monetary payments.
             </span>
           </div>
@@ -881,7 +881,7 @@ export default function ListingDetailView({
             <h5 className="text-[11px] font-black text-slate-900 dark:text-white uppercase tracking-tight leading-none truncate">
               Contact Seller
             </h5>
-            <span className="text-[9px] font-bold text-[#ff6600] dark:text-orange-404 block mt-0.5 leading-none">
+            <span className="text-[9px] font-bold text-primary dark:text-orange-404 block mt-0.5 leading-none">
               যোগাযোগ করুন
             </span>
           </div>
@@ -901,16 +901,16 @@ export default function ListingDetailView({
             ) : (
               <a
                 href={`tel:${activeListingItem.sellerPhone}`}
-                className="h-[32px] px-2 bg-slate-50 dark:bg-slate-950/40 border border-slate-200 dark:border-slate-800 text-[#ff6600] dark:text-orange-400 flex items-center justify-center gap-1 rounded-lg font-bold text-[10px] transition-all active:scale-95 cursor-pointer shadow-sm text-center truncate max-w-[105px]"
+                className="h-[32px] px-2 bg-slate-50 dark:bg-slate-950/40 border border-slate-200 dark:border-slate-800 text-primary dark:text-orange-400 flex items-center justify-center gap-1 rounded-lg font-bold text-[10px] transition-all active:scale-95 cursor-pointer shadow-sm text-center truncate max-w-[105px]"
               >
-                <Phone className="w-3 h-3 fill-current text-[#ff6600] shrink-0" />
+                <Phone className="w-3 h-3 fill-current text-primary shrink-0" />
                 <span className="truncate text-[9px]">{activeListingItem.sellerPhone}</span>
               </a>
             )}
 
             <button
               onClick={() => handleStartListingChat(activeListingItem)}
-              className="h-[32px] px-3 bg-[#ff6600] hover:bg-[#eb5e00] text-white flex items-center justify-center gap-1 rounded-lg font-bold text-[11px] sm:text-xs transition-all active:scale-95 cursor-pointer shadow-sm"
+              className="h-[32px] px-3 bg-primary hover:bg-primary-hover text-white flex items-center justify-center gap-1 rounded-lg font-bold text-[11px] sm:text-xs transition-all active:scale-95 cursor-pointer shadow-sm"
             >
               <MessageSquare className="w-3 h-3 text-white/90 shrink-0" />
               <span>Chat</span>

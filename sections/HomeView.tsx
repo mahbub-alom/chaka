@@ -311,8 +311,8 @@ export default function HomeView({
       {/* BRAND NEW ELEGANT CATEGORIES GRID SECTION */}
       <div className="space-y-4">
         <div>
-          <h3 className="text-sm sm:text-base md:text-lg font-black uppercase tracking-wider text-[#ff6600] dark:text-orange-404 flex items-center gap-1.5 matches-outfit">
-            <Grid className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#ff6600]" /> {t('vehicleCategories')}
+          <h3 className="text-sm sm:text-base md:text-lg font-black uppercase tracking-wider text-primary dark:text-orange-404 flex items-center gap-1.5 matches-outfit">
+            <Grid className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-primary" /> {t('vehicleCategories')}
           </h3>
           <p className={`text-xs sm:text-[13px] md:text-sm ${isDarkMode ? 'text-slate-400' : 'text-slate-505'} font-medium mt-1`}>
             {t('vehicleCategoriesSub')}
@@ -326,7 +326,7 @@ export default function HomeView({
               title: 'Car', 
               subtitle: 'Sedan & SUV', 
               svg: (
-                <svg viewBox="0 0 100 100" className="w-16 h-16 text-[#ff6600] dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 100 100" className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="10" y1="75" x2="90" y2="75" strokeWidth="1.5" className="text-slate-350 dark:text-slate-800" />
                   <path d="M15 65 h10 c2-12 18-12 20 0 h15 c2-12 18-12 20 0 h10 c4 0 5-2 5-6 v-4 c0-4-3-8-8-9 l-12-6 c-3-1.5-8-3-12-3 H38 c-4 0-9 1.5-12 3 L14 50 c-5 1-7 5-7 9 v6 z" fill="currentColor" fillOpacity="0.1" />
                   <path d="M38 41 h15 l8 11 M38 41 v11 M53 41 v11" />
@@ -345,7 +345,7 @@ export default function HomeView({
               title: 'Bike', 
               subtitle: 'Motorcycle & Scooter', 
               svg: (
-                <svg viewBox="0 0 100 100" className="w-16 h-16 text-[#ff6600] dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 100 100" className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="10" y1="75" x2="90" y2="75" strokeWidth="1.5" className="text-slate-350 dark:text-slate-800" />
                   <circle cx="25" cy="62" r="11" fill="currentColor" fillOpacity="0.08" />
                   <circle cx="75" cy="62" r="11" fill="currentColor" fillOpacity="0.08" />
@@ -366,7 +366,7 @@ export default function HomeView({
               title: 'Commercial Vehicle', 
               subtitle: 'Truck & Pickup', 
               svg: (
-                <svg viewBox="0 0 100 100" className="w-16 h-16 text-[#ff6600] dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 100 100" className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="10" y1="75" x2="90" y2="75" strokeWidth="1.5" className="text-slate-350 dark:text-slate-800" />
                   <rect x="15" y="28" width="50" height="34" rx="2" fill="currentColor" fillOpacity="0.1" strokeWidth="2.5" />
                   <path d="M28 28 v34 M45 28 v34" strokeWidth="1.5" className="opacity-45" />
@@ -384,7 +384,7 @@ export default function HomeView({
               title: 'EV', 
               subtitle: 'Electric Vehicle', 
               svg: (
-                <svg viewBox="0 0 100 100" className="w-16 h-16 text-[#ff6600] dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 100 100" className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="10" y1="75" x2="90" y2="75" strokeWidth="1.5" className="text-slate-350 dark:text-slate-800" />
                   <path d="M12 63 h12 c1-8 11-8 12 0 h28 c1-8 11-8 12 0 h12 c3 0 4-2 4-5 v-2 c0-5-3-7-7-8 L62 44 c-2-1-5-2-8-2 H34 c-3 0-6 1-8 2 L14 49 c-4 1-5 4-5 7 v2 c0 3 1 5 3 5 z" fill="currentColor" fillOpacity="0.1" />
                   <circle cx="22" cy="63" r="5" fill="none" strokeWidth="2.5" />
@@ -392,7 +392,7 @@ export default function HomeView({
                   <circle cx="62" cy="63" r="5" fill="none" strokeWidth="2.5" />
                   <circle cx="62" cy="63" r="1.5" fill="currentColor" />
                   <path d="M47 22 L41 34 h10 L45 46" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-amber-500 fill-amber-500" />
-                  <circle cx="47" cy="34" r="16" stroke="currentColor" strokeWidth="1" strokeDasharray="3 5" className="opacity-40 text-[#ff6600]" />
+                  <circle cx="47" cy="34" r="16" stroke="currentColor" strokeWidth="1" strokeDasharray="3 5" className="opacity-40 text-primary" />
                 </svg>
               )
             },
@@ -401,7 +401,7 @@ export default function HomeView({
               title: 'Three Wheeler', 
               subtitle: 'CNG & Auto', 
               svg: (
-                <svg viewBox="0 0 100 100" className="w-16 h-16 text-[#ff6600] dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 100 100" className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="10" y1="75" x2="90" y2="75" strokeWidth="1.5" className="text-slate-355 dark:text-slate-800" />
                   <path d="M22 64 h48 c2 0 3-1.5 3-3.5 l-6-24 c-1.5-6-5-10.5-12-10.5 H34 c-5 0-9 4-11 9 L15 51 c-1.5 3-1 6.5 1 9.5 z" fill="currentColor" fillOpacity="0.1" />
                   <path d="M25 45 l4-15 h14 v15 z" />
@@ -417,7 +417,7 @@ export default function HomeView({
               title: 'Bicycle', 
               subtitle: 'Cycle & Spares', 
               svg: (
-                <svg viewBox="0 0 100 100" className="w-16 h-16 text-[#ff6600] dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 100 100" className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="10" y1="75" x2="90" y2="75" strokeWidth="1.5" className="text-slate-350 dark:text-slate-800" />
                   <circle cx="28" cy="60" r="11" fill="none" strokeWidth="2.5" />
                   <circle cx="72" cy="60" r="11" fill="none" strokeWidth="2.5" />
@@ -435,7 +435,7 @@ export default function HomeView({
               title: 'Parts', 
               subtitle: 'Components & Spares', 
               svg: (
-                <svg viewBox="0 0 100 100" className="w-16 h-16 text-[#ff6600] dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 100 100" className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="50" cy="50" r="20" fill="currentColor" fillOpacity="0.1" strokeWidth="2.5" />
                   <circle cx="50" cy="50" r="9" fill="none" strokeWidth="2.5" />
                   <path d="M50 24v6M50 70v6M24 50h6M70 50h6M32 32l4.5 4.5M63.5 63.5l4.5 4.5M32 68l4.5-4.5M63.5 36.5l4.5-4.5" strokeWidth="3.5" strokeLinecap="round" />
@@ -451,7 +451,7 @@ export default function HomeView({
               title: 'Services', 
               subtitle: 'Workshop & Support', 
               svg: (
-                <svg viewBox="0 0 100 100" className="w-16 h-16 text-[#ff6600] dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 100 100" className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M25 25 h50 v45 c0 8-15 14-25 14 C35 84 20 78 20 70 V25 z" fill="currentColor" fillOpacity="0.1" strokeWidth="2.5" />
                   <path d="M38 48 l7 7 18-18" strokeWidth="3.5" className="text-orange-500" strokeLinecap="round" strokeLinejoin="round" />
                   <circle cx="50" cy="18" r="4" fill="none" strokeWidth="2" />
@@ -478,13 +478,13 @@ export default function HomeView({
               >
                 <div className="w-full h-20 rounded-xl overflow-hidden bg-slate-50 dark:bg-slate-955/75 flex items-center justify-center p-1.5 shrink-0 relative">
                   {cat.svg}
-                  <span className="absolute top-1 right-1 text-[10px] sm:text-[11px] px-1.5 py-0.5 rounded-md font-black bg-[#ff6600]/10 text-[#ff6600] dark:bg-orange-500/10 dark:text-orange-400">
+                  <span className="absolute top-1 right-1 text-[10px] sm:text-[11px] px-1.5 py-0.5 rounded-md font-black bg-primary/10 text-primary dark:bg-orange-500/10 dark:text-orange-400">
                     {count} ads
                   </span>
                 </div>
 
                 <div className="text-center pt-2 pb-1">
-                  <h4 className="text-[12px] sm:text-xs font-black uppercase tracking-tight text-slate-800 dark:text-slate-200 group-hover:text-[#ff6600] dark:group-hover:text-orange-400 transition-colors">
+                  <h4 className="text-[12px] sm:text-xs font-black uppercase tracking-tight text-slate-800 dark:text-slate-200 group-hover:text-primary dark:group-hover:text-orange-400 transition-colors">
                     {language === 'bn' 
                       ? (cat.id === 'car' ? 'গাড়ি' : cat.id === 'bike' ? 'বাইক' : cat.id === 'commercial' ? 'কমার্শিয়াল গাড়ি' : cat.id === 'ev' ? 'ইভি (ইলেকট্রিক)' : cat.id === 'threewheeler' ? 'থ্রি হুইলার' : cat.id === 'bicycle' ? 'বাইসাইকেল' : cat.id === 'parts' ? 'পার্টস' : 'সার্ভিস')
                       : cat.title
@@ -509,7 +509,7 @@ export default function HomeView({
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-base sm:text-lg md:text-xl font-black tracking-tight flex items-center gap-2">
-              <Sparkles className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#ff6600] animate-bounce-subtle" /> {language === 'bn' ? 'জনপ্রিয় ব্র্যান্ড সমূহ' : 'Popular Brands'}
+              <Sparkles className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-primary animate-bounce-subtle" /> {language === 'bn' ? 'জনপ্রিয় ব্র্যান্ড সমূহ' : 'Popular Brands'}
             </h2>
             <p className={`text-[10px] sm:text-[11px] md:text-xs ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
               {language === 'bn' ? 'আপনার পছন্দের ব্র্যান্ডটি সিলেক্ট করে চমৎকার সব লিস্টিং ইনস্ট্যান্টলি খুঁজে নিন' : 'Select your preferred automobile manufacturer to filter listings instantly'}
@@ -540,7 +540,7 @@ export default function HomeView({
                 <div className="flex flex-col pr-1 justify-center">
                   <span className={`text-sm sm:text-base font-black tracking-tight transition-colors ${
                     isDarkMode ? 'text-slate-200' : 'text-slate-800'
-                  } group-hover:text-[#ff6600] dark:group-hover:text-orange-400`}>
+                  } group-hover:text-primary dark:group-hover:text-orange-400`}>
                     {brand.name}
                   </span>
                 </div>
@@ -554,7 +554,7 @@ export default function HomeView({
         <div className="flex justify-between items-center sm:items-end">
           <div>
             <h2 className="text-base sm:text-lg md:text-xl font-black tracking-tight flex items-center gap-2">
-              <Eye className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#ff6600]" /> {language === 'bn' ? 'সবচেয়ে জনপ্রিয় বিজ্ঞাপন সমূহ' : 'Most Viewed Ads'}
+              <Eye className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-primary" /> {language === 'bn' ? 'সবচেয়ে জনপ্রিয় বিজ্ঞাপন সমূহ' : 'Most Viewed Ads'}
             </h2>
             <p className={`text-[10px] sm:text-[11px] md:text-xs ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
               {language === 'bn' ? 'সারাদেশের ক্রেতাদের সর্বাধিক বার দেখা ৮টি আকর্ষণীয় বিজ্ঞাপন' : 'Explore the hottest vehicle deals based on active customer views across Bangladesh (8 featured deals)'}
@@ -567,8 +567,8 @@ export default function HomeView({
                 onClick={() => setHomeViewMode('grid')}
                 className={`p-1 sm:p-1.5 rounded-md transition-all cursor-pointer ${
                   homeViewMode === 'grid'
-                    ? 'bg-[#ff6600] text-white shadow-xs'
-                    : 'text-slate-500 dark:text-slate-404 hover:text-[#ff6600]'
+                    ? 'bg-primary text-white shadow-xs'
+                    : 'text-slate-500 dark:text-slate-404 hover:text-primary'
                 }`}
                 title="Grid space"
               >
@@ -578,8 +578,8 @@ export default function HomeView({
                 onClick={() => setHomeViewMode('list')}
                 className={`p-1 sm:p-1.5 rounded-md transition-all cursor-pointer ${
                   homeViewMode === 'list'
-                    ? 'bg-[#ff6600] text-white shadow-xs'
-                    : 'text-slate-500 dark:text-slate-404 hover:text-[#ff6600]'
+                    ? 'bg-primary text-white shadow-xs'
+                    : 'text-slate-500 dark:text-slate-404 hover:text-primary'
                 }`}
                 title="Detailed list"
               >
@@ -589,7 +589,7 @@ export default function HomeView({
 
             <button
               onClick={() => changeView('browse')}
-              className="hidden sm:inline-flex items-center gap-1 text-xs font-black text-[#ff6600] hover:text-[#eb5e00] transition-colors cursor-pointer"
+              className="hidden sm:inline-flex items-center gap-1 text-xs font-black text-primary hover:text-primary-hover transition-colors cursor-pointer"
             >
               View All &rarr;
             </button>
@@ -612,7 +612,7 @@ export default function HomeView({
         <div className="text-center pt-1.5 sm:hidden">
           <button
             onClick={() => changeView('browse')}
-            className="w-full bg-slate-900 border border-slate-800 text-[#ff6600] font-black py-3 rounded-xl text-xs transition-colors cursor-pointer"
+            className="w-full bg-slate-900 border border-slate-800 text-primary font-black py-3 rounded-xl text-xs transition-colors cursor-pointer"
           >
             Browse Complete Catalog ({listings.length} Active Ads)
           </button>
@@ -630,7 +630,7 @@ export default function HomeView({
               isDarkMode ? 'text-white' : 'text-slate-900'
             }`}>
               <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-orange-500/10 border border-orange-500/20">
-                <MapPin className="w-4 h-4 text-[#ff6600]" />
+                <MapPin className="w-4 h-4 text-primary" />
               </span>
               {t('browseTitle')}
             </h3>
@@ -670,7 +670,7 @@ export default function HomeView({
                 className={`relative p-4 rounded-2xl border cursor-pointer overflow-hidden transition-all duration-300 md:hover:-translate-y-1 hover:shadow-md flex flex-col justify-between group h-36 ${
                   isDarkMode 
                     ? 'bg-slate-955/40 border-slate-900/60 hover:border-orange-500/30 hover:bg-slate-900/25' 
-                    : 'bg-white border-slate-200/50 hover:border-[#ff6600]/25 hover:bg-slate-50/20'
+                    : 'bg-white border-slate-200/50 hover:border-primary/25 hover:bg-slate-50/20'
                 }`}
               >
                 <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${meta.gradient} rounded-bl-full opacity-20 group-hover:opacity-45 blur-md transition-opacity`} />
@@ -694,7 +694,7 @@ export default function HomeView({
 
                 <div className="relative z-10 mt-3">
                   <h4 className={`text-xs font-black tracking-tight transition-colors truncate ${
-                    isDarkMode ? 'text-slate-100 group-hover:text-orange-400' : 'text-slate-900 group-hover:text-[#ff6600]'
+                    isDarkMode ? 'text-slate-100 group-hover:text-orange-400' : 'text-slate-900 group-hover:text-primary'
                   }`}>
                     {language === 'bn' 
                       ? (div === 'Dhaka' ? 'ঢাকা' : div === 'Chittagong' ? 'চট্টগ্রাম' : div === 'Sylhet' ? 'সিলেট' : div === 'Rajshahi' ? 'রাজশাহী' : div === 'Khulna' ? 'খুলনা' : div === 'Barisal' ? 'বরিশাল' : div === 'Rangpur' ? 'রংপুর' : 'ময়মনসিংহ')

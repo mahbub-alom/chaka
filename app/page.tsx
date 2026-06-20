@@ -897,7 +897,7 @@ export default function Home() {
     return (
       <div className="min-h-screen bg-[#faf8f5] dark:bg-slate-955 flex flex-col items-center justify-center">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-10 h-10 border-4 border-[#ff6600] border-t-transparent rounded-full animate-spin"></div>
+          <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
           <span className="text-xs font-bold text-slate-500 dark:text-slate-400">Loading Chaka BD...</span>
         </div>
       </div>

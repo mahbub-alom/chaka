@@ -219,7 +219,7 @@ export default function ChatWindow({ chat, isDarkMode, onSendMessage, currentUse
             </div>
 
             <div className="flex items-center gap-2 mt-1 flex-wrap">
-              <span className={`text-[11px] font-black ${isDarkMode ? 'text-teal-400' : 'text-[#ff6600]'}`}>
+              <span className={`text-[11px] font-black ${isDarkMode ? 'text-teal-400' : 'text-primary'}`}>
                 {chat.listingPrice}
               </span>
               <span className="text-[10px] text-slate-400 font-sans">•</span>
@@ -298,7 +298,7 @@ export default function ChatWindow({ chat, isDarkMode, onSendMessage, currentUse
                 animate={{ opacity: 1, y: 0 }}
                 className="flex flex-col items-center justify-center py-16 text-center text-slate-400"
               >
-                <div className="p-3.5 rounded-full bg-[#ff6600]/10 text-[#ff6600] dark:bg-orange-500/10 dark:text-orange-400 mb-3">
+                <div className="p-3.5 rounded-full bg-primary/10 text-primary dark:bg-orange-500/10 dark:text-orange-400 mb-3">
                   <MessageSquare className="w-7 h-7" />
                 </div>
                 <h5 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 font-sans">Secure Conversation</h5>
@@ -455,7 +455,7 @@ export default function ChatWindow({ chat, isDarkMode, onSendMessage, currentUse
                   setShowOfferForm(false);
                   setOfferPrice('');
                 }}
-                className="px-4 py-2.5 text-[11.5px] font-extrabold bg-[#ff6600] hover:bg-[#eb5e00] text-white rounded-xl transition-all shadow-md cursor-pointer flex items-center gap-1 uppercase"
+                className="px-4 py-2.5 text-[11.5px] font-extrabold bg-primary hover:bg-primary-hover text-white rounded-xl transition-all shadow-md cursor-pointer flex items-center gap-1 uppercase"
               >
                 Propose <ArrowRight className="w-3.5 h-3.5" />
               </button>
@@ -476,7 +476,7 @@ export default function ChatWindow({ chat, isDarkMode, onSendMessage, currentUse
           className={`px-3 py-2.5 rounded-xl transition-all font-black text-xs flex items-center gap-1 cursor-pointer whitespace-nowrap shrink-0 border ${
             showOfferForm
               ? 'bg-rose-500/10 border-rose-500/30 text-rose-500 shadow-sm'
-              : 'bg-orange-500/10 border-orange-500/20 text-[#ff6600] hover:bg-[#ff6600] hover:text-white hover:border-[#ff6600]'
+              : 'bg-orange-500/10 border-orange-500/20 text-primary hover:bg-primary hover:text-white hover:border-primary'
           }`}
           title="Make direct proposed offer"
         >

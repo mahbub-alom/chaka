@@ -266,12 +266,12 @@ export default function DashboardAdmin({
           ? 'bg-gradient-to-r from-orange-950/20 via-slate-900 to-slate-900 border-slate-800' 
           : 'bg-gradient-to-r from-orange-50/40 via-white to-white border-slate-200 shadow-md shadow-slate-100/40'
       }`}>
-        <div className="absolute top-0 right-0 w-80 h-full bg-radial-gradient from-[#ff6600]/10 to-transparent opacity-60 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-80 h-full bg-radial-gradient from-primary/10 to-transparent opacity-60 pointer-events-none" />
 
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 z-10 relative">
           <div className="flex items-center gap-3.5">
             <div className={`w-13 h-13 rounded-2xl flex items-center justify-center border ${
-              isDarkMode ? 'bg-[#ff6600]/10 border-[#ff6600]/30 text-orange-400' : 'bg-orange-50 border-orange-100 text-[#ff6600]'
+              isDarkMode ? 'bg-primary/10 border-primary/30 text-orange-400' : 'bg-orange-50 border-orange-100 text-primary'
             }`}>
               <Shield className="w-6.5 h-6.5 fill-current/15" />
             </div>
@@ -285,7 +285,7 @@ export default function DashboardAdmin({
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 mt-1 flex items-center gap-1">
-                <Database className="w-3.5 h-3.5 text-[#ff6600]" /> System IP: <span className="font-mono text-slate-450">127.0.0.1 (Node Engine Port 3000)</span>
+                <Database className="w-3.5 h-3.5 text-primary" /> System IP: <span className="font-mono text-slate-450">127.0.0.1 (Node Engine Port 3000)</span>
               </p>
             </div>
           </div>
@@ -300,10 +300,10 @@ export default function DashboardAdmin({
                   : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200'
               }`}
             >
-              <RefreshCw className="w-4 h-4 text-[#ff6600]" />
+              <RefreshCw className="w-4 h-4 text-primary" />
               <span>Diagnostic Sync</span>
             </button>
-            <span className={`bg-orange-500/10 text-[#ff6600] dark:text-orange-400 text-[10px] font-extrabold px-3.5 py-2 rounded-xl uppercase tracking-widest border border-orange-500/25 flex items-center gap-1.5`}>
+            <span className={`bg-orange-500/10 text-primary dark:text-orange-400 text-[10px] font-extrabold px-3.5 py-2 rounded-xl uppercase tracking-widest border border-orange-500/25 flex items-center gap-1.5`}>
               <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
               {listings.filter(l => l.status === 'Pending').length} Pending Audits
             </span>
@@ -355,7 +355,7 @@ export default function DashboardAdmin({
               <span>Pending: {listings.filter(l => l.status === 'Pending').length}</span>
             </div>
             <div className="w-full bg-slate-800 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden flex">
-              <div className="bg-[#ff6600] h-full" style={{ width: `${(listings.filter(l => l.status === 'Approved').length / listings.length) * 100}%` }} />
+              <div className="bg-primary h-full" style={{ width: `${(listings.filter(l => l.status === 'Approved').length / listings.length) * 100}%` }} />
               <div className="bg-amber-500 h-full" style={{ width: `${(listings.filter(l => l.status === 'Pending').length / listings.length) * 100}%` }} />
             </div>
           </div>
@@ -415,7 +415,7 @@ export default function DashboardAdmin({
       }`}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-[#ff6600]/10 text-[#ff6600] rounded-xl shrink-0">
+            <div className="p-2 bg-primary/10 text-primary rounded-xl shrink-0">
               <Terminal className="w-4.5 h-4.5 animate-pulse" />
             </div>
             <div>
@@ -432,7 +432,7 @@ export default function DashboardAdmin({
               isDarkMode ? 'bg-slate-900/60 border-slate-800/80 text-orange-500' : 'bg-white border-slate-150 text-slate-650'
             }`}>
               <div className="flex items-center gap-2 overflow-hidden truncate">
-                <span className="bg-[#ff6600]/10 text-[#ff6600] font-black text-[8px] px-1.5 py-0.5 rounded tracking-wide uppercase">Audit Trial</span>
+                <span className="bg-primary/10 text-primary font-black text-[8px] px-1.5 py-0.5 rounded tracking-wide uppercase">Audit Trial</span>
                 <span className="truncate">{auditLogs[0] || 'Idle listening on system notifications.'}</span>
               </div>
               <span className="text-[8.5px] text-slate-400 select-none shrink-0 border-l pl-2 border-slate-800/20 lowercase">
@@ -449,14 +449,14 @@ export default function DashboardAdmin({
           onClick={() => setActiveAdminTab('listings')}
           className={`flex items-center gap-2 pb-2.5 pt-1 px-3 text-xs font-black tracking-wider uppercase transition-all relative cursor-pointer shrink-0 ${
             activeAdminTab === 'listings' 
-              ? 'text-[#ff6600]' 
+              ? 'text-primary' 
               : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-355'
           }`}
         >
           <Sliders className="w-4.5 h-4.5" />
           <span>Master Vehicle Directory ({listings.length})</span>
           {activeAdminTab === 'listings' && (
-            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#ff6600] rounded-full" />
+            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
           )}
         </button>
 
@@ -464,7 +464,7 @@ export default function DashboardAdmin({
           onClick={() => setActiveAdminTab('reports')}
           className={`flex items-center gap-2 pb-2.5 pt-1 px-3 text-xs font-black tracking-wider uppercase transition-all relative cursor-pointer shrink-0 ${
             activeAdminTab === 'reports' 
-              ? 'text-[#ff6600]' 
+              ? 'text-primary' 
               : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-355'
           }`}
         >
@@ -476,7 +476,7 @@ export default function DashboardAdmin({
             </span>
           )}
           {activeAdminTab === 'reports' && (
-            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#ff6600] rounded-full" />
+            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
           )}
         </button>
 
@@ -484,14 +484,14 @@ export default function DashboardAdmin({
           onClick={() => setActiveAdminTab('ads')}
           className={`flex items-center gap-2 pb-2.5 pt-1 px-3 text-xs font-black tracking-wider uppercase transition-all relative cursor-pointer shrink-0 ${
             activeAdminTab === 'ads' 
-              ? 'text-[#ff6600]' 
+              ? 'text-primary' 
               : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-355'
           }`}
         >
           <Landmark className="w-4.5 h-4.5" />
           <span>Sponsored Ad slots</span>
           {activeAdminTab === 'ads' && (
-            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#ff6600] rounded-full" />
+            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
           )}
         </button>
 
@@ -499,14 +499,14 @@ export default function DashboardAdmin({
           onClick={() => setActiveAdminTab('settings')}
           className={`flex items-center gap-2 pb-2.5 pt-1 px-3 text-xs font-black tracking-wider uppercase transition-all relative cursor-pointer shrink-0 ${
             activeAdminTab === 'settings' 
-              ? 'text-[#ff6600]' 
+              ? 'text-primary' 
               : 'text-slate-500 hover:text-slate-700 dark:hover:text-slate-355'
           }`}
         >
           <Settings className="w-4.5 h-4.5" />
           <span>System Settings</span>
           {activeAdminTab === 'settings' && (
-            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#ff6600] rounded-full" />
+            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
           )}
         </button>
       </div>
@@ -528,7 +528,7 @@ export default function DashboardAdmin({
                   placeholder="Search listings by title, brand, model, seller or showroom..."
                   value={adminSearch}
                   onChange={(e) => setAdminSearch(e.target.value)}
-                  className={`w-full text-xs font-semibold pl-9 pr-4 py-2.5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                  className={`w-full text-xs font-semibold pl-9 pr-4 py-2.5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                     isDarkMode 
                       ? 'bg-slate-950/80 border-slate-800 text-slate-100 placeholder-slate-500' 
                       : 'bg-slate-50 border-slate-200 text-slate-900 placeholder-slate-400'
@@ -541,7 +541,7 @@ export default function DashboardAdmin({
                 <select
                   value={adminStatusFilter}
                   onChange={(e) => setAdminStatusFilter(e.target.value as any)}
-                  className={`w-full text-xs font-bold px-3 py-2.5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] cursor-pointer ${
+                  className={`w-full text-xs font-bold px-3 py-2.5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer ${
                     isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-850'
                   }`}
                 >
@@ -557,7 +557,7 @@ export default function DashboardAdmin({
                 <select
                   value={adminConditionFilter}
                   onChange={(e) => setAdminConditionFilter(e.target.value as any)}
-                  className={`w-full text-xs font-bold px-3 py-2.5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] cursor-pointer ${
+                  className={`w-full text-xs font-bold px-3 py-2.5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer ${
                     isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-850'
                   }`}
                 >
@@ -573,7 +573,7 @@ export default function DashboardAdmin({
                 <select
                   value={adminFeaturedFilter}
                   onChange={(e) => setAdminFeaturedFilter(e.target.value as any)}
-                  className={`w-full text-xs font-bold px-3 py-2.5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] cursor-pointer ${
+                  className={`w-full text-xs font-bold px-3 py-2.5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer ${
                     isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-850'
                   }`}
                 >
@@ -593,7 +593,7 @@ export default function DashboardAdmin({
                   onClick={() => setAdminTypeFilter(type)}
                   className={`px-3 py-1 rounded-lg text-[11px] font-black capitalize tracking-wide transition-all cursor-pointer ${
                     adminTypeFilter === type
-                      ? 'bg-[#ff6600] text-white'
+                      ? 'bg-primary text-white'
                       : isDarkMode 
                         ? 'bg-slate-950 text-slate-400 border border-slate-850 hover:bg-slate-900' 
                         : 'bg-slate-100 text-slate-700 hover:bg-slate-150'
@@ -631,7 +631,7 @@ export default function DashboardAdmin({
                         <p className="font-bold text-slate-400 text-xs">No active listings match your administrative guidelines.</p>
                         <button 
                           onClick={() => { setAdminSearch(''); setAdminStatusFilter('all'); setAdminConditionFilter('all'); setAdminTypeFilter('all'); }}
-                          className="mt-2 text-xs font-black text-[#ff6600] hover:underline"
+                          className="mt-2 text-xs font-black text-primary hover:underline"
                         >
                           Reset Filters
                         </button>
@@ -784,8 +784,8 @@ export default function DashboardAdmin({
           
           <div className={`p-4.5 rounded-2.5xl border ${isDarkMode ? 'bg-slate-900/40 border-slate-800' : 'bg-white border-slate-200'}`}>
             <div className="flex justify-between items-center mb-3">
-              <h3 className="text-xs font-black uppercase tracking-wider text-[#ff6600] flex items-center gap-1.5">
-                <ShieldAlert className="w-4 h-4 text-[#ff6600]" /> Active Compliance Reports Queue
+              <h3 className="text-xs font-black uppercase tracking-wider text-primary flex items-center gap-1.5">
+                <ShieldAlert className="w-4 h-4 text-primary" /> Active Compliance Reports Queue
               </h3>
               <span className="text-[10px] text-slate-450 uppercase">Secured directly from customer report forms</span>
             </div>
@@ -874,7 +874,7 @@ export default function DashboardAdmin({
                               setAdminSearch(matchedLog.title);
                               setActiveAdminTab('listings');
                             }}
-                            className="mt-3 text-[10px] font-heavy px-2 py-1 bg-[#ff6600]/10 text-[#ff6600] rounded hover:bg-[#ff6600]/20 transition-colors w-full"
+                            className="mt-3 text-[10px] font-heavy px-2 py-1 bg-primary/10 text-primary rounded hover:bg-primary/20 transition-colors w-full"
                           >
                             Locate listing entry
                           </button>
@@ -897,7 +897,7 @@ export default function DashboardAdmin({
                         <div className="flex gap-2.5">
                           <button
                             onClick={() => handleResolveReport(report.id, 'dismiss')}
-                            className="inline-flex items-center gap-1.5 text-[10px] font-black px-3.5 py-1.5 bg-[#ff6600]/10 text-[#ff6600] hover:bg-[#ff6600]/20 transition-all rounded-lg cursor-pointer"
+                            className="inline-flex items-center gap-1.5 text-[10px] font-black px-3.5 py-1.5 bg-primary/10 text-primary hover:bg-primary/20 transition-all rounded-lg cursor-pointer"
                           >
                             <Check className="w-3.5 h-3.5" /> Dismiss Complaints
                           </button>
@@ -936,12 +936,12 @@ export default function DashboardAdmin({
               <div className={`p-5 rounded-2.5xl border ${isDarkMode ? 'bg-slate-900/40 border-slate-800' : 'bg-white border-slate-200'}`}>
                 <div className="flex justify-between items-center mb-4 border-b pb-3 dark:border-slate-800">
                   <div>
-                    <h3 className="text-xs font-black uppercase tracking-wider flex items-center gap-1.5 text-[#ff6600]">
+                    <h3 className="text-xs font-black uppercase tracking-wider flex items-center gap-1.5 text-primary">
                       <Landmark className="w-4 h-4 text-amber-500" /> Active Site Ad Placements
                     </h3>
                     <p className="text-[10px] text-slate-500 mt-1">Configure and load ad campaigns across the main web frames.</p>
                   </div>
-                  <span className="text-[10.5px] px-2.5 py-1 bg-[#ff6600]/10 text-[#ff6600] font-black rounded-lg">
+                  <span className="text-[10.5px] px-2.5 py-1 bg-primary/10 text-primary font-black rounded-lg">
                     {adSlots.length} Registered Slots
                   </span>
                 </div>
@@ -952,7 +952,7 @@ export default function DashboardAdmin({
                       key={ad.id}
                       className={`p-4 rounded-xl border transition-all ${
                         editingAdSlot?.id === ad.id
-                          ? 'border-[#ff6600] bg-[#ff6600]/5'
+                          ? 'border-primary bg-primary/5'
                           : isDarkMode ? 'bg-slate-950 border-slate-900 hover:border-slate-800' : 'bg-white border-slate-200 shadow-sm hover:border-slate-350'
                       }`}
                     >
@@ -997,7 +997,7 @@ export default function DashboardAdmin({
                             >
                               <div className={`relative w-11 h-6 rounded-full transition-colors duration-300 ease-in-out p-1 ${
                                 ad.isActive 
-                                  ? 'bg-gradient-to-r from-amber-500 to-[#ff6600]' 
+                                  ? 'bg-gradient-to-r from-amber-500 to-primary' 
                                   : isDarkMode ? 'bg-slate-800' : 'bg-slate-200'
                               }`}>
                                 <div className={`w-4 h-4 bg-white rounded-full transition-transform duration-300 ease-in-out shadow ${
@@ -1015,7 +1015,7 @@ export default function DashboardAdmin({
                             }}
                             className={`text-[10px] font-black px-3.5 py-1.5 rounded-lg border transition-all cursor-pointer ${
                               editingAdSlot?.id === ad.id
-                                ? 'bg-[#ff6600] border-[#ff6600] text-white'
+                                ? 'bg-primary border-primary text-white'
                                 : isDarkMode
                                   ? 'bg-slate-900 hover:bg-slate-800 border-slate-800 text-slate-300 hover:text-white'
                                   : 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-700 shadow-xs'
@@ -1056,7 +1056,7 @@ export default function DashboardAdmin({
                   <div className="flex justify-between items-center mb-4 border-b pb-3 dark:border-slate-800">
                     <div>
                       <h4 className="text-xs font-black uppercase text-amber-500">Campaign Editor</h4>
-                      <p className="text-[9px] text-slate-500 mt-0.5">Custom variables for <strong className="font-mono text-[#ff6600]">{editingAdSlot.placement}</strong></p>
+                      <p className="text-[9px] text-slate-500 mt-0.5">Custom variables for <strong className="font-mono text-primary">{editingAdSlot.placement}</strong></p>
                     </div>
                     <button
                       onClick={() => setEditingAdSlot(null)}
@@ -1081,7 +1081,7 @@ export default function DashboardAdmin({
                         type="text"
                         value={editingAdSlot.title}
                         onChange={(e) => setEditingAdSlot({...editingAdSlot, title: e.target.value})}
-                        className={`w-full text-xs font-semibold px-3 py-2 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                        className={`w-full text-xs font-semibold px-3 py-2 rounded-lg border focus:outline-none focus:ring-1 focus:ring-primary ${
                           isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-900'
                         }`}
                         placeholder="e.g. Premium Auto Accessories Discount"
@@ -1096,7 +1096,7 @@ export default function DashboardAdmin({
                         rows={2}
                         value={editingAdSlot.description}
                         onChange={(e) => setEditingAdSlot({...editingAdSlot, description: e.target.value})}
-                        className={`w-full text-xs font-semibold px-3 py-2 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                        className={`w-full text-xs font-semibold px-3 py-2 rounded-lg border focus:outline-none focus:ring-1 focus:ring-primary ${
                           isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-900'
                         }`}
                         placeholder="e.g. Get up to 35% discount on reconditioned spares, Japanese lubricants and genuine detailing kits for all Toyota car models."
@@ -1111,7 +1111,7 @@ export default function DashboardAdmin({
                         type="url"
                         value={editingAdSlot.imageUrl}
                         onChange={(e) => setEditingAdSlot({...editingAdSlot, imageUrl: e.target.value})}
-                        className={`w-full text-xs font-mono px-3 py-2 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                        className={`w-full text-xs font-mono px-3 py-2 rounded-lg border focus:outline-none focus:ring-1 focus:ring-primary ${
                           isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-900'
                         }`}
                         placeholder="e.g. https://images.unsplash.com/..."
@@ -1137,7 +1137,7 @@ export default function DashboardAdmin({
                               }}
                               className={`p-1 rounded border overflow-hidden hover:opacity-100 cursor-pointer transition-all ${
                                 editingAdSlot.imageUrl === preset.url 
-                                  ? 'border-[#ff6600] opacity-100 scale-102 bg-[#ff6600]/10' 
+                                  ? 'border-primary opacity-100 scale-102 bg-primary/10' 
                                   : 'border-slate-800 opacity-60 hover:border-slate-500'
                               }`}
                               title={preset.name}
@@ -1157,7 +1157,7 @@ export default function DashboardAdmin({
                         type="text"
                         value={editingAdSlot.targetUrl}
                         onChange={(e) => setEditingAdSlot({...editingAdSlot, targetUrl: e.target.value})}
-                        className={`w-full text-xs font-semibold px-3 py-2 rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                        className={`w-full text-xs font-semibold px-3 py-2 rounded-lg border focus:outline-none focus:ring-1 focus:ring-primary ${
                           isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-900'
                         }`}
                         placeholder="e.g. tel:01886666018, or https://chaka.bd/promo"
@@ -1169,7 +1169,7 @@ export default function DashboardAdmin({
                     <div className="flex gap-2.5 pt-2">
                       <button
                         type="submit"
-                        className="flex-1 bg-[#ff6600] hover:bg-[#eb5e00] text-white text-xs font-black py-2.5 px-4 rounded-xl transition-all cursor-pointer shadow-md shadow-orange-500/5 hover:-translate-y-0.5"
+                        className="flex-1 bg-primary hover:bg-primary-hover text-white text-xs font-black py-2.5 px-4 rounded-xl transition-all cursor-pointer shadow-md shadow-orange-500/5 hover:-translate-y-0.5"
                       >
                         Push Changes Live
                       </button>
@@ -1229,7 +1229,7 @@ export default function DashboardAdmin({
 
                     <div className="flex justify-between items-center text-[9px] font-mono text-slate-500 pt-1.5 border-t dark:border-slate-900">
                       <span>CTR Target: 1.25%</span>
-                      <span className="text-[#ff6600]">Onclick: {editingAdSlot.targetUrl || 'none'}</span>
+                      <span className="text-primary">Onclick: {editingAdSlot.targetUrl || 'none'}</span>
                     </div>
                   </div>
                 ) : (
@@ -1313,7 +1313,7 @@ export default function DashboardAdmin({
                   >
                     <div className={`relative w-12 h-6.5 rounded-full transition-colors duration-300 ease-in-out p-1 ${
                       globalSettings.autoApproveAds 
-                        ? 'bg-[#ff6600]' 
+                        ? 'bg-primary' 
                         : isDarkMode ? 'bg-slate-800' : 'bg-slate-200'
                     }`}>
                       <div className={`w-4.5 h-4.5 bg-white rounded-full transition-transform duration-300 ease-in-out shadow-md ${
@@ -1340,7 +1340,7 @@ export default function DashboardAdmin({
                   >
                     <div className={`relative w-12 h-6.5 rounded-full transition-colors duration-300 ease-in-out p-1 ${
                       globalSettings.systemAlerts 
-                        ? 'bg-[#ff6600]' 
+                        ? 'bg-primary' 
                         : isDarkMode ? 'bg-slate-800' : 'bg-slate-200'
                     }`}>
                       <div className={`w-4.5 h-4.5 bg-white rounded-full transition-transform duration-300 ease-in-out shadow-md ${
@@ -1368,7 +1368,7 @@ export default function DashboardAdmin({
                         setGlobalSettings(prev => ({ ...prev, checkedServiceFee: val }));
                         handleSimulateLog(`Service charge edited to ${val} BDT`);
                       }}
-                      className={`w-full text-xs font-bold pl-12 pr-4 py-2.5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                      className={`w-full text-xs font-bold pl-12 pr-4 py-2.5 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                         isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100' : 'bg-slate-50 border-slate-200'
                       }`} 
                     />
@@ -1380,7 +1380,7 @@ export default function DashboardAdmin({
                 <div className="space-y-1 pb-3">
                   <div className="flex justify-between items-center text-[10.5px] font-black text-slate-500 uppercase tracking-wider">
                     <span>Audit Spam Filter Weight</span>
-                    <span className="text-[#ff6600] font-black text-xs font-mono">{globalSettings.spamThreshold}%</span>
+                    <span className="text-primary font-black text-xs font-mono">{globalSettings.spamThreshold}%</span>
                   </div>
                   <input 
                     type="range"
@@ -1391,7 +1391,7 @@ export default function DashboardAdmin({
                       const val = Number(e.target.value);
                       setGlobalSettings(prev => ({ ...prev, spamThreshold: val }));
                     }}
-                    className="w-full text-[#ff6600] bg-slate-800 h-1.5 rounded-lg cursor-pointer" 
+                    className="w-full text-primary bg-slate-800 h-1.5 rounded-lg cursor-pointer" 
                   />
                   <span className="text-[9px] text-slate-500 block">AI probability calculation weight to auto-flag suspicious description terms.</span>
                 </div>
@@ -1455,7 +1455,7 @@ export default function DashboardAdmin({
                       const uptime = (Math.random() * 10 + 90).toFixed(2);
                       handleSimulateLog(`♻️ Memory Sweeper completed. Freed 142MB heap leakage. Server health: ${uptime}% optimal.`);
                     }}
-                    className="w-full text-left text-[11px] font-bold p-3 rounded-xl border border-orange-500/10 bg-[#ff6600]/5 hover:bg-[#ff6600]/10 text-orange-400 transition-all cursor-pointer flex items-center justify-between"
+                    className="w-full text-left text-[11px] font-bold p-3 rounded-xl border border-orange-500/10 bg-primary/5 hover:bg-primary/10 text-orange-400 transition-all cursor-pointer flex items-center justify-between"
                   >
                     <span>♻️ Run Garbage Collector Sweep</span>
                     <span className="text-[9px] bg-orange-500/10 px-1 rounded uppercase font-mono">Run</span>
@@ -1470,7 +1470,7 @@ export default function DashboardAdmin({
                       onClick={() => {
                         setAuditLogs([`[${new Date().toLocaleTimeString()}] Diagnostics terminal log stack flushed.`]);
                       }}
-                      className="text-[9px] font-heavy text-[#ff6600] bg-[#ff6600]/10 hover:bg-[#ff6600]/20 px-2 py-0.5 rounded cursor-pointer"
+                      className="text-[9px] font-heavy text-primary bg-primary/10 hover:bg-primary/20 px-2 py-0.5 rounded cursor-pointer"
                     >
                       Clear Logs
                     </button>
@@ -1532,7 +1532,7 @@ export default function DashboardAdmin({
               isDarkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-50 border-slate-200'
             }`}>
               <div className="flex items-center gap-2.5">
-                <div className="w-8.5 h-8.5 rounded-full bg-[#ff6600]/10 text-[#ff6600] flex items-center justify-center">
+                <div className="w-8.5 h-8.5 rounded-full bg-primary/10 text-primary flex items-center justify-center">
                   <Edit className="w-4 h-4" />
                 </div>
                 <div>
@@ -1554,8 +1554,8 @@ export default function DashboardAdmin({
             {/* Modal Form body */}
             <form onSubmit={handleSaveListingEdit} className="overflow-y-auto p-5 space-y-4">
               {/* Alert message */}
-              <div className="p-3.5 rounded-xl bg-[#ff6600]/10 border border-[#ff6600]/20 text-[11px] text-[#ff6600] leading-relaxed font-bold flex items-center gap-2">
-                <AlertCircle className="w-4.5 h-4.5 text-[#ff6600] shrink-0" />
+              <div className="p-3.5 rounded-xl bg-primary/10 border border-primary/20 text-[11px] text-primary leading-relaxed font-bold flex items-center gap-2">
+                <AlertCircle className="w-4.5 h-4.5 text-primary shrink-0" />
                 <span>As a root moderator, saving modifications will instantly publish changes live across standard user browse indexes. Double-check price and mileage parameters.</span>
               </div>
 
@@ -1567,7 +1567,7 @@ export default function DashboardAdmin({
                   required
                   value={editingListing.title}
                   onChange={(e) => setEditingListing({ ...editingListing, title: e.target.value })}
-                  className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                  className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                     isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                   }`}
                 />
@@ -1582,7 +1582,7 @@ export default function DashboardAdmin({
                     required
                     value={editingListing.brand}
                     onChange={(e) => setEditingListing({ ...editingListing, brand: e.target.value })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   />
@@ -1595,7 +1595,7 @@ export default function DashboardAdmin({
                     required
                     value={editingListing.model}
                     onChange={(e) => setEditingListing({ ...editingListing, model: e.target.value })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   />
@@ -1611,7 +1611,7 @@ export default function DashboardAdmin({
                     required
                     value={editingListing.year}
                     onChange={(e) => setEditingListing({ ...editingListing, year: Number(e.target.value) })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   />
@@ -1622,7 +1622,7 @@ export default function DashboardAdmin({
                   <select
                     value={editingListing.condition}
                     onChange={(e) => setEditingListing({ ...editingListing, condition: e.target.value as any })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] cursor-pointer ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   >
@@ -1637,7 +1637,7 @@ export default function DashboardAdmin({
                   <select
                     value={editingListing.fuelType}
                     onChange={(e) => setEditingListing({ ...editingListing, fuelType: e.target.value as any })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] cursor-pointer ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   >
@@ -1661,7 +1661,7 @@ export default function DashboardAdmin({
                     required
                     value={editingListing.price}
                     onChange={(e) => setEditingListing({ ...editingListing, price: Number(e.target.value) })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   />
@@ -1674,8 +1674,8 @@ export default function DashboardAdmin({
                     required
                     value={editingListing.priceFormatted}
                     onChange={(e) => setEditingListing({ ...editingListing, priceFormatted: e.target.value })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
-                      isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-[#ff6600]'
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
+                      isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-primary'
                     }`}
                   />
                 </div>
@@ -1690,7 +1690,7 @@ export default function DashboardAdmin({
                     required
                     value={editingListing.mileage}
                     onChange={(e) => setEditingListing({ ...editingListing, mileage: Number(e.target.value) })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   />
@@ -1703,7 +1703,7 @@ export default function DashboardAdmin({
                     required
                     value={editingListing.engineCapacity}
                     onChange={(e) => setEditingListing({ ...editingListing, engineCapacity: e.target.value })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   />
@@ -1719,7 +1719,7 @@ export default function DashboardAdmin({
                     required
                     value={editingListing.location}
                     onChange={(e) => setEditingListing({ ...editingListing, location: e.target.value })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   />
@@ -1732,7 +1732,7 @@ export default function DashboardAdmin({
                     required
                     value={editingListing.sellerName}
                     onChange={(e) => setEditingListing({ ...editingListing, sellerName: e.target.value })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   />
@@ -1745,7 +1745,7 @@ export default function DashboardAdmin({
                     required
                     value={editingListing.sellerPhone}
                     onChange={(e) => setEditingListing({ ...editingListing, sellerPhone: e.target.value })}
-                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] ${
+                    className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                     }`}
                   />
@@ -1760,7 +1760,7 @@ export default function DashboardAdmin({
                   required
                   rows={3}
                   onChange={(e) => setEditingListing({ ...editingListing, description: e.target.value })}
-                  className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-[#ff6600] leading-relaxed resize-none ${
+                  className={`w-full text-xs font-bold px-3 py-2 rounded-xl border focus:outline-none focus:ring-1 focus:ring-primary leading-relaxed resize-none ${
                     isDarkMode ? 'bg-slate-950 border-slate-800 text-stone-100' : 'bg-slate-50 border-slate-200 text-slate-800'
                   }`}
                 />
@@ -1784,7 +1784,7 @@ export default function DashboardAdmin({
               <button
                 type="button"
                 onClick={handleSaveListingEdit}
-                className="px-5 py-2 rounded-xl text-xs font-extrabold bg-[#ff6600] hover:bg-[#eb5e00] active:scale-95 text-white flex items-center gap-1.5 cursor-pointer shadow-md"
+                className="px-5 py-2 rounded-xl text-xs font-extrabold bg-primary hover:bg-primary-hover active:scale-95 text-white flex items-center gap-1.5 cursor-pointer shadow-md"
               >
                 <Check className="w-4 h-4" /> Save Core Changes
               </button>

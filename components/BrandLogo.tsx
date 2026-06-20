@@ -117,7 +117,7 @@ export default function BrandLogo({ brandName, className = '', sizeClassName = '
         );
       default:
         return (
-          <div className={`${sizeClassName} flex items-center justify-center text-[8px] font-black text-[#ff6600] bg-orange-50 dark:bg-orange-950/20 border border-solid border-orange-200/40 rounded scale-95`}>
+          <div className={`${sizeClassName} flex items-center justify-center text-[8px] font-black text-primary bg-orange-50 dark:bg-orange-950/20 border border-solid border-orange-200/40 rounded scale-95`}>
             {brandName.trim().slice(0, 1).toUpperCase()}
           </div>
         );

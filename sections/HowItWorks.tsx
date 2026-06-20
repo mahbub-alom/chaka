@@ -223,7 +223,7 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
         }`}>
           How Chaka Works
         </h2>
-        <div className="w-20 h-1.5 bg-gradient-to-r from-[#ff6600] to-orange-500 mx-auto rounded-full animate-pulse" />
+        <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full animate-pulse" />
         <p className={`text-xs sm:text-sm md:text-base font-semibold ${isDarkMode ? 'text-slate-400' : 'text-slate-500'} leading-relaxed`}>
           Bangladesh's trusted self-inspection portal. We empower buyers with transparency, verified documentation, and immediate test ride flexibility.
         </p>
@@ -237,7 +237,7 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
             className={`relative p-6 sm:p-8 rounded-3xl flex flex-col justify-between transition-all duration-350 border overflow-hidden group ${
               isDarkMode
                 ? 'bg-gradient-to-b from-slate-900/85 to-slate-950/50 border-slate-800 hover:border-orange-500/40 hover:shadow-2xl shadow-slate-950/70'
-                : 'bg-white border-slate-100 hover:border-[#ff6600]/30 hover:shadow-2xl shadow-slate-200/65'
+                : 'bg-white border-slate-100 hover:border-primary/30 hover:shadow-2xl shadow-slate-200/65'
             }`}
           >
             {/* Elegant large background digit identifier (watermark) */}
@@ -266,13 +266,13 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
                   </span>
                   
                   <h3 className={`text-base sm:text-lg md:text-xl font-black tracking-tight leading-snug mt-1.5 transition-colors ${
-                    isDarkMode ? 'text-slate-100 group-hover:text-orange-400' : 'text-slate-900 group-hover:text-[#ff6600]'
+                    isDarkMode ? 'text-slate-100 group-hover:text-orange-400' : 'text-slate-900 group-hover:text-primary'
                   }`}>
                     {step.title}
                   </h3>
                   
                   <span className={`text-xs sm:text-sm font-bold block mt-1 ${
-                    isDarkMode ? 'text-orange-400' : 'text-[#ff6600]'
+                    isDarkMode ? 'text-orange-400' : 'text-primary'
                   }`}>
                     {step.bengaliTitle}
                   </span>

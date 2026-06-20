@@ -259,7 +259,7 @@ export default function AdPlacement({ slot, allSlots = [], isDarkMode, onAdClose
           className={`relative overflow-hidden rounded-2xl border transition-all duration-300 group ${
             isDarkMode 
               ? 'bg-slate-900/40 border-slate-800/80 hover:border-orange-500/20' 
-              : 'bg-gradient-to-r from-orange-50/20 via-white to-orange-50/10 border-slate-200/60 hover:border-[#ff6600]/30 shadow-xs'
+              : 'bg-gradient-to-r from-orange-50/20 via-white to-orange-50/10 border-slate-200/60 hover:border-primary/30 shadow-xs'
           }`}
         >
           {/* Anti-irritation AdSense Control Bar */}
@@ -288,7 +288,7 @@ export default function AdPlacement({ slot, allSlots = [], isDarkMode, onAdClose
             <div className={`absolute inset-0 z-20 p-6 flex flex-col justify-center backdrop-blur-lg ${
               isDarkMode ? 'bg-slate-950/95 text-slate-300' : 'bg-white/95 text-slate-700'
             }`}>
-              <h4 className="text-sm font-extrabold flex items-center gap-1.5 mb-1.5 text-[#ff6600]">
+              <h4 className="text-sm font-extrabold flex items-center gap-1.5 mb-1.5 text-primary">
                 <ShieldCheck className="w-4 h-4" /> Sponsored Partner Policy
               </h4>
               <p className="text-xs leading-relaxed max-w-xl">
@@ -330,14 +330,14 @@ export default function AdPlacement({ slot, allSlots = [], isDarkMode, onAdClose
             {/* Ad Copy */}
             <div className="flex-1 p-5 md:p-6.5 flex flex-col justify-center">
               <div className="flex items-center gap-1.5 mb-1.5 font-sans">
-                <span className={`text-[10px] font-black uppercase tracking-wider ${isDarkMode ? 'text-orange-400' : 'text-[#ff6600]'}`}>
+                <span className={`text-[10px] font-black uppercase tracking-wider ${isDarkMode ? 'text-orange-400' : 'text-primary'}`}>
                   Official Sponsor Offer
                 </span>
                 <span className={`w-1 h-1 rounded-full ${isDarkMode ? 'bg-slate-800' : 'bg-slate-200'}`} />
                 <span className={`text-[9px] font-semibold ${isDarkMode ? 'text-slate-500' : 'text-slate-400'}`}>AdX Network Verified</span>
               </div>
               
-              <h3 className={`text-sm md:text-base font-black mb-1.5 group-hover:text-[#ff6600] transition-colors ${
+              <h3 className={`text-sm md:text-base font-black mb-1.5 group-hover:text-primary transition-colors ${
                 isDarkMode ? 'text-slate-100' : 'text-slate-900'
               }`}>
                 {activeSlot.title}
@@ -353,7 +353,7 @@ export default function AdPlacement({ slot, allSlots = [], isDarkMode, onAdClose
                 href={activeSlot.targetUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 self-start text-xs font-bold py-2.5 px-4 rounded-xl bg-[#ff6600] hover:bg-[#eb5e00] text-white transition-all shadow-md shadow-orange-500/5 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-1.5 self-start text-xs font-bold py-2.5 px-4 rounded-xl bg-primary hover:bg-primary-hover text-white transition-all shadow-md shadow-orange-500/5 hover:-translate-y-0.5"
               >
                 <span>Learn More</span>
                 <ExternalLink className="w-3.5 h-3.5" />

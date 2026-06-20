@@ -376,7 +376,7 @@ export default function DashboardShowroom({
                       <span className={`text-xs font-black block ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
                         {lead.name}
                       </span>
-                      <span className="text-[10px] font-extrabold text-[#ff6600]">Listing: {lead.car}</span>
+                      <span className="text-[10px] font-extrabold text-primary">Listing: {lead.car}</span>
                     </div>
                     <span className="text-[9px] text-slate-500 font-extrabold">{lead.date}</span>
                   </div>
@@ -388,7 +388,7 @@ export default function DashboardShowroom({
                   <div className="flex flex-wrap gap-2 pt-2 border-t border-slate-800/10 dark:border-slate-800/40">
                     <a 
                       href={`tel:${lead.phone}`}
-                      className="text-[10px] px-3 py-1.5 rounded-lg bg-orange-500/10 hover:bg-[#ff6600] text-[#05cd93] hover:text-white font-bold inline-flex items-center gap-1.5 transition-all outline-none"
+                      className="text-[10px] px-3 py-1.5 rounded-lg bg-orange-500/10 hover:bg-primary text-[#05cd93] hover:text-white font-bold inline-flex items-center gap-1.5 transition-all outline-none"
                     >
                       <Phone className="w-3 h-3" /> Call {lead.phone}
                     </a>
@@ -489,7 +489,7 @@ export default function DashboardShowroom({
                 {showroom.name}
               </h2>
               {showroom.isVerified && (
-                <span className="bg-[#ff6600] text-white px-2.5 py-0.5 rounded-lg text-[9px] font-black flex items-center gap-1 uppercase tracking-wider">
+                <span className="bg-primary text-white px-2.5 py-0.5 rounded-lg text-[9px] font-black flex items-center gap-1 uppercase tracking-wider">
                   <ShieldCheck className="w-3.5 h-3.5" /> Verified Showroom
                 </span>
               )}
@@ -498,9 +498,9 @@ export default function DashboardShowroom({
             {/* Showroom Rating Stars hidden as requested */}
             
             <div className={`flex flex-wrap gap-x-4 gap-y-1 text-xs mt-2 font-semibold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
-              <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5 text-[#ff6600]" /> {showroom.location}</span>
-              <span className="flex items-center gap-1"><Phone className="w-3.5 h-3.5 text-[#ff6600]" /> {showroom.phone || showroom.contactNumber}</span>
-              <span className="flex items-center gap-1"><Mail className="w-3.5 h-3.5 text-[#ff6600]" /> {showroom.email}</span>
+              <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5 text-primary" /> {showroom.location}</span>
+              <span className="flex items-center gap-1"><Phone className="w-3.5 h-3.5 text-primary" /> {showroom.phone || showroom.contactNumber}</span>
+              <span className="flex items-center gap-1"><Mail className="w-3.5 h-3.5 text-primary" /> {showroom.email}</span>
             </div>
           </div>
 
@@ -511,7 +511,7 @@ export default function DashboardShowroom({
               className={`text-xs font-black py-2.5 px-4 transition-colors rounded-xl shrink-0 w-full sm:w-auto cursor-pointer shadow-md inline-flex items-center justify-center gap-1.5 ${
                 resolvedTab === 'profile' 
                   ? 'bg-amber-600 hover:bg-amber-500 text-white' 
-                  : 'bg-[#ff6600] hover:bg-[#eb5e00] text-white'
+                  : 'bg-primary hover:bg-primary-hover text-white'
               }`}
             >
               <Settings className="w-3.5 h-3.5 shrink-0" /> {resolvedTab === 'profile' ? 'Close Settings' : 'Modify Storefront'}
@@ -538,7 +538,7 @@ export default function DashboardShowroom({
           onClick={() => handleTabChange('my-ads')}
           className={`flex-1 min-w-[124px] py-2.5 px-3 rounded-xl text-xs font-black transition-all cursor-pointer text-center ${
             resolvedTab === 'my-ads'
-              ? 'bg-[#ff6600] text-white shadow-md'
+              ? 'bg-primary text-white shadow-md'
               : isDarkMode
                 ? 'hover:bg-slate-800 text-slate-300 hover:text-white'
                 : 'hover:bg-white text-slate-600 hover:text-slate-900'
@@ -552,7 +552,7 @@ export default function DashboardShowroom({
           onClick={() => handleTabChange('post-ad')}
           className={`flex-1 min-w-[124px] py-2.5 px-3 rounded-xl text-xs font-black transition-all cursor-pointer text-center ${
             resolvedTab === 'post-ad'
-              ? 'bg-[#ff6600] text-white shadow-md'
+              ? 'bg-primary text-white shadow-md'
               : isDarkMode
                 ? 'hover:bg-slate-800 text-slate-300 hover:text-white'
                 : 'hover:bg-white text-slate-600 hover:text-slate-900'
@@ -566,7 +566,7 @@ export default function DashboardShowroom({
           onClick={() => handleTabChange('profile')}
           className={`flex-1 min-w-[124px] py-2.5 px-3 rounded-xl text-xs font-black transition-all cursor-pointer text-center ${
             resolvedTab === 'profile'
-              ? 'bg-[#ff6600] text-white shadow-md'
+              ? 'bg-primary text-white shadow-md'
               : isDarkMode
                 ? 'hover:bg-slate-800 text-slate-300 hover:text-white'
                 : 'hover:bg-white text-slate-600 hover:text-slate-900'
@@ -631,7 +631,7 @@ export default function DashboardShowroom({
             <h3 className={`text-base md:text-lg font-black uppercase tracking-tight flex items-center gap-1.5 ${
               isDarkMode ? 'text-white' : 'text-slate-800'
             }`}>
-              <Settings className="w-5 h-5 text-[#ff6600]" /> Storefront Guidelines & Security Settings
+              <Settings className="w-5 h-5 text-primary" /> Storefront Guidelines & Security Settings
             </h3>
             <p className="text-[11px] text-slate-400 mt-0.5">
               Refine your brand logo, cover aesthetics, division queries, and secure API/login passwords.
@@ -802,7 +802,7 @@ export default function DashboardShowroom({
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="text-xs font-black py-2.5 px-5 bg-[#ff6600]/90 hover:bg-[#ff6600] text-white transition-all rounded-xl cursor-pointer shadow-md inline-flex items-center gap-1.5"
+                  className="text-xs font-black py-2.5 px-5 bg-primary/90 hover:bg-primary text-white transition-all rounded-xl cursor-pointer shadow-md inline-flex items-center gap-1.5"
                 >
                   <Check className="w-4 h-4" /> Save Storefront Info
                 </button>
@@ -813,7 +813,7 @@ export default function DashboardShowroom({
             <div className="lg:col-span-2 space-y-6 lg:border-l lg:border-solid lg:border-slate-800/40 lg:pl-6">
               <form onSubmit={handleUpdatePassword} className="space-y-4">
                 <div className="text-[10px] font-black uppercase text-slate-400 flex items-center gap-1">
-                  <Lock className="w-3.5 h-3.5 text-[#ff6600]" /> Super Admin Credentials
+                  <Lock className="w-3.5 h-3.5 text-primary" /> Super Admin Credentials
                 </div>
 
                 <div className="space-y-3">
@@ -877,7 +877,7 @@ export default function DashboardShowroom({
 
                 <button
                   type="submit"
-                  className="w-full text-[#ff6600] dark:text-orange-400 bg-slate-950 hover:bg-slate-900 border border-slate-800 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer"
+                  className="w-full text-primary dark:text-orange-400 bg-slate-950 hover:bg-slate-900 border border-slate-800 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer"
                 >
                   Change Admin Password
                 </button>
@@ -887,11 +887,11 @@ export default function DashboardShowroom({
               <div className={`p-3.5 rounded-xl border space-y-1 ${
                 isDarkMode ? 'bg-slate-950/50 border-slate-800' : 'bg-slate-50 border-slate-200'
               }`}>
-                <span className="text-[8.5px] uppercase font-black px-1.5 py-0.5 rounded bg-[#ff6600]/10 text-orange-400 border border-orange-500/15">
+                <span className="text-[8.5px] uppercase font-black px-1.5 py-0.5 rounded bg-primary/10 text-orange-400 border border-orange-500/15">
                   Verified Merchant Status Active
                 </span>
                 <p className="text-[10px] text-slate-400 leading-relaxed font-semibold">
-                  Any details saved here are instantly accessible online. Buyers looking for your listings will see your updated showroom location <strong className="text-[#ff6600]">{editForm.location}</strong> on the site details panels.
+                  Any details saved here are instantly accessible online. Buyers looking for your listings will see your updated showroom location <strong className="text-primary">{editForm.location}</strong> on the site details panels.
                 </p>
               </div>
 
@@ -909,7 +909,7 @@ export default function DashboardShowroom({
         }`}>
           <div>
             <span className="text-[10px] uppercase font-black tracking-wider text-slate-400">Active Inventory</span>
-            <p className="text-xl md:text-2xl font-black text-[#ff6600] mt-1">{showroomListings.length} Vehicles</p>
+            <p className="text-xl md:text-2xl font-black text-primary mt-1">{showroomListings.length} Vehicles</p>
           </div>
           <BarChart3 className="w-8 h-8 text-orange-500/20 animate-pulse" />
         </div>
@@ -955,7 +955,7 @@ export default function DashboardShowroom({
           </div>
           <div className="flex items-center gap-4 text-xs font-bold text-slate-400">
             <div className="flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 bg-[#ff6600] rounded-full"></span>
+              <span className="w-2.5 h-2.5 bg-primary rounded-full"></span>
               <span>Buyer Hits (+24%)</span>
             </div>
             <div className="flex items-center gap-1.5">
@@ -998,7 +998,7 @@ export default function DashboardShowroom({
                     {/* Hits bar */}
                     <div 
                       style={{ height: item.percent }} 
-                      className="w-2.5 sm:w-3.5 bg-gradient-to-t from-[#eb5e00] to-[#ff6600] rounded-t-sm transition-all duration-500 group-hover:brightness-110 group-hover:scale-y-105"
+                      className="w-2.5 sm:w-3.5 bg-gradient-to-t from-primary-hover to-primary rounded-t-sm transition-all duration-500 group-hover:brightness-110 group-hover:scale-y-105"
                     ></div>
                     {/* Leads bar */}
                     <div 
@@ -1063,7 +1063,7 @@ export default function DashboardShowroom({
                   className={`p-3 rounded-xl border flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 ${
                     isSold 
                       ? 'opacity-70 bg-slate-100/50 dark:bg-slate-950/20 border-slate-200 dark:border-slate-900'
-                      : isDarkMode ? 'bg-slate-950 border-slate-900 hover:border-slate-800' : 'bg-slate-50 border-slate-100 hover:border-[#ff6600]/20'
+                      : isDarkMode ? 'bg-slate-950 border-slate-900 hover:border-slate-800' : 'bg-slate-50 border-slate-100 hover:border-primary/20'
                   }`}
                 >
                   <div className="flex items-center gap-3 min-w-0">
@@ -1085,7 +1085,7 @@ export default function DashboardShowroom({
                         <span className={`text-[8px] font-black px-1 py-0.5 rounded tracking-wider uppercase ${
                           isSold
                             ? 'bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-400'
-                            : isDarkMode ? 'bg-slate-800 text-[#ff6600]' : 'bg-orange-50 text-[#ff6600]'
+                            : isDarkMode ? 'bg-slate-800 text-primary' : 'bg-orange-50 text-primary'
                         }`}>
                           {listing.condition || 'Used'}
                         </span>
@@ -1115,7 +1115,7 @@ export default function DashboardShowroom({
                       onClick={() => toggleSoldStatusLocal(listing)}
                       className={`text-[9.5px] px-2 py-1 rounded border font-black transition-all cursor-pointer flex items-center gap-1 shrink-0 ${
                         isSold 
-                          ? 'bg-slate-200 dark:bg-slate-900 border-transparent text-slate-600 dark:text-slate-400 hover:bg-[#ff6600] hover:text-white'
+                          ? 'bg-slate-200 dark:bg-slate-900 border-transparent text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white'
                           : 'bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-red-500 hover:bg-rose-50 dark:hover:bg-rose-950/20 hover:text-rose-500'
                       }`}
                       title={isSold ? "Mark as Available" : "Mark as Sold"}
@@ -1158,8 +1158,8 @@ export default function DashboardShowroom({
                         onClick={promoteRandomAd}
                         className={`text-[9.5px] px-2.5 py-1.5 rounded font-extrabold transition-all cursor-pointer border ${
                           isDarkMode
-                            ? 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-[#ff6600] hover:border-orange-500 hover:text-white'
-                            : 'bg-white border-slate-200 text-slate-700 hover:bg-[#ff6600] hover:border-[#ff6600] hover:text-white'
+                            ? 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-primary hover:border-orange-500 hover:text-white'
+                            : 'bg-white border-slate-200 text-slate-700 hover:bg-primary hover:border-primary hover:text-white'
                         }`}
                         title="Sponsor/Boost Car"
                       >
@@ -1218,12 +1218,12 @@ export default function DashboardShowroom({
             <button 
               type="button"
               onClick={() => setEditingListing(null)}
-              className="absolute top-4 right-4 p-1.5 rounded-lg hover:bg-slate-500/10 text-slate-400 hover:text-[#ff6600] transition-colors cursor-pointer"
+              className="absolute top-4 right-4 p-1.5 rounded-lg hover:bg-slate-500/10 text-slate-400 hover:text-primary transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
             
-            <h3 className="text-sm font-black uppercase tracking-wider text-[#ff6600] mb-1 font-sans">
+            <h3 className="text-sm font-black uppercase tracking-wider text-primary mb-1 font-sans">
               ✏️ Edit Showroom Car Listing
             </h3>
             <p className="text-[10px] text-slate-500 dark:text-slate-400 mb-4 font-semibold font-sans">
@@ -1274,7 +1274,7 @@ export default function DashboardShowroom({
                   <select 
                     value={inventoryEditForm.condition}
                     onChange={(e) => setInventoryEditForm({...inventoryEditForm, condition: e.target.value as any})}
-                    className={`w-full text-xs font-bold py-2.5 px-3 rounded-xl border focus:outline-none focus:border-[#ff6600] cursor-pointer ${
+                    className={`w-full text-xs font-bold py-2.5 px-3 rounded-xl border focus:outline-none focus:border-primary cursor-pointer ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-800'
                     }`}
                   >
@@ -1356,7 +1356,7 @@ export default function DashboardShowroom({
                 </button>
                 <button 
                   type="submit"
-                  className="flex-1 bg-[#ff6600] hover:bg-[#eb5e00] text-white py-2.5 rounded-xl text-xs font-black transition-all shadow-md cursor-pointer border-none outline-none"
+                  className="flex-1 bg-primary hover:bg-primary-hover text-white py-2.5 rounded-xl text-xs font-black transition-all shadow-md cursor-pointer border-none outline-none"
                 >
                   Save Changes
                 </button>

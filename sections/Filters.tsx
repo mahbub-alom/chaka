@@ -130,7 +130,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               className={`w-full pl-9 pr-3 py-2 rounded-xl text-xs sm:text-sm outline-none transition-all ${
                 isDarkMode 
                   ? 'bg-slate-950 border border-slate-800 text-slate-200 focus:border-orange-500/50' 
-                  : 'bg-slate-50 border border-slate-200 focus:border-[#ff6600] focus:bg-white'
+                  : 'bg-slate-50 border border-slate-200 focus:border-primary focus:bg-white'
               }`}
             />
           </div>
@@ -143,7 +143,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               className={`w-full px-3 py-2 rounded-xl text-xs font-bold border outline-none transition-all cursor-pointer ${
                 isDarkMode 
                   ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                  : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                  : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
               }`}
             >
               <option value="all">{language === 'bn' ? 'সব ক্যাটাগরি' : 'All Categories'}</option>
@@ -166,7 +166,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               className={`w-full px-3 py-2 rounded-xl text-xs font-bold border outline-none transition-all cursor-pointer ${
                 isDarkMode 
                   ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                  : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                  : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
               }`}
             >
               <option value="all">{language === 'bn' ? 'সব বিভাগ/স্থান' : 'All Locations'}</option>
@@ -189,7 +189,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               className={`w-full px-3 py-2 rounded-xl text-xs font-bold border outline-none transition-all cursor-pointer ${
                 isDarkMode 
                   ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                  : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                  : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
               }`}
             >
               <option value="all">{language === 'bn' ? 'সব কন্ডিশন' : 'All Conditions'}</option>
@@ -207,7 +207,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               showAdvanced
                 ? isDarkMode 
                   ? 'bg-orange-950/40 border-orange-500/30 text-orange-300 hover:bg-orange-900/40' 
-                  : 'bg-[#e6f7f3] border-[#ff6600]/60 text-[#ff6600] hover:bg-[#d0f0e8]'
+                  : 'bg-[#e6f7f3] border-primary/60 text-primary hover:bg-[#d0f0e8]'
                 : isDarkMode
                   ? 'bg-slate-950 border-slate-800 text-slate-300 hover:border-slate-700'
                   : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50 border'
@@ -230,7 +230,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
           <button
             type="button"
             onClick={() => onChange({ ...filters })}
-            className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#ff6600] hover:bg-[#eb5e00] transition-all cursor-pointer shadow-xs shrink-0"
+            className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-primary hover:bg-primary-hover transition-all cursor-pointer shadow-xs shrink-0"
           >
             <Search className="w-3.5 h-3.5" />
             <span>{t('searchBtn') || 'Search'}</span>
@@ -252,7 +252,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
             </span>
-            <span className={`text-[11px] font-black uppercase tracking-wider ${isDarkMode ? 'text-orange-500' : 'text-[#ff6600]'}`}>
+            <span className={`text-[11px] font-black uppercase tracking-wider ${isDarkMode ? 'text-orange-500' : 'text-primary'}`}>
               Parts Filter:
             </span>
           </div>
@@ -275,7 +275,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
                 className={`w-full px-3 py-2 rounded-xl text-xs font-bold border outline-none transition-all cursor-pointer ${
                   isDarkMode 
                     ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                    : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                    : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
                 }`}
               >
                 <option value="all">All Vehicle Parts</option>
@@ -295,7 +295,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
                 className={`w-full px-3 py-2 rounded-xl text-xs font-bold border outline-none transition-all cursor-pointer ${
                   isDarkMode 
                     ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                    : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                    : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
                 }`}
               >
                 <option value="all">All Types</option>
@@ -319,7 +319,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               className={`w-full px-3 py-2 rounded-xl text-xs font-semibold border outline-none transition-all cursor-pointer ${
                 isDarkMode 
                   ? 'bg-slate-900 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                  : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                  : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
               }`}
             >
               <option value="all">{language === 'bn' ? 'মডেল ইয়ার' : 'Model Year'}</option>
@@ -335,7 +335,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               className={`w-full px-3 py-2 rounded-xl text-xs font-semibold border outline-none transition-all cursor-pointer ${
                 isDarkMode 
                   ? 'bg-slate-900 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                  : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                  : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
               }`}
             >
               <option value="all">{language === 'bn' ? 'বডি টাইপ' : 'Body Type'}</option>
@@ -353,7 +353,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               className={`w-full px-3 py-2 rounded-xl text-xs font-semibold border outline-none transition-all cursor-pointer ${
                 isDarkMode 
                   ? 'bg-slate-900 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                  : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                  : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
               }`}
             >
               <option value="all">{language === 'bn' ? 'জ্বালানি' : 'Fuel Type'}</option>
@@ -371,7 +371,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               className={`w-full px-3 py-2 rounded-xl text-xs font-semibold border outline-none transition-all cursor-pointer ${
                 isDarkMode 
                   ? 'bg-slate-900 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                  : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                  : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
               }`}
             >
               <option value="all">{language === 'bn' ? 'গিয়ার ট্রান্সমিশন' : 'Transmission'}</option>
@@ -386,7 +386,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               className={`w-full px-3 py-2 rounded-xl text-xs font-semibold border outline-none transition-all cursor-pointer ${
                 isDarkMode 
                   ? 'bg-slate-900 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                  : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                  : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
               }`}
             >
               <option value="all">{language === 'bn' ? 'সর্বোচ্চ মাইলেজ' : 'Max Mileage'}</option>
@@ -402,7 +402,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
               className={`w-full px-3 py-2 rounded-xl text-xs font-semibold border outline-none transition-all cursor-pointer ${
                 isDarkMode 
                   ? 'bg-slate-900 border-slate-800 text-slate-300 focus:border-orange-500/50' 
-                  : 'bg-white border-slate-200 text-slate-700 focus:border-[#ff6600]'
+                  : 'bg-white border-slate-200 text-slate-700 focus:border-primary'
               }`}
             >
               <option value="all">{language === 'bn' ? 'আসন সংখ্যা' : 'Seats'}</option>
@@ -427,7 +427,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
                   <span className={`text-[10px] font-extrabold uppercase tracking-wider ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                     {language === 'bn' ? 'সর্বোচ্চ বাজেট সীমা' : 'Max Budget Limit'}
                   </span>
-                  <span className="text-xs font-black text-[#ff6600] dark:text-orange-400">
+                  <span className="text-xs font-black text-primary dark:text-orange-400">
                     {filters.priceMax >= 6000000 
                       ? (language === 'bn' ? 'সীমাহীন বাজেট' : 'Unlimited BDT') 
                       : (language === 'bn' ? `৳ ${filters.priceMax.toLocaleString('en-IN')}` : `BDT ${filters.priceMax.toLocaleString('en-IN')}`)
@@ -441,7 +441,7 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
                   step="50000"
                   value={filters.priceMax}
                   onChange={handlePriceMaxChange}
-                  className="w-full accent-[#ff6600] h-1 bg-slate-200 dark:bg-slate-800 rounded-lg cursor-pointer"
+                  className="w-full accent-primary h-1 bg-slate-200 dark:bg-slate-800 rounded-lg cursor-pointer"
                 />
               </div>
 
@@ -468,10 +468,10 @@ export default function Filters({ filters, onChange, isDarkMode }: FiltersProps)
                       onClick={() => onChange({ ...filters, searchQuery: preset.query })}
                       className={`text-[10px] px-2.5 py-1 rounded-lg border font-bold transition-all cursor-pointer ${
                         filters.searchQuery === preset.query
-                          ? 'bg-[#ff6600] border-[#ff6600] text-white'
+                          ? 'bg-primary border-primary text-white'
                           : isDarkMode
-                            ? 'bg-slate-950 border-slate-800 text-slate-400 hover:text-[#ff6600]'
-                            : 'bg-slate-50 border-slate-200 text-slate-600 hover:text-[#ff6600]'
+                            ? 'bg-slate-950 border-slate-800 text-slate-400 hover:text-primary'
+                            : 'bg-slate-50 border-slate-200 text-slate-600 hover:text-primary'
                       }`}
                     >
                       {preset.label}

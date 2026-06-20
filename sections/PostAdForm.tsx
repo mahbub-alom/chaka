@@ -356,7 +356,7 @@ export default function PostAdForm({
                 onClick={() => handleTypeChange(cat.id)}
                 className={`p-3 rounded-xl border font-extrabold text-[11px] flex flex-col items-center justify-center gap-1.5 transition-all cursor-pointer ${
                   formData.type === cat.id
-                    ? 'bg-[#ff6600]/10 border-[#ff6600] text-[#ff6600]'
+                    ? 'bg-primary/10 border-primary text-primary'
                     : isDarkMode 
                       ? 'border-slate-800 bg-slate-950 text-slate-400 hover:border-slate-700' 
                       : 'border-slate-200 bg-slate-50 text-slate-600 hover:bg-neutral-100'
@@ -389,7 +389,7 @@ export default function PostAdForm({
                     : (language === 'bn' ? 'যেমন: টয়োটা প্রিমিও জি-সুপিরিয়র ২০১৮ কন্ডিশন' : 'e.g. Toyota Premio G-Superior 2018 Pristine')
               }
               className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none ${
-                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-800 focus:border-[#ff6600] focus:bg-white'
+                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-800 focus:border-primary focus:bg-white'
               }`}
             />
           </div>
@@ -403,7 +403,7 @@ export default function PostAdForm({
               value={formData.brand}
               onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
               className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none cursor-pointer ${
-                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-700'
+                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-700'
               }`}
             >
               {brands.map((brand) => (
@@ -425,7 +425,7 @@ export default function PostAdForm({
               onChange={(e) => setFormData({ ...formData, model: e.target.value })}
               placeholder={language === 'bn' ? 'যেমন: Corolla, R15 V4, Brake Pad, Polish' : 'e.g. Corolla, R15 V4, Brake Pad, Polish'}
               className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none ${
-                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-800 focus:border-[#ff6600] focus:bg-white'
+                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-800 focus:border-primary focus:bg-white'
               }`}
             />
           </div>
@@ -446,13 +446,13 @@ export default function PostAdForm({
                 onChange={(e) => setFormData({ ...formData, price: e.target.value })}
                 placeholder="e.g. 2650000"
                 className={`w-full pl-3.5 pr-14 py-2.5 text-xs rounded-xl border outline-none ${
-                  isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-900 focus:border-[#ff6600] focus:bg-white'
+                  isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-100 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-900 focus:border-primary focus:bg-white'
                 }`}
               />
               <span className="absolute right-3.5 top-2.5 text-[10px] font-black text-slate-500">BDT</span>
             </div>
             {formData.price && (
-              <span className="text-[10px] font-extrabold text-[#ff6600] mt-1 block">
+              <span className="text-[10px] font-extrabold text-primary mt-1 block">
                 💵 {language === 'bn' ? 'সমপরিমাণ মূল্য:' : 'Equivalent to:'} {formatBDT(Number(formData.price))}
               </span>
             )}
@@ -467,7 +467,7 @@ export default function PostAdForm({
               value={formData.condition}
               onChange={(e) => setFormData({ ...formData, condition: e.target.value as any })}
               className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none cursor-pointer ${
-                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-700'
+                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-700'
               }`}
             >
               <option value="Used">{language === 'bn' ? 'ব্যবহৃত (Used)' : 'Used Item'}</option>
@@ -488,7 +488,7 @@ export default function PostAdForm({
                 value={formData.year}
                 onChange={(e) => setFormData({ ...formData, year: Number(e.target.value) })}
                 className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none ${
-                  isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-800'
+                  isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-800'
                 }`}
               />
             </div>
@@ -521,7 +521,7 @@ export default function PostAdForm({
                 onChange={(e) => setFormData({ ...formData, engineCapacity: e.target.value })}
                 placeholder="e.g. 1500 cc, 150 cc"
                 className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none ${
-                  isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-800'
+                  isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-800'
                 }`}
               />
             </div>
@@ -536,7 +536,7 @@ export default function PostAdForm({
                 onChange={(e) => setFormData({ ...formData, mileage: e.target.value })}
                 placeholder="e.g. 42000"
                 className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none ${
-                  isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-800'
+                  isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-800'
                 }`}
               />
             </div>
@@ -580,7 +580,7 @@ export default function PostAdForm({
 
         {/* SPECIFICATION EXTENSION SPECIFIC FIELDS */}
         <div className="border-t border-dashed border-slate-800/30 dark:border-slate-800/60 pt-5 space-y-4">
-          <span className="text-[11px] font-extrabold text-[#ff6600] uppercase tracking-wider block">
+          <span className="text-[11px] font-extrabold text-primary uppercase tracking-wider block">
             Specifications & Metadata ⚙️
           </span>
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
@@ -656,7 +656,7 @@ export default function PostAdForm({
                     onChange={(e) => setFormData({ ...formData, registrationYear: e.target.value })}
                     placeholder="e.g. Fit Toyota / Universal"
                     className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none ${
-                      isDarkMode ? 'bg-[#ff6600]/5 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-800'
+                      isDarkMode ? 'bg-primary/5 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-800'
                     }`}
                   />
                 </div>
@@ -668,7 +668,7 @@ export default function PostAdForm({
                     onChange={(e) => setFormData({ ...formData, seatingCapacity: e.target.value })}
                     placeholder="e.g. Takes 3-5 Hours"
                     className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none ${
-                      isDarkMode ? 'bg-[#ff6600]/5 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-800'
+                      isDarkMode ? 'bg-primary/5 border-slate-800 text-slate-200' : 'bg-slate-50 border-slate-200 text-slate-800'
                     }`}
                   />
                 </div>
@@ -730,14 +730,14 @@ export default function PostAdForm({
                       onClick={() => handleFeatureToggle(feat)}
                       className={`flex items-center gap-2 p-2.5 rounded-xl border text-left text-[11px] font-bold transition-all ${
                         isSelected 
-                          ? 'bg-[#ff6600]/10 border-[#ff6600] text-[#ff6600]' 
+                          ? 'bg-primary/10 border-primary text-primary' 
                           : isDarkMode 
                             ? 'border-slate-800 bg-slate-950/40 text-slate-400 hover:border-slate-700' 
                             : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
                       }`}
                     >
                       {isSelected ? (
-                        <Check className="w-4 h-4 shrink-0 text-[#ff6600]" />
+                        <Check className="w-4 h-4 shrink-0 text-primary" />
                       ) : (
                         <div className="w-4 h-4 rounded border border-slate-400 dark:border-slate-600 shrink-0" />
                       )}
@@ -772,7 +772,7 @@ export default function PostAdForm({
                 });
               }}
               className={`w-full px-3 py-2.5 text-xs rounded-xl border outline-none cursor-pointer ${
-                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-700'
+                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-700'
               }`}
             >
               {BANGLADESH_DIVISIONS.map((div) => (
@@ -798,7 +798,7 @@ export default function PostAdForm({
                 });
               }}
               className={`w-full px-3 py-2.5 text-xs rounded-xl border outline-none cursor-pointer ${
-                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-700'
+                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-700'
               }`}
             >
               {(BANGLADESH_DISTRICTS_BY_DIVISION[formData.division] || []).map((dist) => (
@@ -814,7 +814,7 @@ export default function PostAdForm({
               value={formData.location}
               onChange={(e) => setFormData({ ...formData, location: e.target.value })}
               className={`w-full px-3 py-2.5 text-xs rounded-xl border outline-none cursor-pointer ${
-                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-700'
+                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-300 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-700'
               }`}
             >
               {(BANGLADESH_AREAS_BY_DISTRICT[selectedDistrict] || []).map((loc) => (
@@ -832,7 +832,7 @@ export default function PostAdForm({
               value={formData.sellerPhone}
               onChange={(e) => setFormData({ ...formData, sellerPhone: e.target.value })}
               className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none ${
-                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-800'
+                isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-800'
               }`}
             />
           </div>
@@ -876,7 +876,7 @@ export default function PostAdForm({
                 <span className="text-[10px] text-slate-400 font-bold">• High-speed CDN Optimize</span>
               </div>
               <h4 className={`text-xs font-black uppercase tracking-wider ${isDarkMode ? 'text-white' : 'text-slate-800'}`}>
-                Photo Capacity Quota: <span className="text-[#ff6600]">{formData.images.length}</span> / <span className="font-extrabold">{(sellerType === 'showroom' || userProfile?.isSubscribed === true) ? 10 : 5} Loaded</span>
+                Photo Capacity Quota: <span className="text-primary">{formData.images.length}</span> / <span className="font-extrabold">{(sellerType === 'showroom' || userProfile?.isSubscribed === true) ? 10 : 5} Loaded</span>
               </h4>
               <p className="text-[10.5px] text-slate-500 dark:text-slate-400 leading-normal font-medium">
                 {(sellerType === 'showroom' || userProfile?.isSubscribed === true) 
@@ -906,7 +906,7 @@ export default function PostAdForm({
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1">
-            <label className="block text-[11px] font-black uppercase text-[#ff6600] tracking-wider flex items-center gap-1.5">
+            <label className="block text-[11px] font-black uppercase text-primary tracking-wider flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-orange-500 animate-pulse" />
               Upload & Drag-to-Arrange Gallery Panel
             </label>
@@ -924,10 +924,10 @@ export default function PostAdForm({
             onClick={() => fileInputRef.current?.click()}
             className={`border-2 border-dashed rounded-3xl p-8 text-center cursor-pointer transition-all duration-250 flex flex-col items-center justify-center gap-3 relative overflow-hidden ${
               isDragActive 
-                ? 'border-[#ff6600] bg-orange-500/[0.05] shadow-[0_0_15px_rgba(2,154,108,0.1)]' 
+                ? 'border-primary bg-orange-500/[0.05] shadow-[0_0_15px_rgba(2,154,108,0.1)]' 
                 : isDarkMode 
-                  ? 'border-slate-800 bg-slate-950/40 hover:border-[#ff6600]/60 hover:bg-slate-900/20' 
-                  : 'border-slate-200 bg-slate-50/40 hover:border-[#ff6600]/50 hover:bg-slate-50/90'
+                  ? 'border-slate-800 bg-slate-950/40 hover:border-primary/60 hover:bg-slate-900/20' 
+                  : 'border-slate-200 bg-slate-50/40 hover:border-primary/50 hover:bg-slate-50/90'
             }`}
           >
             <input 
@@ -941,18 +941,18 @@ export default function PostAdForm({
             
             {isPhotoConverting ? (
               <div className="flex flex-col items-center gap-2 py-4">
-                <Loader2 className="w-9 h-9 text-[#ff6600] animate-spin" />
-                <span className="text-[11px] text-[#ff6600] font-black uppercase tracking-widest animate-pulse">Processing & Optimizing Images to WebP Format...</span>
+                <Loader2 className="w-9 h-9 text-primary animate-spin" />
+                <span className="text-[11px] text-primary font-black uppercase tracking-widest animate-pulse">Processing & Optimizing Images to WebP Format...</span>
                 <p className="text-[9px] text-slate-400 font-bold">Resizing & compressing locally in the browser</p>
               </div>
             ) : (
               <div className="space-y-2 py-2">
-                <div className="w-12 h-12 rounded-2xl bg-orange-500/10 dark:bg-orange-500/5 text-[#ff6600] flex items-center justify-center mx-auto mb-1 group-hover:scale-105 transition-transform">
-                  <Upload className="w-5 h-5 text-[#ff6600]" />
+                <div className="w-12 h-12 rounded-2xl bg-orange-500/10 dark:bg-orange-500/5 text-primary flex items-center justify-center mx-auto mb-1 group-hover:scale-105 transition-transform">
+                  <Upload className="w-5 h-5 text-primary" />
                 </div>
                 <div className="space-y-1">
                   <p className={`text-xs font-black ${isDarkMode ? 'text-slate-200' : 'text-slate-700'}`}>
-                    Drag & Drop ONE OR MULTIPLE pictures here, or <span className="text-[#ff6600] hover:underline">Browse Files</span>
+                    Drag & Drop ONE OR MULTIPLE pictures here, or <span className="text-primary hover:underline">Browse Files</span>
                   </p>
                   <p className="text-[10px] text-slate-400 font-semibold max-w-md mx-auto leading-normal">
                     Supports JPG, PNG, WEBP, and HEIC files. Images are auto-optimized instantly for fast client page loading speed.
@@ -1016,7 +1016,7 @@ export default function PostAdForm({
                         <X className="w-3 h-3" />
                       </button>
                       <div className={`absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-lg text-[8.5px] font-extrabold text-white uppercase tracking-wider ${
-                        index === 0 ? 'bg-[#ff6600]' : 'bg-black/65'
+                        index === 0 ? 'bg-primary' : 'bg-black/65'
                       }`}>
                         {index === 0 ? '📷 Primary Cover' : `Photo ${index + 1}`}
                       </div>
@@ -1044,7 +1044,7 @@ export default function PostAdForm({
                   : 'Detail interior specs, transmission quality, suspension, engine power, minor accidents, documents validity...'
             }
             className={`w-full px-3.5 py-2.5 text-xs rounded-xl border outline-none ${
-              isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-[#ff6600]/60' : 'bg-slate-50 border-slate-200 text-slate-800 focus:border-[#ff6600]'
+              isDarkMode ? 'bg-slate-950 border-slate-800 text-slate-200 focus:border-primary/60' : 'bg-slate-50 border-slate-200 text-slate-800 focus:border-primary'
             }`}
           />
         </div>
@@ -1062,7 +1062,7 @@ export default function PostAdForm({
         <button
           type="submit"
           id="post-ad-submit-button"
-          className="w-full bg-[#ff6600] hover:bg-[#eb5e00] text-white font-extrabold py-3.5 rounded-xl transition-all text-xs cursor-pointer shadow-md shadow-orange-950/20 text-center flex items-center justify-center gap-2"
+          className="w-full bg-primary hover:bg-primary-hover text-white font-extrabold py-3.5 rounded-xl transition-all text-xs cursor-pointer shadow-md shadow-orange-950/20 text-center flex items-center justify-center gap-2"
         >
           <CheckCircle className="w-4 h-4" /> Upload & Publish Ad Online
         </button>

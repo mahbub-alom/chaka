@@ -59,7 +59,7 @@ export default function FeedbackModal({ isOpen, onClose, isDarkMode }: FeedbackM
       }`}>
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <MessageSquare className="w-5 h-5 text-[#ff6600]" />
+            <MessageSquare className="w-5 h-5 text-primary" />
             <h3 className="font-extrabold text-base tracking-tight">Give Us Your Feedback</h3>
           </div>
           <button 
@@ -84,7 +84,7 @@ export default function FeedbackModal({ isOpen, onClose, isDarkMode }: FeedbackM
                   onClick={() => setFeedbackType('feature')}
                   className={`flex flex-col items-center justify-center py-2.5 px-2 rounded-xl border text-xs font-bold transition-all gap-1 cursor-pointer ${
                     feedbackType === 'feature'
-                      ? 'border-[#ff6600] bg-[#ff6600]/10 text-[#ff6600]'
+                      ? 'border-primary bg-primary/10 text-primary'
                       : isDarkMode 
                         ? 'border-slate-800 bg-slate-950/60 hover:bg-slate-800 text-slate-400' 
                         : 'border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-600'
@@ -142,10 +142,10 @@ export default function FeedbackModal({ isOpen, onClose, isDarkMode }: FeedbackM
                       ? "What new features or additions would make Chaka.BD even better?"
                       : "Any queries, improvement suggestions, or kind words..."
                 }
-                className={`w-full text-xs font-medium rounded-xl p-3 border focus:outline-none focus:ring-1 focus:ring-[#ff6600]/50 transition-all ${
+                className={`w-full text-xs font-medium rounded-xl p-3 border focus:outline-none focus:ring-1 focus:ring-primary/50 transition-all ${
                   isDarkMode 
-                    ? 'bg-slate-950 border-slate-800 text-slate-200 placeholder-slate-500 focus:border-[#ff6600]' 
-                    : 'bg-slate-50 border-slate-200 text-slate-800 placeholder-slate-400 focus:border-[#ff6600]'
+                    ? 'bg-slate-950 border-slate-800 text-slate-200 placeholder-slate-500 focus:border-primary' 
+                    : 'bg-slate-50 border-slate-200 text-slate-800 placeholder-slate-400 focus:border-primary'
                 }`}
               />
               <div className="flex justify-between text-[10px] text-slate-400">
@@ -164,10 +164,10 @@ export default function FeedbackModal({ isOpen, onClose, isDarkMode }: FeedbackM
                 value={feedbackEmail}
                 onChange={(e) => setFeedbackEmail(e.target.value)}
                 placeholder="Enter your email so we can reply..."
-                className={`w-full text-xs font-medium rounded-xl px-3 py-2 border focus:outline-none focus:ring-1 focus:ring-[#ff6600]/50 transition-all ${
+                className={`w-full text-xs font-medium rounded-xl px-3 py-2 border focus:outline-none focus:ring-1 focus:ring-primary/50 transition-all ${
                   isDarkMode 
-                    ? 'bg-slate-950 border-slate-800 text-slate-200 placeholder-slate-500 focus:border-[#ff6600]' 
-                    : 'bg-slate-50 border-slate-200 text-slate-800 placeholder-slate-400 focus:border-[#ff6600]'
+                    ? 'bg-slate-950 border-slate-800 text-slate-200 placeholder-slate-500 focus:border-primary' 
+                    : 'bg-slate-50 border-slate-200 text-slate-800 placeholder-slate-400 focus:border-primary'
                 }`}
               />
             </div>
@@ -178,7 +178,7 @@ export default function FeedbackModal({ isOpen, onClose, isDarkMode }: FeedbackM
               className={`w-full py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer ${
                 !feedbackText.trim()
                   ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-600 cursor-not-allowed'
-                  : 'bg-[#ff6600] text-white hover:bg-[#028059] active:scale-98 shadow-md hover:shadow-lg'
+                  : 'bg-primary text-white hover:bg-[#028059] active:scale-98 shadow-md hover:shadow-lg'
               }`}
             >
               {isSubmitting ? (

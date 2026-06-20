@@ -88,12 +88,12 @@ export default function MobileDrawer({
         {/* Clean, high-density Header */}
         <div className="p-4.5 border-b border-solid border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-[#ff6600] flex items-center justify-center text-white shrink-0 shadow-sm">
+            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white shrink-0 shadow-sm">
               <span className="font-black text-sm select-none">C</span>
             </div>
             <div>
               <h2 className="font-extrabold text-xs tracking-tight text-slate-800 dark:text-slate-200">Chaka Navigation</h2>
-              <p className="text-[9px] text-[#ff6600] dark:text-orange-400 font-bold leading-none mt-0.5">
+              <p className="text-[9px] text-primary dark:text-orange-400 font-bold leading-none mt-0.5">
                 {language === 'bn' ? 'অকশন ও কার পোর্টাল' : 'Verified Auction Portal'}
               </p>
             </div>
@@ -121,11 +121,11 @@ export default function MobileDrawer({
               onClick={() => handleItemClick('home')}
               className={`w-full flex items-center gap-3.5 px-3 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                 activeView === 'home'
-                  ? 'bg-[#ff6600]/10 text-[#ff6600] dark:text-orange-400 font-extrabold shadow-3xs'
+                  ? 'bg-primary/10 text-primary dark:text-orange-400 font-extrabold shadow-3xs'
                   : 'hover:bg-slate-50 dark:hover:bg-slate-900 text-slate-600 dark:text-slate-350'
               }`}
             >
-              <Home className="w-4 h-4 text-[#ff6600] shrink-0" />
+              <Home className="w-4 h-4 text-primary shrink-0" />
               <span>{language === 'bn' ? 'মূল পাতা' : 'Home Main'}</span>
             </button>
 
@@ -139,7 +139,7 @@ export default function MobileDrawer({
                   onClick={() => handleItemClick(item.view, item.cat)}
                   className={`w-full flex items-center gap-3.5 px-3 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                     isSelected
-                      ? 'bg-[#ff6600]/10 text-[#ff6600] dark:text-orange-400 font-extrabold shadow-3xs'
+                      ? 'bg-primary/10 text-primary dark:text-orange-400 font-extrabold shadow-3xs'
                       : 'hover:bg-slate-50 dark:hover:bg-slate-900 text-slate-600 dark:text-slate-350'
                   }`}
                 >
@@ -161,7 +161,7 @@ export default function MobileDrawer({
                 onClick={() => handleItemClick('terms')}
                 className={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-[10px] font-bold border transition-all ${
                   activeView === 'terms'
-                    ? 'border-[#ff6600] bg-[#ff6600]/10 text-[#ff6600]'
+                    ? 'border-primary bg-primary/10 text-primary'
                     : 'border-slate-200/40 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900'
                 }`}
               >
@@ -173,7 +173,7 @@ export default function MobileDrawer({
                 onClick={() => handleItemClick('privacy')}
                 className={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-[10px] font-bold border transition-all ${
                   activeView === 'privacy'
-                    ? 'border-[#ff6600] bg-[#ff6600]/10 text-[#ff6600]'
+                    ? 'border-primary bg-primary/10 text-primary'
                     : 'border-slate-200/40 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900'
                 }`}
               >
@@ -185,7 +185,7 @@ export default function MobileDrawer({
                 onClick={() => handleItemClick('help')}
                 className={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-[10px] font-bold border transition-all ${
                   activeView === 'help'
-                    ? 'border-[#ff6600] bg-[#ff6600]/10 text-[#ff6600]'
+                    ? 'border-primary bg-primary/10 text-primary'
                     : 'border-slate-200/40 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900'
                 }`}
               >
@@ -197,7 +197,7 @@ export default function MobileDrawer({
                 onClick={() => handleItemClick('safety')}
                 className={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-[10px] font-bold border transition-all ${
                   activeView === 'safety'
-                    ? 'border-[#ff6600] bg-[#ff6600]/10 text-[#ff6600]'
+                    ? 'border-primary bg-primary/10 text-primary'
                     : 'border-slate-200/40 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900'
                 }`}
               >
@@ -228,7 +228,7 @@ export default function MobileDrawer({
                     }}
                     className={`py-1 px-1.5 rounded-md text-[9px] font-extrabold transition-all border text-center ${
                       currentRole === r.id
-                        ? 'bg-[#ff6600] border-[#ff6600] text-white shadow-3xs'
+                        ? 'bg-primary border-primary text-white shadow-3xs'
                         : 'bg-white dark:bg-slate-900 border-slate-200/60 dark:border-slate-800 text-slate-600 dark:text-slate-400'
                     }`}
                   >
@@ -252,13 +252,13 @@ export default function MobileDrawer({
           </div>
 
           {/* Clean hotline */}
-          <div className="p-3.5 rounded-xl bg-gradient-to-br from-[#ff6600]/10 to-orange-500/5 border border-[#ff6600]/20 text-center space-y-2">
-            <span className="text-[10px] font-extrabold text-[#ff6600] dark:text-orange-400 block">
+          <div className="p-3.5 rounded-xl bg-gradient-to-br from-primary/10 to-orange-500/5 border border-primary/20 text-center space-y-2">
+            <span className="text-[10px] font-extrabold text-primary dark:text-orange-400 block">
               {language === 'bn' ? '📞 চাকা সাপোর্ট হটলাইন' : '📞 Chaka Live Support'}
             </span>
             <a 
               href="tel:01886666018"
-              className="flex items-center justify-center gap-2 py-1.5 px-3 rounded-lg bg-[#ff6600] text-white hover:bg-[#eb5e00] text-[11px] font-black transition-all shadow-xs"
+              className="flex items-center justify-center gap-2 py-1.5 px-3 rounded-lg bg-primary text-white hover:bg-primary-hover text-[11px] font-black transition-all shadow-xs"
             >
               <Phone className="w-3.5 h-3.5 fill-current" />
               <span>01886666018</span>

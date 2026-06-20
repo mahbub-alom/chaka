@@ -223,7 +223,7 @@ export default function UserProfile({
       }`}>
         {/* Profile background cover */}
         <div 
-          className="h-32 md:h-44 bg-gradient-to-r from-orange-950 via-[#ff6600]/80 to-teal-900 relative bg-cover bg-center"
+          className="h-32 md:h-44 bg-gradient-to-r from-orange-950 via-primary/80 to-teal-900 relative bg-cover bg-center"
           style={hoverBannerBackground ? { backgroundImage: `url(${hoverBannerBackground})` } : undefined}
         >
           <div className="absolute inset-0 bg-slate-950/20 backdrop-brightness-75" />
@@ -313,11 +313,11 @@ export default function UserProfile({
         }`}>
           <div>
             <span className="text-slate-500 block font-bold text-[10px] uppercase">Registered Ads</span>
-            <span className="font-extrabold text-[#ff6600] dark:text-orange-400">{userListings.length} Active</span>
+            <span className="font-extrabold text-primary dark:text-orange-400">{userListings.length} Active</span>
           </div>
           <div>
             <span className="text-slate-500 block font-bold text-[10px] uppercase">Total Views</span>
-            <span className="font-extrabold text-[#ff6600] dark:text-orange-400 flex items-center justify-center gap-0.5">
+            <span className="font-extrabold text-primary dark:text-orange-400 flex items-center justify-center gap-0.5">
               <Eye className="w-3.5 h-3.5" /> {totalViews.toLocaleString()}
             </span>
           </div>
@@ -341,7 +341,7 @@ export default function UserProfile({
                 <button
                   type="button"
                   onClick={() => setRevealPhone(true)}
-                  className="w-full h-11 flex items-center justify-center gap-2 bg-[#ff6600] hover:bg-[#eb5e00] text-white font-extrabold text-[13px] rounded-xl cursor-pointer transition-all duration-150 font-sans shadow-sm"
+                  className="w-full h-11 flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white font-extrabold text-[13px] rounded-xl cursor-pointer transition-all duration-150 font-sans shadow-sm"
                 >
                   <EyeOff className="w-4.5 h-4.5 text-white shrink-0" />
                   <span>Show Phone Number</span>
@@ -349,7 +349,7 @@ export default function UserProfile({
               ) : (
                 <a 
                   href={`tel:${sellerPhone}`}
-                  className="flex items-center gap-2 p-2.5 rounded-xl border dark:border-slate-800 border-slate-200 hover:bg-[#ff6600]/10 hover:border-orange-500/20 transition-all cursor-pointer w-full"
+                  className="flex items-center gap-2 p-2.5 rounded-xl border dark:border-slate-800 border-slate-200 hover:bg-primary/10 hover:border-orange-500/20 transition-all cursor-pointer w-full"
                 >
                   <div className="p-1.5 rounded-lg bg-orange-500/10 text-orange-500">
                     <Phone className="w-3.5 h-3.5" />
@@ -404,7 +404,7 @@ export default function UserProfile({
               onClick={() => setActiveTab('listings')}
               className={`pb-2.5 text-xs font-black uppercase tracking-wider relative transition-all cursor-pointer ${
                 activeTab === 'listings'
-                  ? 'text-[#ff6600] border-b-2 border-[#ff6600]'
+                  ? 'text-primary border-b-2 border-primary'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
@@ -414,7 +414,7 @@ export default function UserProfile({
               onClick={() => setActiveTab('about')}
               className={`pb-2.5 text-xs font-black uppercase tracking-wider relative transition-all cursor-pointer ${
                 activeTab === 'about'
-                  ? 'text-[#ff6600] border-b-2 border-[#ff6600]'
+                  ? 'text-primary border-b-2 border-primary'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
@@ -572,7 +572,7 @@ export default function UserProfile({
                 <div className="text-right">
                   <button
                     type="submit"
-                    className="text-xs bg-[#ff6600] hover:bg-[#eb5e00] text-white font-black py-2 px-4 rounded-xl cursor-pointer hover:shadow-lg transition-all inline-flex items-center gap-1.5"
+                    className="text-xs bg-primary hover:bg-primary-hover text-white font-black py-2 px-4 rounded-xl cursor-pointer hover:shadow-lg transition-all inline-flex items-center gap-1.5"
                   >
                     <Send className="w-3.5 h-3.5" /> Post Verified Review
                   </button>
@@ -600,7 +600,7 @@ export default function UserProfile({
                       >
                         <div className="flex justify-between items-start gap-4">
                           <div className="flex gap-2.5 items-center">
-                            <div className="w-8 h-8 rounded-full bg-orange-500/10 text-[#ff6600] flex items-center justify-center font-black text-xs">
+                            <div className="w-8 h-8 rounded-full bg-orange-500/10 text-primary flex items-center justify-center font-black text-xs">
                               {rev.reviewerName.slice(0, 2).toUpperCase()}
                             </div>
                             <div>

@@ -526,11 +526,11 @@ export default function DashboardUser({
         isDarkMode ? 'bg-slate-900/40 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
       }`}>
         <div className="flex items-center gap-3 pb-4 mb-2 border-b border-dashed border-slate-800/60">
-          <div className="w-10 h-10 rounded-full overflow-hidden border border-[#ff6600]/30">
+          <div className="w-10 h-10 rounded-full overflow-hidden border border-primary/30">
             {userProfile?.avatarUrl ? (
               <img referrerPolicy="no-referrer" src={userProfile.avatarUrl} alt={userProfile.name} className="w-full h-full object-cover" />
             ) : (
-              <div className="w-full h-full bg-[#ff6600]/10 flex items-center justify-center text-[#ff6600] font-black text-sm">
+              <div className="w-full h-full bg-primary/10 flex items-center justify-center text-primary font-black text-sm">
                 {(userProfile?.name || 'Towsif Mahbub').slice(0, 2).toUpperCase()}
               </div>
             )}
@@ -547,7 +547,7 @@ export default function DashboardUser({
           onClick={() => changeTab('my-ads')}
           className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all text-left cursor-pointer ${
             currentTab === 'my-ads'
-              ? 'bg-[#ff6600] text-white'
+              ? 'bg-primary text-white'
               : isDarkMode
                 ? 'hover:bg-slate-800 text-slate-300'
                 : 'hover:bg-slate-50 text-slate-700'
@@ -560,7 +560,7 @@ export default function DashboardUser({
           onClick={() => changeTab('post-ad')}
           className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all text-left cursor-pointer ${
             currentTab === 'post-ad'
-              ? 'bg-[#ff6600] text-white'
+              ? 'bg-primary text-white'
               : isDarkMode
                 ? 'hover:bg-slate-800 text-slate-300'
                 : 'hover:bg-slate-50 text-slate-700'
@@ -573,7 +573,7 @@ export default function DashboardUser({
           onClick={() => changeTab('inbox')}
           className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all text-left cursor-pointer ${
             currentTab === 'inbox'
-              ? 'bg-[#ff6600] text-white'
+              ? 'bg-primary text-white'
               : isDarkMode
                 ? 'hover:bg-slate-800 text-slate-300'
                 : 'hover:bg-slate-50 text-slate-700'
@@ -586,7 +586,7 @@ export default function DashboardUser({
           onClick={() => changeTab('pricing-tool')}
           className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all text-left cursor-pointer ${
             currentTab === 'pricing-tool'
-              ? 'bg-[#ff6600] text-white'
+              ? 'bg-primary text-white'
               : isDarkMode
                 ? 'hover:bg-slate-800 text-slate-300'
                 : 'hover:bg-slate-50 text-slate-700'
@@ -599,7 +599,7 @@ export default function DashboardUser({
           onClick={() => changeTab('profile')}
           className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all text-left cursor-pointer ${
             currentTab === 'profile'
-              ? 'bg-[#ff6600] text-white'
+              ? 'bg-primary text-white'
               : isDarkMode
                 ? 'hover:bg-slate-800 text-slate-300'
                 : 'hover:bg-slate-50 text-slate-700'
@@ -628,18 +628,18 @@ export default function DashboardUser({
               <h3 className={`text-sm font-black ${isDarkMode ? 'text-slate-100' : 'text-slate-900'}`}>
                 My Published Vehicle Ads
               </h3>
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#ff6600]/10 text-[#ff6600] font-black uppercase">
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary font-black uppercase">
                 Active Session
               </span>
             </div>
 
             {/* Smart Statistics Boxes & Performance Widget */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-5 select-none">
-              <div className={`p-3.5 rounded-xl border flex flex-col justify-between transition-all hover:scale-[1.01] hover:border-[#ff6600]/20 duration-300 ${
+              <div className={`p-3.5 rounded-xl border flex flex-col justify-between transition-all hover:scale-[1.01] hover:border-primary/20 duration-300 ${
                 isDarkMode ? 'bg-slate-950/60 border-slate-800' : 'bg-slate-50 border-slate-200'
               }`}>
                 <span className="text-[9px] uppercase font-bold tracking-wider text-slate-400">Total Active Inventory</span>
-                <span className="text-sm font-black mt-1 text-[#ff6600] dark:text-orange-400">{myListings.length} Ads Posted</span>
+                <span className="text-sm font-black mt-1 text-primary dark:text-orange-400">{myListings.length} Ads Posted</span>
               </div>
               <div className={`p-3.5 rounded-xl border flex flex-col justify-between transition-all hover:scale-[1.01] hover:border-amber-500/20 duration-300 ${
                 isDarkMode ? 'bg-slate-950/60 border-slate-800' : 'bg-slate-50 border-slate-200'
@@ -656,7 +656,7 @@ export default function DashboardUser({
             </div>
 
             {/* Store Performance Analytics Tracker */}
-            <div className={`p-4 rounded-xl border mb-5 space-y-3 transition-all duration-300 hover:border-[#ff6600]/20 ${
+            <div className={`p-4 rounded-xl border mb-5 space-y-3 transition-all duration-300 hover:border-primary/20 ${
               isDarkMode ? 'bg-slate-950/40 border-slate-800' : 'bg-slate-50/50 border-slate-200'
             }`}>
               <div className="flex justify-between items-center text-[10px] font-black uppercase tracking-wider text-slate-400">
@@ -682,7 +682,7 @@ export default function DashboardUser({
                     <div className="w-full bg-slate-800 dark:bg-slate-900 rounded-t h-6 flex items-end">
                       <div 
                         style={{ height: pt.h }} 
-                        className="w-full bg-gradient-to-t from-[#eb5e00] to-[#ff6600] rounded-t transition-all duration-300 group-hover:brightness-110"
+                        className="w-full bg-gradient-to-t from-primary-hover to-primary rounded-t transition-all duration-300 group-hover:brightness-110"
                       ></div>
                     </div>
                     <span className="text-[8px] font-bold text-slate-500 mt-1">{pt.day}</span>
@@ -697,18 +697,18 @@ export default function DashboardUser({
             }`}>
               <span className="text-base select-none">💡</span>
               <div className="text-[10.5px] leading-normal text-slate-500 dark:text-slate-400">
-                <span className="font-extrabold text-[#ff6600] block mb-0.5">Pro Tip to Sell 3x Faster:</span>
+                <span className="font-extrabold text-primary block mb-0.5">Pro Tip to Sell 3x Faster:</span>
                 Keep your pricing competitive matching Bangladesh market standards. Share the ad to Facebook or WhatsApp (using our 1-click share utilities on detail pages) to get immediate inquiries!
               </div>
             </div>
 
             {myListings.length === 0 ? (
               <div className="text-center py-16 text-slate-500 flex flex-col items-center justify-center">
-                <Tag className="w-12 h-12 text-[#ff6600] opacity-40 mb-3" />
+                <Tag className="w-12 h-12 text-primary opacity-40 mb-3" />
                 <p className="text-xs font-bold mb-3 text-slate-400">You haven't posted any vehicle ads yet!</p>
                 <button
                   onClick={() => changeTab('post-ad')}
-                  className="text-xs bg-[#ff6600] hover:bg-[#eb5e00] text-white font-extrabold px-5 py-2.5 rounded-xl transition-all shadow-md"
+                  className="text-xs bg-primary hover:bg-primary-hover text-white font-extrabold px-5 py-2.5 rounded-xl transition-all shadow-md"
                 >
                   Upload Ad Now
                 </button>
@@ -724,7 +724,7 @@ export default function DashboardUser({
                        className={`p-4 rounded-xl border flex flex-col sm:flex-row gap-4 justify-between sm:items-center transition-all ${
                         isSold 
                           ? 'opacity-70 bg-slate-100/50 dark:bg-slate-950/20 border-slate-200 dark:border-slate-900'
-                          : isDarkMode ? 'bg-slate-950 border-slate-800 hover:border-slate-800' : 'bg-slate-50 border-slate-200 hover:border-[#ff6600]/30'
+                          : isDarkMode ? 'bg-slate-950 border-slate-800 hover:border-slate-800' : 'bg-slate-50 border-slate-200 hover:border-primary/30'
                       }`}
                     >
                       <div className="flex gap-3 items-center min-w-0">
@@ -746,7 +746,7 @@ export default function DashboardUser({
                             <span className={`text-[8px] font-black px-1.5 py-0.5 rounded tracking-wider uppercase ${
                               isSold
                                 ? 'bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-400'
-                                : isDarkMode ? 'bg-slate-800 text-[#ff6600]' : 'bg-orange-50 text-[#ff6600]'
+                                : isDarkMode ? 'bg-slate-800 text-primary' : 'bg-orange-50 text-primary'
                             }`}>
                               {listing.condition}
                             </span>
@@ -775,7 +775,7 @@ export default function DashboardUser({
                           onClick={() => toggleSoldStatusLocal(listing)}
                           className={`text-[10px] px-2.5 py-1.5 rounded-lg border font-black transition-all cursor-pointer flex items-center gap-1 shrink-0 ${
                             isSold 
-                              ? 'bg-slate-200 dark:bg-slate-900 border-transparent text-slate-600 dark:text-slate-400 hover:bg-[#ff6600] hover:text-white'
+                              ? 'bg-slate-200 dark:bg-slate-900 border-transparent text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white'
                               : 'bg-white dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-red-500 hover:bg-rose-50 dark:hover:bg-rose-950/20 hover:text-rose-500'
                           }`}
                           title={isSold ? "Mark as Available" : "Mark as Sold"}
@@ -856,7 +856,7 @@ export default function DashboardUser({
 
             {myChats.length === 0 ? (
               <div className="text-center py-16 text-slate-500 flex flex-col items-center justify-center">
-                <MessageSquare className="w-10 h-10 text-[#ff6600] opacity-40 mb-2" />
+                <MessageSquare className="w-10 h-10 text-primary opacity-40 mb-2" />
                 <p className="text-xs font-bold text-slate-400">You don't have any active chats at the moment.</p>
               </div>
             ) : (
@@ -894,7 +894,7 @@ export default function DashboardUser({
                         onClick={() => onSelectChat(chat.id)}
                         className={`p-3 rounded-xl border cursor-pointer transition-all hover:scale-[1.01] active:scale-[0.99] duration-200 ${
                           activeChatId === chat.id
-                            ? 'bg-[#ff6600]/10 border-[#ff6600]/40 text-[#ff6600] dark:text-orange-400'
+                            ? 'bg-primary/10 border-primary/40 text-primary dark:text-orange-400'
                             : isDarkMode 
                               ? 'bg-slate-950 border-slate-800 hover:border-slate-705' 
                               : 'bg-slate-50 border-slate-100 hover:border-orange-200'
@@ -930,7 +930,7 @@ export default function DashboardUser({
                             <img 
                               src={avatarUrl} 
                               alt={contactName} 
-                              className="w-3.5 h-3.5 rounded-full object-cover border border-[#ff6600]/10" 
+                              className="w-3.5 h-3.5 rounded-full object-cover border border-primary/10" 
                               referrerPolicy="no-referrer"
                             />
                             <span className="text-[9.5px] font-bold text-slate-700 dark:text-slate-300 truncate max-w-[90px]">{contactName}</span>
@@ -956,7 +956,7 @@ export default function DashboardUser({
                     <div className={`p-8 py-20 rounded-xl border flex flex-col justify-center items-center text-center h-full ${
                       isDarkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-50/50 border-slate-200'
                     }`}>
-                      <AlertCircle className="w-8 h-8 text-[#ff6600] mb-2 opacity-60 flex-shrink-0" />
+                      <AlertCircle className="w-8 h-8 text-primary mb-2 opacity-60 flex-shrink-0" />
                       <p className="text-xs text-slate-400 font-bold mb-1">Select a Conversation from list</p>
                       <p className="text-[10px] text-slate-500 max-w-xs leading-relaxed">
                         Always converse inside in-app messaging logs to guarantee safe local negotiations.
@@ -974,7 +974,7 @@ export default function DashboardUser({
             isDarkMode ? 'bg-slate-900/40 border-slate-800' : 'bg-white border-slate-200'
           }`}>
             <div className="flex items-center gap-2 mb-2">
-              <span className="p-1 px-1.5 text-[9px] font-black bg-[#ff6600]/10 text-[#ff6600] dark:bg-orange-500/10 dark:text-orange-400 rounded-md">Live Beta</span>
+              <span className="p-1 px-1.5 text-[9px] font-black bg-primary/10 text-primary dark:bg-orange-500/10 dark:text-orange-400 rounded-md">Live Beta</span>
               <h3 className={`text-sm md:text-base font-extrabold ${isDarkMode ? 'text-slate-100' : 'text-slate-900'}`}>
                 Automobile Market Valuation Tool
               </h3>
@@ -994,7 +994,7 @@ export default function DashboardUser({
                       onClick={() => setPricingForm({ ...pricingForm, type: 'car', brand: 'Toyota' })}
                       className={`py-2 rounded-xl text-[11px] font-bold transition-all ${
                         pricingForm.type === 'car'
-                          ? 'bg-[#ff6600] text-white font-black'
+                          ? 'bg-primary text-white font-black'
                           : isDarkMode ? 'bg-slate-950 text-slate-400 border border-slate-800' : 'bg-slate-50 text-slate-600 border border-slate-100'
                       }`}
                     >
@@ -1005,7 +1005,7 @@ export default function DashboardUser({
                       onClick={() => setPricingForm({ ...pricingForm, type: 'bike', brand: 'Yamaha' })}
                       className={`py-2 rounded-xl text-[11px] font-bold transition-all ${
                         pricingForm.type === 'bike'
-                          ? 'bg-[#ff6600] text-white font-black'
+                          ? 'bg-primary text-white font-black'
                           : isDarkMode ? 'bg-slate-950 text-slate-400 border border-slate-800' : 'bg-slate-50 text-slate-600 border border-slate-100'
                       }`}
                     >
@@ -1122,7 +1122,7 @@ export default function DashboardUser({
                   type="button"
                   onClick={calculateEstimate}
                   disabled={isEstimating}
-                  className="w-full py-3 bg-[#ff6600] hover:bg-[#028d63] disabled:opacity-50 text-white font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-md shadow-orange-950/15 cursor-pointer"
+                  className="w-full py-3 bg-primary hover:bg-[#028d63] disabled:opacity-50 text-white font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-md shadow-orange-950/15 cursor-pointer"
                 >
                   {isEstimating ? 'Analyzing Market Trends...' : 'Estimate Fair Value'}
                 </button>
@@ -1135,7 +1135,7 @@ export default function DashboardUser({
                     isDarkMode ? 'bg-slate-950/60 border-slate-800' : 'bg-orange-50/20 border-orange-100/55'
                   }`}>
                     <div>
-                      <span className="text-[9px] uppercase tracking-wider font-extrabold text-[#ff6600] bg-[#ff6600]/10 px-2.5 py-1 rounded-full">
+                      <span className="text-[9px] uppercase tracking-wider font-extrabold text-primary bg-primary/10 px-2.5 py-1 rounded-full">
                         Market Evaluation Result
                       </span>
 
@@ -1143,7 +1143,7 @@ export default function DashboardUser({
                         <label className="block text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
                           Fair Price Estimation Band (BDT)
                         </label>
-                        <h2 className="text-xl md:text-2xl font-black text-[#ff6600] dark:text-orange-400 tracking-tight">
+                        <h2 className="text-xl md:text-2xl font-black text-primary dark:text-orange-400 tracking-tight">
                           {estimatedValue.low} – {estimatedValue.high}
                         </h2>
                         <p className={`text-[10px] font-semibold leading-relaxed ${isDarkMode ? 'text-slate-300' : 'text-slate-500'}`}>
@@ -1192,7 +1192,7 @@ export default function DashboardUser({
                   <div className={`p-8 py-24 rounded-2xl border border-dashed flex flex-col justify-center items-center text-center h-full ${
                     isDarkMode ? 'bg-slate-950/20 border-slate-800' : 'bg-slate-50/40 border-slate-200'
                   }`}>
-                    <Tag className="w-10 h-10 text-[#ff6600]/40 mb-3 animate-bounce" />
+                    <Tag className="w-10 h-10 text-primary/40 mb-3 animate-bounce" />
                     <p className={`text-xs font-bold mb-1 ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                       Select Fields and Estimate Price Range
                     </p>
@@ -1218,7 +1218,7 @@ export default function DashboardUser({
                   <h3 className={`text-base md:text-lg font-black uppercase tracking-tight flex items-center gap-1.5 ${
                     isDarkMode ? 'text-white' : 'text-slate-800'
                   }`}>
-                    <User className="w-5 h-5 text-[#ff6600]" /> Customize Account Profile
+                    <User className="w-5 h-5 text-primary" /> Customize Account Profile
                   </h3>
                   <p className="text-[11.5px] text-slate-450 mt-0.5">
                     Update your contact email address, personal phone specs, and reset your secure account password.
@@ -1228,7 +1228,7 @@ export default function DashboardUser({
                   <button
                     type="button"
                     onClick={() => onViewPublicProfile('user_curr')}
-                    className="w-full sm:w-auto px-4.5 py-2.5 bg-gradient-to-r from-orange-600 to-teal-600 hover:from-orange-500 hover:to-teal-500 text-slate-950 font-black text-xs uppercase tracking-wider rounded-xl shadow-md hover:shadow-orange-500/10 transition-all transform hover:scale-102 flex items-center justify-center gap-2 cursor-pointer border border-[#ff6600]/20"
+                    className="w-full sm:w-auto px-4.5 py-2.5 bg-gradient-to-r from-orange-600 to-teal-600 hover:from-orange-500 hover:to-teal-500 text-slate-950 font-black text-xs uppercase tracking-wider rounded-xl shadow-md hover:shadow-orange-500/10 transition-all transform hover:scale-102 flex items-center justify-center gap-2 cursor-pointer border border-primary/20"
                   >
                     👁️ Visit My Public Profile
                   </button>
@@ -1291,7 +1291,7 @@ export default function DashboardUser({
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1.5 flex justify-between items-center">
                         <span>Membership / Quota Type</span>
-                        <span className="text-[8px] bg-orange-500/10 text-[#ff6600] px-1 py-0.2 rounded font-extrabold uppercase">Dynamic limits</span>
+                        <span className="text-[8px] bg-orange-500/10 text-primary px-1 py-0.2 rounded font-extrabold uppercase">Dynamic limits</span>
                       </label>
                       <button
                         type="button"
@@ -1311,7 +1311,7 @@ export default function DashboardUser({
                           <span className={`w-2 h-2 rounded-full ${profileForm.isSubscribed ? 'bg-orange-500 animate-pulse' : 'bg-slate-400'}`} />
                           {profileForm.isSubscribed ? 'Premium Subscribed Member' : 'Single / Free (Non-Subscribed)'}
                         </span>
-                        <span className="text-[9px] uppercase font-bold underline text-[#ff6600] hover:text-orange-300">
+                        <span className="text-[9px] uppercase font-bold underline text-primary hover:text-orange-300">
                           {profileForm.isSubscribed ? 'Downgrade' : 'Upgrade Club'}
                         </span>
                       </button>
@@ -1371,7 +1371,7 @@ export default function DashboardUser({
                             />
                             <label 
                               htmlFor="user-avatar-upload-direct"
-                              className="absolute bottom-0 right-0 bg-[#ff6600] hover:bg-[#eb5e00] text-white p-1.5 rounded-full border border-white dark:border-slate-900 shadow-md hover:scale-110 transition-all inline-flex items-center justify-center cursor-pointer shrink-0"
+                              className="absolute bottom-0 right-0 bg-primary hover:bg-primary-hover text-white p-1.5 rounded-full border border-white dark:border-slate-900 shadow-md hover:scale-110 transition-all inline-flex items-center justify-center cursor-pointer shrink-0"
                               title="Change Photo"
                             >
                               <Camera className="w-3.5 h-3.5 text-white" />
@@ -1485,7 +1485,7 @@ export default function DashboardUser({
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className="text-xs font-black py-2.5 px-5 bg-[#ff6600] hover:bg-[#eb5e00] text-white transition-all rounded-xl cursor-pointer shadow-md inline-flex items-center gap-1.5"
+                      className="text-xs font-black py-2.5 px-5 bg-primary hover:bg-primary-hover text-white transition-all rounded-xl cursor-pointer shadow-md inline-flex items-center gap-1.5"
                     >
                       <CheckCircle className="w-4 h-4" /> Save Profile Details
                     </button>
@@ -1562,7 +1562,7 @@ export default function DashboardUser({
 
                     <button
                       type="submit"
-                      className="w-full text-[#ff6600] dark:text-orange-400 bg-slate-950 hover:bg-slate-900 border border-slate-800 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer"
+                      className="w-full text-primary dark:text-orange-400 bg-slate-950 hover:bg-slate-900 border border-slate-800 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer"
                     >
                       Update Password Credentials
                     </button>
@@ -1598,12 +1598,12 @@ export default function DashboardUser({
             <button 
               type="button"
               onClick={() => setEditingListing(null)}
-              className="absolute top-4 right-4 p-1.5 rounded-lg hover:bg-slate-500/10 text-slate-450 hover:text-[#ff6600] transition-colors cursor-pointer"
+              className="absolute top-4 right-4 p-1.5 rounded-lg hover:bg-slate-500/10 text-slate-450 hover:text-primary transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
             
-            <h3 className="text-sm font-black uppercase tracking-wider text-[#ff6600] mb-1 font-sans">
+            <h3 className="text-sm font-black uppercase tracking-wider text-primary mb-1 font-sans">
               ✏️ Edit Listing Details
             </h3>
             <p className="text-[10px] text-slate-500 dark:text-slate-400 mb-4 font-semibold font-sans">
@@ -1654,7 +1654,7 @@ export default function DashboardUser({
                   <select 
                     value={editForm.condition}
                     onChange={(e) => setEditForm({...editForm, condition: e.target.value as any})}
-                    className={`w-full text-xs font-bold py-2.5 px-3 rounded-xl border focus:outline-none focus:border-[#ff6600] cursor-pointer ${
+                    className={`w-full text-xs font-bold py-2.5 px-3 rounded-xl border focus:outline-none focus:border-primary cursor-pointer ${
                       isDarkMode ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-800'
                     }`}
                   >
@@ -1736,7 +1736,7 @@ export default function DashboardUser({
                 </button>
                 <button 
                   type="submit"
-                  className="flex-1 bg-[#ff6600] hover:bg-[#eb5e00] text-white py-2.5 rounded-xl text-xs font-black transition-all shadow-md cursor-pointer border-none outline-none"
+                  className="flex-1 bg-primary hover:bg-primary-hover text-white py-2.5 rounded-xl text-xs font-black transition-all shadow-md cursor-pointer border-none outline-none"
                 >
                   Save Changes
                 </button>

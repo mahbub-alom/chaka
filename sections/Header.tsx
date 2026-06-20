@@ -18,6 +18,7 @@ import {
   Clock,
   History,
   Menu,
+  Toolbox,
 } from "lucide-react";
 
 interface HeaderProps {
@@ -114,7 +115,7 @@ export default function Header({
                 onClick={() => setLanguage("en")}
                 className={`text-[9px] font-black px-1.5 py-0.5 rounded transition-all cursor-pointer ${
                   language === "en"
-                    ? "bg-[#ff6600] text-white font-black shadow-sm"
+                    ? "bg-primary text-white font-black shadow-sm"
                     : "text-slate-400 hover:text-slate-200"
                 }`}
               >
@@ -124,7 +125,7 @@ export default function Header({
                 onClick={() => setLanguage("bn")}
                 className={`text-[9px] font-black px-1.5 py-0.5 rounded transition-all cursor-pointer ${
                   language === "bn"
-                    ? "bg-[#ff6600] text-white font-black shadow-sm"
+                    ? "bg-primary text-white font-black shadow-sm"
                     : "text-slate-400 hover:text-slate-200"
                 }`}
               >
@@ -213,7 +214,7 @@ export default function Header({
                 className={`relative flex items-center h-10 sm:h-12 transition-colors duration-300 ${
                   isDarkMode
                     ? "text-orange-400 group-hover:text-orange-300"
-                    : "text-[#ff6600] group-hover:text-orange-600"
+                    : "text-primary group-hover:text-orange-600"
                 }`}
               >
                 <svg
@@ -290,22 +291,21 @@ export default function Header({
               <Link
                 href="/#browse"
                 onClick={() => onChangeView("browse", "all")}
-                className={`text-[12.5px] xl:text-[13.5px] font-bold py-1.5 px-3.5 rounded-xl flex items-center gap-1.5 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
+                className={`text-[12.5px] xl:text-[13.5px] whitespace-nowrap font-bold py-1.5 px-3.5 rounded-xl flex items-center gap-1.5 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
                   activeView === "browse" &&
                   (activeCategory === "all" || !activeCategory)
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
-                      : "bg-orange-50/60 border-orange-100/70 text-[#ff6600] font-extrabold shadow-xs"
+                      : "bg-orange-50/60 border-orange-100/70 text-primary font-extrabold shadow-xs"
                     : isDarkMode
                       ? "text-slate-400 hover:text-white hover:bg-slate-900/60"
-                      : "text-slate-600 hover:text-[#ff6600] hover:bg-slate-50"
+                      : "text-slate-600 hover:text-primary hover:bg-slate-50"
                 }`}
               >
-                {/* <LayoutGrid className="w-3.5 h-3.5" />{" "} */}
+                <LayoutGrid className="w-3.5 h-3.5" />{" "}
                 {language === "bn" ? "সকল বিজ্ঞাপন" : "All Ads"}
               </Link>
 
-              {/* Cars Category Filter Path */}
               <Link
                 href="/#browse/car"
                 onClick={() => onChangeView("browse", "car")}
@@ -313,17 +313,16 @@ export default function Header({
                   activeView === "browse" && activeCategory === "car"
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
-                      : "bg-orange-50/60 border-orange-100/70 text-[#ff6600] font-extrabold shadow-xs"
+                      : "bg-orange-50/60 border-orange-100/70 text-primary font-extrabold shadow-xs"
                     : isDarkMode
                       ? "text-slate-400 hover:text-white hover:bg-slate-900/60"
-                      : "text-slate-600 hover:text-[#ff6600] hover:bg-slate-50"
+                      : "text-slate-600 hover:text-primary hover:bg-slate-50"
                 }`}
               >
                 <Car className="w-3.5 h-3.5" />{" "}
                 {language === "bn" ? "গাড়ি" : "Cars"}
               </Link>
 
-              {/* Bikes Category Filter Path */}
               <Link
                 href="/#browse/bike"
                 onClick={() => onChangeView("browse", "bike")}
@@ -331,17 +330,16 @@ export default function Header({
                   activeView === "browse" && activeCategory === "bike"
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
-                      : "bg-orange-50/60 border-orange-100/70 text-[#ff6600] font-extrabold shadow-xs"
+                      : "bg-orange-50/60 border-orange-100/70 text-primary font-extrabold shadow-xs"
                     : isDarkMode
                       ? "text-slate-400 hover:text-white hover:bg-slate-900/60"
-                      : "text-slate-600 hover:text-[#ff6600] hover:bg-slate-50"
+                      : "text-slate-600 hover:text-primary hover:bg-slate-50"
                 }`}
               >
                 <Bike className="w-3.5 h-3.5" />{" "}
                 {language === "bn" ? "বাইক" : "Bikes"}
               </Link>
 
-              {/* Parts Category Filter Path */}
               <Link
                 href="/#browse/parts"
                 onClick={() => onChangeView("browse", "parts")}
@@ -349,17 +347,16 @@ export default function Header({
                   activeView === "browse" && activeCategory === "parts"
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
-                      : "bg-orange-50/60 border-orange-100/70 text-[#ff6600] font-extrabold shadow-xs"
+                      : "bg-orange-50/60 border-orange-100/70 text-primary font-extrabold shadow-xs"
                     : isDarkMode
                       ? "text-slate-400 hover:text-white hover:bg-slate-900/60"
-                      : "text-slate-600 hover:text-[#ff6600] hover:bg-slate-50"
+                      : "text-slate-600 hover:text-primary hover:bg-slate-50"
                 }`}
               >
                 <Wrench className="w-3.5 h-3.5" />{" "}
                 {language === "bn" ? "পার্টস" : "Parts"}
               </Link>
 
-              {/* Services Category Filter Path */}
               <Link
                 href="/#browse/service"
                 onClick={() => onChangeView("browse", "service")}
@@ -367,28 +364,27 @@ export default function Header({
                   activeView === "browse" && activeCategory === "service"
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
-                      : "bg-orange-50/60 border-orange-100/70 text-[#ff6600] font-extrabold shadow-xs"
+                      : "bg-orange-50/60 border-orange-100/70 text-primary font-extrabold shadow-xs"
                     : isDarkMode
                       ? "text-slate-400 hover:text-white hover:bg-slate-900/60"
-                      : "text-slate-600 hover:text-[#ff6600] hover:bg-slate-50"
+                      : "text-slate-600 hover:text-primary hover:bg-slate-50"
                 }`}
               >
-                <Wrench className="w-3.5 h-3.5" />{" "}
+                <Toolbox className="w-3.5 h-3.5" />{" "}
                 {language === "bn" ? "সার্ভিস" : "Services"}
               </Link>
 
-              {/* Auction Verify Category Path */}
               <Link
                 href="/#auction-verify"
                 onClick={() => handleAuctionVerifyClick()}
-                className={`text-[12.5px] xl:text-[13.5px] font-bold py-1.5 px-3.5 rounded-xl flex items-center gap-1.5 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
+                className={`text-[12.5px] xl:text-[13.5px] font-bold whitespace-nowrap py-1.5 px-3.5 rounded-xl flex items-center gap-1.5 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
                   activeView === "auction-verify"
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
-                      : "bg-orange-50/60 border-orange-100/70 text-[#ff6600] font-extrabold shadow-xs"
+                      : "bg-orange-50/60 border-orange-100/70 text-primary font-extrabold shadow-xs"
                     : isDarkMode
                       ? "text-slate-400 hover:text-white hover:bg-slate-900/60"
-                      : "text-slate-600 hover:text-[#ff6600] hover:bg-slate-50"
+                      : "text-slate-600 hover:text-primary hover:bg-slate-50"
                 }`}
               >
                 <ShieldCheck className="w-3.5 h-3.5" /> {t("verifyAuction")}
@@ -441,7 +437,7 @@ export default function Header({
                   className={`w-full text-[10.5px] sm:text-xs font-bold py-1.5 sm:py-2 pl-7.5 sm:pl-9 pr-7 sm:pr-9 rounded-full transition-all outline-none border ${
                     isDarkMode
                       ? "bg-slate-900 text-white placeholder-slate-500 border-slate-800 focus:bg-slate-950 focus:border-orange-500 shadow-inner"
-                      : "bg-slate-50 text-slate-800 placeholder-slate-400 border-slate-200/80 focus:bg-white focus:border-[#ff6600] shadow-inner"
+                      : "bg-slate-50 text-slate-800 placeholder-slate-400 border-slate-200/80 focus:bg-white focus:border-primary shadow-inner"
                   }`}
                 />
                 {localSearch && (
@@ -551,7 +547,7 @@ export default function Header({
                   }
                   onChangeView("dashboard", "inbox");
                 }}
-                className="relative rounded-full text-white bg-[#ff6600] hover:bg-[#eb5e00] hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center h-8.5 w-8.5 sm:h-9.5 sm:w-9.5 shadow-[0_3px_10px_rgba(255,102,0,0.3)] border border-orange-500/10 shrink-0"
+                className="relative rounded-full text-white bg-primary hover:bg-primary-hover hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center h-8.5 w-8.5 sm:h-9.5 sm:w-9.5 shadow-[0_3px_10px_rgba(255,102,0,0.3)] border border-orange-500/10 shrink-0"
                 title="Open Chat Inbox"
               >
                 <div className="relative flex items-center justify-center w-full h-full p-2">
@@ -571,15 +567,15 @@ export default function Header({
                     {/* Elegant hand-crafted Triangle Tail */}
                     <path d="M 48 58 L 57 74 L 57 58 Z" fill="currentColor" />
                     {/* Three dots inside, colored orange to match button background */}
-                    <circle cx="37" cy="43" r="4.2" fill="#ff6600" />
-                    <circle cx="50" cy="43" r="4.2" fill="#ff6600" />
-                    <circle cx="63" cy="43" r="4.2" fill="#ff6600" />
+                    <circle cx="37" cy="43" r="4.2" fill="var(--primary)" />
+                    <circle cx="50" cy="43" r="4.2" fill="var(--primary)" />
+                    <circle cx="63" cy="43" r="4.2" fill="var(--primary)" />
                   </svg>
                 </div>
                 {unreadChatsCount > 0 && (
                   <span className="absolute -top-1 -right-1 flex h-4.5 w-4.5 z-10">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-90"></span>
-                    <span className="relative inline-flex rounded-full h-4.5 w-4.5 bg-[#ff6600] text-white font-black text-[9px] items-center justify-center shadow-md border border-white">
+                    <span className="relative inline-flex rounded-full h-4.5 w-4.5 bg-primary text-white font-black text-[9px] items-center justify-center shadow-md border border-white">
                       {unreadChatsCount}
                     </span>
                   </span>
@@ -596,7 +592,7 @@ export default function Header({
                   }
                   onChangeView("dashboard", "post-ad");
                 }}
-                className="hidden md:flex text-white hover:scale-[1.06] active:scale-[0.94] font-extrabold bg-[#ff6600] border-0 hover:bg-[#ff5500] px-4 py-2 text-xs rounded-xl transition-all duration-300 transform-gpu items-center gap-1.5 shadow-md hover:shadow-lg hover:shadow-orange-500/20 active:shadow-xs cursor-pointer whitespace-nowrap"
+                className="hidden md:flex text-white hover:scale-[1.06] active:scale-[0.94] font-extrabold bg-primary border-0 hover:bg-primary-hover px-4 py-2 text-xs rounded-xl transition-all duration-300 transform-gpu items-center gap-1.5 shadow-md hover:shadow-lg hover:shadow-orange-500/20 active:shadow-xs cursor-pointer whitespace-nowrap"
               >
                 <PlusCircle className="w-3.5 h-3.5" /> {t("postAd")}
               </Link>

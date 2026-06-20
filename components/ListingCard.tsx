@@ -26,7 +26,7 @@ export default function ListingCard({ listing, isDarkMode, onSelect, onSelectPro
       case 'New':
         return 'bg-orange-500 text-black font-extrabold';
       case 'Reconditioned':
-        return 'bg-[#ff6600] text-white font-semibold';
+        return 'bg-primary text-white font-semibold';
       default:
         return 'bg-amber-600 text-white font-semibold';
     }
@@ -95,7 +95,7 @@ export default function ListingCard({ listing, isDarkMode, onSelect, onSelectPro
       } ${
         isDarkMode 
           ? 'bg-slate-900/40 border-slate-800 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-950/10' 
-          : 'bg-white border-slate-200 hover:border-[#ff6600]/30 hover:shadow-lg hover:shadow-slate-300/10'
+          : 'bg-white border-slate-200 hover:border-primary/30 hover:shadow-lg hover:shadow-slate-300/10'
       }`}
     >
       {/* Featured / Popular badge */}
@@ -134,7 +134,7 @@ export default function ListingCard({ listing, isDarkMode, onSelect, onSelectPro
             window.open(`${window.location.origin}${window.location.pathname}#listing/${listing.id}`, '_blank');
           }}
           title={language === 'bn' ? 'নতুন ট্যাবে খুলুন' : 'Open in New Tab'}
-          className="absolute bottom-2 right-2 z-20 p-1.5 rounded-lg bg-black/60 hover:bg-[#ff6600] text-slate-100 hover:text-white transition-all shadow-md cursor-pointer hover:scale-105 active:scale-95"
+          className="absolute bottom-2 right-2 z-20 p-1.5 rounded-lg bg-black/60 hover:bg-primary text-slate-100 hover:text-white transition-all shadow-md cursor-pointer hover:scale-105 active:scale-95"
         >
           <ExternalLink className="w-3.5 h-3.5" />
         </span>
@@ -151,7 +151,7 @@ export default function ListingCard({ listing, isDarkMode, onSelect, onSelectPro
               <span className={`inline-flex items-center gap-1 text-[8px] sm:text-[9px] font-black px-1 sm:px-1.5 py-0.5 rounded tracking-wider uppercase border ${
                 isDarkMode 
                   ? 'bg-slate-800/80 text-orange-500 border-slate-700/65' 
-                  : 'bg-orange-50 text-[#ff6600] border-orange-100/40'
+                  : 'bg-orange-50 text-primary border-orange-100/40'
               }`}>
                 {getBrandLogo(listing.brand)}
                 <span>{listing.brand}</span>
@@ -176,7 +176,7 @@ export default function ListingCard({ listing, isDarkMode, onSelect, onSelectPro
 
           {/* Title */}
           <h3 className={`text-[11px] sm:text-[13px] font-bold line-clamp-1 sm:line-clamp-2 leading-tight mb-0.5 transition-colors ${
-            isDarkMode ? 'text-slate-100 hover:text-[#ff6600]' : 'text-slate-900 hover:text-[#ff6600]'
+            isDarkMode ? 'text-slate-100 hover:text-primary' : 'text-slate-900 hover:text-primary'
           }`}>
             {listing.title}
           </h3>
