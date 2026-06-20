@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import { Home, Search, User, Plus, MessageSquare } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -20,6 +21,7 @@ export default function BottomNav({
   unreadChatsCount,
 }: BottomNavProps) {
   const { language, t } = useLanguage();
+  const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(375); // Safe initial width fallback
   const [currentHash, setCurrentHash] = useState(window.location.hash);
@@ -65,12 +67,12 @@ export default function BottomNav({
   const isAccountActive = activeView === 'dashboard' && !currentHash.includes('tab=inbox') && !currentHash.includes('tab=post-ad');
 
   const handleHomeClick = () => {
-    window.location.hash = '#home';
+    router.push('/#home');
     onChangeView('home');
   };
 
   const handleBrowseClick = () => {
-    window.location.hash = '#browse';
+    router.push('/#browse');
     onChangeView('browse');
   };
 
@@ -78,7 +80,7 @@ export default function BottomNav({
     if (currentRole === 'guest') {
       onChangeRole('user');
     }
-    window.location.hash = '#dashboard?tab=post-ad';
+    router.push('/#dashboard/post-ad');
     onChangeView('dashboard');
   };
 
@@ -86,7 +88,7 @@ export default function BottomNav({
     if (currentRole === 'guest') {
       onChangeRole('user');
     }
-    window.location.hash = '#dashboard?tab=inbox';
+    router.push('/#dashboard/inbox');
     onChangeView('dashboard');
   };
 
@@ -94,7 +96,7 @@ export default function BottomNav({
     if (currentRole === 'guest') {
       onChangeRole('user');
     }
-    window.location.hash = '#dashboard?tab=my-ads';
+    router.push('/#dashboard/my-ads');
     onChangeView('dashboard');
   };
 

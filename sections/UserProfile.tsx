@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 import { VehicleListing } from '@/types';
 import { 
   ArrowLeft, 
@@ -283,15 +284,13 @@ export default function UserProfile({
             </div>
 
             {isCurrentUser || isCurrentShowroom ? (
-              <button
+              <Link
                 id="profile-post-ad-direct-btn"
-                onClick={() => {
-                  window.location.hash = '#dashboard/post-ad';
-                }}
+                href="/#dashboard/post-ad"
                 className="px-5 py-2.5 rounded-xl text-xs font-black bg-orange-500 hover:bg-orange-400 text-white shadow-md hover:shadow-orange-500/20 transition-all transform hover:scale-102 flex items-center gap-1.5 cursor-pointer"
               >
                 📢 Post an Ad
-              </button>
+              </Link>
             ) : (
               <button
                 id={`follow-profile-btn-${userId}`}

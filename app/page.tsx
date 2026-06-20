@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import { 
   VehicleListing, 
@@ -41,6 +42,7 @@ const BANGLADESH_DIVISIONS = ['Dhaka', 'Chittagong', 'Sylhet', 'Rajshahi', 'Khul
 
 export default function Home() {
   const { language, t } = useLanguage();
+  const router = useRouter();
 
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -629,39 +631,58 @@ export default function Home() {
   }, [isLoaded]);
 
   const changeView = (view: string, categoryOrId: string | null = null) => {
-    if (view === 'listing' && categoryOrId) {
-      window.location.hash = `#listing/${categoryOrId}`;
+    if (view === '/') {
+      router.push('/');
+      setActiveView('home');
+    } else if (view === 'listing' && categoryOrId) {
+      router.push(`/#listing/${categoryOrId}`);
+      setSelectedListingId(categoryOrId);
+      setActiveView('listing');
     } else if (view === 'profile' && categoryOrId) {
-      window.location.hash = `#profile/${categoryOrId}`;
+      router.push(`/#profile/${categoryOrId}`);
+      setSelectedProfileId(categoryOrId);
+      setActiveView('profile');
     } else if (view === 'browse') {
       if (categoryOrId && ['car', 'bike', 'commercial', 'ev', 'threewheeler', 'bicycle', 'parts', 'service'].includes(categoryOrId)) {
         setFilters((f) => ({ ...f, type: categoryOrId as any, brand: 'all' }));
-        window.location.hash = `#browse/${categoryOrId}`;
+        router.push(`/#browse/${categoryOrId}`);
       } else if (categoryOrId === 'all') {
         setFilters((f) => ({ ...f, type: 'all', brand: 'all' }));
-        window.location.hash = '#browse';
+        router.push('/#browse');
       } else {
-        window.location.hash = '#browse';
+        router.push('/#browse');
       }
+      setActiveView('browse');
     } else if (view === 'dashboard') {
       if (categoryOrId === 'inbox') {
-        window.location.hash = '#dashboard/inbox';
+        router.push('/#dashboard/inbox');
         setUserDashboardTab('inbox');
+      } else if (categoryOrId === 'post-ad') {
+        router.push('/#dashboard/post-ad');
+        setUserDashboardTab('post-ad');
       } else {
-        window.location.hash = '#dashboard';
+        router.push('/#dashboard');
+        setUserDashboardTab('my-ads');
       }
+      setActiveView('dashboard');
     } else if (view === 'auction-verify') {
-      window.location.hash = '#auction-verify';
+      router.push('/#auction-verify');
+      setActiveView('auction-verify');
     } else if (view === 'terms') {
-      window.location.hash = '#terms';
+      router.push('/#terms');
+      setActiveView('terms');
     } else if (view === 'privacy') {
-      window.location.hash = '#privacy';
+      router.push('/#privacy');
+      setActiveView('privacy');
     } else if (view === 'help') {
-      window.location.hash = '#help';
+      router.push('/#help');
+      setActiveView('help');
     } else if (view === 'safety') {
-      window.location.hash = '#safety';
+      router.push('/#safety');
+      setActiveView('safety');
     } else {
-      window.location.hash = '#home';
+      router.push('/#home');
+      setActiveView('home');
     }
   };
 
@@ -1023,7 +1044,7 @@ export default function Home() {
                 activeTab={userDashboardTab}
                 onChangeTab={(tab) => {
                   setUserDashboardTab(tab);
-                  window.location.hash = `#dashboard/${tab}`;
+                  router.push(`/#dashboard/${tab}`);
                 }}
                 userProfile={userProfile}
                 onChangeUserProfile={(updated) => setUserProfile(updated)}
@@ -1054,7 +1075,7 @@ export default function Home() {
                 activeTab={userDashboardTab}
                 onChangeTab={(tab) => {
                   setUserDashboardTab(tab);
-                  window.location.hash = `#dashboard/${tab}`;
+                  router.push(`/#dashboard/${tab}`);
                 }}
                 onLogout={() => {
                   setCurrentRole('guest');

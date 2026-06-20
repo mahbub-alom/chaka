@@ -12,7 +12,7 @@ export default function ThemeToggle({ isDarkMode, onToggle }: ThemeToggleProps) 
     <button
       id="theme-toggle"
       onClick={onToggle}
-      className={`relative inline-flex h-7 w-14 shrink-0 cursor-pointer rounded-full p-0.5 transition-all duration-300 focus:outline-none select-none border ${
+      className={`relative inline-flex items-center h-7 w-14 shrink-0 cursor-pointer rounded-full p-0.5 transition-all duration-300 focus:outline-none select-none border ${
         isDarkMode 
           ? 'bg-gradient-to-r from-slate-950 to-indigo-950 border-slate-800 shadow-inner' 
           : 'bg-gradient-to-r from-amber-50 to-orange-100 border-amber-200 shadow-inner'
@@ -29,7 +29,7 @@ export default function ThemeToggle({ isDarkMode, onToggle }: ThemeToggleProps) 
       <motion.div
         layout
         transition={{ type: 'spring', stiffness: 450, damping: 25 }}
-        className={`pointer-events-none z-10 inline-block h-5.5 w-5.5 transform rounded-full bg-white shadow-lg flex items-center justify-center border ${
+        className={`pointer-events-none z-10 flex h-5.5 w-5.5 items-center justify-center transform rounded-full bg-white shadow-lg border ${
           isDarkMode 
             ? 'translate-x-7 bg-gradient-to-tr from-slate-900 to-indigo-900 border-indigo-500/30' 
             : 'translate-x-0 bg-white border-amber-100'
