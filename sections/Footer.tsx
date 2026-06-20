@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import Container from "@/components/Container";
 import {
   Shield,
   MapPin,
@@ -38,7 +39,7 @@ export default function Footer({
           : "bg-white border-slate-200 text-slate-600"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <Container className="py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Profile section */}
           <div className="space-y-4">
@@ -421,7 +422,7 @@ export default function Footer({
             </span>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

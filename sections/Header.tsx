@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Container from "@/components/Container";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useLanguage } from "@/context/LanguageContext";
 import {
@@ -58,16 +59,19 @@ export default function Header({
   const { language, setLanguage, t } = useLanguage();
   const [localSearch, setLocalSearch] = useState(searchQuery);
 
-  const [recentSearches, setRecentSearches] = useState<string[]>(() => {
+  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+
+  useEffect(() => {
     const saved = localStorage.getItem("chaka-recent-searches");
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed)) return parsed.slice(0, 5);
-      } catch (e) {}
+        if (Array.isArray(parsed)) {
+          setRecentSearches(parsed.slice(0, 5));
+        }
+      } catch {}
     }
-    return [];
-  });
+  }, []);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const saveSearchQuery = (query: string) => {
@@ -109,7 +113,7 @@ export default function Header({
             : "bg-slate-900 border-slate-800 text-slate-200"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-end gap-4">
+        <Container className="flex items-center justify-end gap-4">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1 bg-slate-800 dark:bg-slate-950 p-0.5 rounded-md border border-slate-700/60 max-h-7 select-none">
               <button
@@ -182,7 +186,7 @@ export default function Header({
               <ThemeToggle isDarkMode={isDarkMode} onToggle={onThemeToggle} />
             </div>
           </div>
-        </div>
+        </Container>
       </div>
 
       <div
@@ -192,7 +196,7 @@ export default function Header({
             : "bg-white text-slate-800 shadow-[0_4px_24px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.02)]"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-1 xs:px-2.5 sm:px-6 lg:px-8">
+        <Container>
           <div className="h-14 flex items-center justify-between gap-1 sm:gap-3 md:gap-4 select-none">
             <button
               onClick={onMobileMenuToggle}
@@ -392,8 +396,10 @@ export default function Header({
               </Link>
             </nav>
 
-            <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2.5 shrink-0">
-              <div className="relative w-[85px] xs:w-[115px] sm:w-[170px] md:w-[220px] shrink-0">
+            {/* <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2.5 shrink-0"> */}
+            {/* <div className="relative w-[85px] xs:w-[115px] sm:w-[170px] md:w-[220px] shrink-0"> */}
+            <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2.5 min-w-0">
+              <div className="relative min-w-[70px] w-full max-w-[220px]">
                 <div className="absolute inset-y-0 left-0 pl-2.5 sm:pl-3 flex items-center pointer-events-none text-slate-400">
                   <svg
                     className="w-3.5 h-3.5"
@@ -545,7 +551,7 @@ export default function Header({
                   }
                   onChangeView("dashboard", "inbox");
                 }}
-                className="relative rounded-full text-white bg-primary hover:bg-primary-hover hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center justify-center h-8.5 w-8.5 sm:h-9.5 sm:w-9.5 shadow-[0_3px_10px_rgba(255,102,0,0.3)] border border-orange-500/10 shrink-0"
+                className="hidden lg:flex relative rounded-full text-white bg-primary hover:bg-primary-hover hover:scale-105 active:scale-95 transition-all cursor-pointer items-center justify-center h-8.5 w-8.5 sm:h-9.5 sm:w-9.5 shadow-[0_3px_10px_rgba(255,102,0,0.3)] border border-orange-500/10 shrink-0"
                 title="Open Chat Inbox"
               >
                 <div className="relative flex items-center justify-center w-full h-full">
@@ -576,7 +582,6 @@ export default function Header({
                 <PlusCircle className="w-3.5 h-3.5" /> {t("postAd")}
               </Link>
 
-              {/* Core Sign In / User Profile photo circle link */}
               {currentRole === "guest" ? (
                 <Link
                   href="/#dashboard"
@@ -611,7 +616,6 @@ export default function Header({
                         : "bg-slate-100 hover:bg-slate-200"
                   }`}
                 >
-                  {/* Round Profile Avatar */}
                   <div className="w-7.5 h-7.5 rounded-full overflow-hidden border border-slate-300 dark:border-slate-700 shadow-sm bg-orange-900 flex items-center justify-center shrink-0">
                     {currentRole === "admin" ? (
                       <img
@@ -648,12 +652,10 @@ export default function Header({
               )}
             </div>
           </div>
-        </div>
+        </Container>
       </div>
     </header>
   );
-
-  // Helper routine to route/filter to specific elements
   function handleAuctionVerifyClick() {
     onChangeView("auction-verify");
   }

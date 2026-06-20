@@ -36,6 +36,7 @@ import BrowseView from '@/sections/BrowseView';
 import ListingDetailView from '@/sections/ListingDetailView';
 import ShareModal from '@/components/ShareModal';
 import ReportModal from '@/components/ReportModal';
+import Container from '@/components/Container';
 
 // Bangladesh divisions list
 const BANGLADESH_DIVISIONS = ['Dhaka', 'Chittagong', 'Sylhet', 'Rajshahi', 'Khulna', 'Barisal', 'Rangpur', 'Mymensingh'];
@@ -945,7 +946,8 @@ export default function Home() {
       />
 
       {/* Main Contents view ports */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-24 md:pb-12 min-h-[60vh]">
+      <main>
+        <Container className="py-6 pb-24 md:pb-12 min-h-[60vh]">
         
         {/* VIEW 1: HOME VIEW */}
         {activeView === 'home' && (
@@ -1176,6 +1178,7 @@ export default function Home() {
           />
         )}
 
+        </Container>
       </main>
 
       {/* GLOBAL FOOTER */}
