@@ -19,6 +19,7 @@ import {
   Toolbox
 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import Link from 'next/link';
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -88,7 +89,6 @@ export default function MobileDrawer({
         onClick={onClose}
       />
 
-      {/* Modern thin slide-out drawer panel */}
       <div 
         className={`fixed inset-y-0 left-0 max-w-[275px] w-full flex flex-col shadow-2xl transition-transform duration-300 ease-out z-10 animate-slide-in-left ${
           isDarkMode 
@@ -96,18 +96,89 @@ export default function MobileDrawer({
             : 'bg-white border-r border-slate-200 text-slate-900'
         }`}
       >
-        {/* Clean, high-density Header */}
         <div className="p-4.5 border-b border-solid border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white shrink-0 shadow-sm">
-              <span className="font-black text-sm select-none">C</span>
-            </div>
-            <div>
-              <h2 className="font-extrabold text-xs tracking-tight text-slate-800 dark:text-slate-200">Chaka Navigation</h2>
-              <p className="text-[9px] text-primary dark:text-orange-400 font-bold leading-none mt-0.5">
-                {language === 'bn' ? 'অকশন ও কার পোর্টাল' : 'Verified Auction Portal'}
-              </p>
-            </div>
+          <Link
+              href="/"
+              onClick={() => onChangeView("/")}
+              className="flex items-center cursor-pointer group select-none min-w-fit pr-0.5 sm:pr-2 -ml-1"
+            >
+              <div
+                className={`relative flex items-center h-10 sm:h-12 transition-colors duration-300 ${
+                  isDarkMode
+                    ? "text-orange-400 group-hover:text-orange-300"
+                    : "text-primary group-hover:text-orange-600"
+                }`}
+              >
+                <svg
+                  className="h-[25px] xs:h-[31px] sm:h-[36px] md:h-[42px] w-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                  viewBox="0 0 172 54"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M48 6 L60 22 M75 3 L92 24 M110 5 L124 23 M130 9 L139 21 M58 20 L84 4 M88 18 L114 3 M118 19 L138 8"
+                    stroke="currentColor"
+                    strokeWidth="0.7"
+                    strokeOpacity="0.22"
+                  />
+
+                  <path
+                    d="M 5 35 
+                       C 5 30, 4 20, 8 17 
+                       C 11 14, 18 17, 20 15 
+                       C 23 13.5, 27 10.5, 38 9 
+                       C 52 7, 74 5.5, 100 6 
+                       C 118 6.2, 130 9, 138 12.5
+                       C 146 16, 149 18.5, 153 18.5
+                       C 156 18.5, 159 19, 165 21.5
+                       C 169 23, 170 25.5, 170.5 27.5
+                       C 171 29, 170 30.2, 168.5 31
+                       C 166.5 32, 164 32.5, 162 30
+                       C 160.5 28.5, 159 27.5, 155 27.5
+                       C 151 27.5, 142 28.5, 138 31
+                       C 135.5 32.5, 135 35.5, 135 38
+                       C 135 42.5, 134 44, 138 44.2
+                       C 143 44.5, 149.5 43.5, 153 40.5
+                       C 156 38, 155.5 36.5, 155 35
+                       C 154.5 33.5, 156.5 32.5, 158 33
+                       C 159.5 33.5, 159 35, 159 36.5
+                       C 159 39, 155.5 44.5, 144 46.5
+                       C 138 47.5, 129 46, 129 43
+                       L 129 37
+                       C 129 31, 104 30, 98 30
+                       C 89 30, 74 31.5, 65 31.5
+                       M 170.5 27.5
+                       C 170.5 27.5, 168.5 29.2, 167.5 30
+                       M 153 18.5
+                       C 139 18.5, 118 19.2, 96 19.5"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+
+                  <path
+                    d="M139 20 C146 20.5, 152 22.5, 158 24 M156 27.5 C159 30, 161.5 30.5, 165 30"
+                    stroke="currentColor"
+                    strokeWidth="0.8"
+                    strokeOpacity="0.4"
+                  />
+                  <text
+                    x="21"
+                    y="43"
+                    className="font-logo font-bold select-none text-[32px] tracking-tight"
+                    fill="currentColor"
+                    style={{
+                      fontFamily: "'Fredoka', sans-serif",
+                      fontWeight: 700,
+                    }}
+                  >
+                    Chaka
+                  </text>
+                </svg>
+              </div>
+            </Link>
           </div>
 
           <button 
@@ -118,16 +189,13 @@ export default function MobileDrawer({
           </button>
         </div>
 
-        {/* Dense Professional lists */}
         <div className="flex-1 overflow-y-auto px-3.5 py-4 space-y-4 no-scrollbar">
           
-          {/* Main Navigation */}
           <div className="space-y-1">
             <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 pl-1">
               {language === 'bn' ? 'মেনু ব্রাউজ' : 'Explore Platform'}
             </span>
             
-            {/* Landing Home */}
             <button
               onClick={() => handleItemClick('home')}
               className={`w-full flex items-center gap-3.5 px-3 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
@@ -140,7 +208,6 @@ export default function MobileDrawer({
               <span>{language === 'bn' ? 'মূল পাতা' : 'Home Main'}</span>
             </button>
 
-            {/* Render Category List */}
             {menuItems.map((item) => {
               const isSelected = activeView === item.view && (item.cat === undefined || activeCategory === item.cat);
               const IconComp = item.icon;
@@ -161,7 +228,6 @@ export default function MobileDrawer({
             })}
           </div>
 
-          {/* Quick Info & Guidelines - Side-by-Side Grid (Incredibly space efficient!) */}
           <div className="space-y-1">
             <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 pl-1">
               {language === 'bn' ? 'গুরুত্বপূর্ণ লিংক' : 'Information Links'}
@@ -218,7 +284,7 @@ export default function MobileDrawer({
             </div>
           </div>
 
-          {/* Clean Role Emulator Tab */}
+          
           <div className="space-y-1.5">
             <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 pl-1 block">
               {language === 'bn' ? 'রোল সিমুলেটর' : 'Platform Mock Role'}
@@ -248,7 +314,6 @@ export default function MobileDrawer({
                 ))}
               </div>
 
-              {/* Theme integration toggle */}
               <div className="flex items-center justify-between pt-2 border-t border-solid border-slate-200/50 dark:border-slate-800/40">
                 <span className="text-[9.5px] font-bold text-slate-500">{language === 'bn' ? 'ডার্ক মোড:' : 'Theme Mode:'}</span>
                 <button
@@ -262,7 +327,6 @@ export default function MobileDrawer({
             </div>
           </div>
 
-          {/* Clean hotline */}
           <div className="p-3.5 rounded-xl bg-gradient-to-br from-primary/10 to-orange-500/5 border border-primary/20 text-center space-y-2">
             <span className="text-[10px] font-extrabold text-primary dark:text-orange-400 block">
               {language === 'bn' ? '📞 চাকা সাপোর্ট হটলাইন' : `📞 Chaka Live Support`}
@@ -279,7 +343,6 @@ export default function MobileDrawer({
 
         </div>
 
-        {/* Mini bottom brand identifier */}
         <div className="p-3 border-t border-solid border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-center">
           <span className="text-[8px] font-mono text-slate-400 dark:text-slate-600 block tracking-widest uppercase">
             Chaka BD Multi-Hub Platform
