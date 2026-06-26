@@ -292,7 +292,7 @@ export default function Header({
               </div>
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+            <nav className="hidden lg:flex items-center ">
               <Link
                 href="/#browse"
                 onClick={() => onChangeView("browse", "all")}
