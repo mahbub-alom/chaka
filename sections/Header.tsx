@@ -63,6 +63,7 @@ export default function Header({
 
   useEffect(() => {
     const saved = localStorage.getItem("chaka-recent-searches");
+    console.log(saved);
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
