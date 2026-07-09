@@ -292,11 +292,11 @@ export default function Header({
               </div>
             </Link>
 
-            <nav className="hidden lg:flex items-center ">
+            <nav className="hidden lg:flex items-center gap-0.5">
               <Link
                 href="/#browse"
                 onClick={() => onChangeView("browse", "all")}
-                className={`text-[12.5px] xl:text-[13.5px] whitespace-nowrap font-bold py-1.5 px-3.5 rounded-xl flex items-center gap-1.5 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
+                className={`text-[12.5px] xl:text-[13.5px] whitespace-nowrap font-bold py-1.5 px-2 rounded-xl flex items-center gap-1 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
                   activeView === "browse" &&
                   (activeCategory === "all" || !activeCategory)
                     ? isDarkMode
@@ -314,7 +314,7 @@ export default function Header({
               <Link
                 href="/#browse/car"
                 onClick={() => onChangeView("browse", "car")}
-                className={`text-[12.5px] xl:text-[13.5px] font-bold py-1.5 px-3.5 rounded-xl flex items-center gap-1.5 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
+                className={`text-[12.5px] xl:text-[13.5px] font-bold py-1.5 px-2 rounded-xl flex items-center gap-1 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
                   activeView === "browse" && activeCategory === "car"
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
@@ -331,7 +331,7 @@ export default function Header({
               <Link
                 href="/#browse/bike"
                 onClick={() => onChangeView("browse", "bike")}
-                className={`text-[12.5px] xl:text-[13.5px] font-bold py-1.5 px-3.5 rounded-xl flex items-center gap-1.5 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
+                className={`text-[12.5px] xl:text-[13.5px] font-bold py-1.5 px-2 rounded-xl flex items-center gap-1 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
                   activeView === "browse" && activeCategory === "bike"
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
@@ -348,7 +348,7 @@ export default function Header({
               <Link
                 href="/#browse/parts"
                 onClick={() => onChangeView("browse", "parts")}
-                className={`text-[12.5px] xl:text-[13.5px] font-bold py-1.5 px-3.5 rounded-xl flex items-center gap-1.5 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
+                className={`text-[12.5px] xl:text-[13.5px] font-bold py-1.5 px-2 rounded-xl flex items-center gap-1 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
                   activeView === "browse" && activeCategory === "parts"
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
@@ -365,7 +365,7 @@ export default function Header({
               <Link
                 href="/#browse/service"
                 onClick={() => onChangeView("browse", "service")}
-                className={`text-[12.5px] xl:text-[13.5px] font-bold py-1.5 px-3.5 rounded-xl flex items-center gap-1.5 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
+                className={`text-[12.5px] xl:text-[13.5px] font-bold py-1.5 px-2 rounded-xl flex items-center gap-1 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
                   activeView === "browse" && activeCategory === "service"
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
@@ -382,7 +382,7 @@ export default function Header({
               <Link
                 href="/#auction-verify"
                 onClick={() => handleAuctionVerifyClick()}
-                className={`text-[12.5px] xl:text-[13.5px] font-bold whitespace-nowrap py-1.5 px-3.5 rounded-xl flex items-center gap-1.5 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
+                className={`text-[12.5px] xl:text-[13.5px] font-bold whitespace-nowrap py-1.5 px-2 rounded-xl flex items-center gap-1 border border-transparent leading-none cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.05] active:scale-[0.95] ${
                   activeView === "auction-verify"
                     ? isDarkMode
                       ? "bg-orange-950/40 border-orange-900/40 text-orange-400 font-extrabold shadow-md"
