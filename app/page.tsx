@@ -966,7 +966,6 @@ export default function Home() {
           />
         )}
 
-        {/* VIEW 2: BROWSE ALL VEHICLES CATALOG VIEW */}
         {activeView === 'browse' && (
           <BrowseView
             listings={listings}
@@ -986,7 +985,6 @@ export default function Home() {
           />
         )}
 
-        {/* VIEW 3: DYNAMIC VEHICLE LISTING DETAIL VIEW */}
         {activeView === 'listing' && activeListingItem && (
           <ListingDetailView
             activeListingItem={activeListingItem}
@@ -1011,7 +1009,6 @@ export default function Home() {
           />
         )}
 
-        {/* VIEW 4: SEPARATED ROLE DASHBOARDS VIEW */}
         {activeView === 'dashboard' && (
           <div className="space-y-6">
             <div>
@@ -1122,7 +1119,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* VIEW 5: JP AUCTION VERIFICATION SEARCH ENGINE */}
         {activeView === 'auction-verify' && (
           <AuctionVerify 
             isDarkMode={isDarkMode} 
@@ -1130,7 +1126,6 @@ export default function Home() {
           />
         )}
 
-        {/* DYNAMIC LEGAL AND HELP PAGES */}
         {['terms', 'privacy', 'help', 'safety'].includes(activeView) && (
           <InfoPages
             language={language}
@@ -1141,7 +1136,6 @@ export default function Home() {
           />
         )}
 
-        {/* VIEW 6: USER / SELLER DETAILED PROFILE VIEW */}
         {activeView === 'profile' && selectedProfileId && (
           <UserProfile
             userId={selectedProfileId}
@@ -1179,21 +1173,19 @@ export default function Home() {
         </Container>
       </main>
 
-      {/* GLOBAL FOOTER */}
+      
       <Footer 
         isDarkMode={isDarkMode} 
         onChangeView={(view, category) => changeView(view, category || null)} 
         onOpenFeedback={() => setIsFeedbackOpen(true)}
       />
 
-      {/* FEEDBACK & SUGGESTION REPORT MODAL OVERLAY */}
       <FeedbackModal 
         isOpen={isFeedbackOpen} 
         onClose={() => setIsFeedbackOpen(false)} 
         isDarkMode={isDarkMode} 
       />
 
-      {/* REPORT AD & ABUSE MODAL OVERLAY */}
       <ReportModal
         isOpen={isReportOpen}
         onClose={() => setIsReportOpen(false)}
@@ -1202,7 +1194,6 @@ export default function Home() {
         showToast={showToast}
       />
 
-      {/* SHARING DIALOG OVERLAY */}
       {activeListingItem && (
         <ShareModal
           isOpen={isShareOpen}
@@ -1213,7 +1204,6 @@ export default function Home() {
         />
       )}
 
-      {/* MOBILE PERSISTENT BOTTOM NAVIGATION BAR */}
       <BottomNav 
         isDarkMode={isDarkMode} 
         activeView={activeView} 
