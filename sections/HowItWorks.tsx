@@ -1,18 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'motion/react';
 
 interface HowItWorksProps {
   isDarkMode: boolean;
 }
 
 export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
+  const [hoveredIndex, setHoveredIndex] = useState<number>(0);
+
   const steps = [
     {
       number: "01",
       title: "Check Car & Bike Yourself",
       bengaliTitle: "নিজে গাড়ি/বাইক পরখ করুন",
       description: "Search from hundreds of certified local listings. Examine full detailed specs, browse ultra-clear high-res photos, analyze local BDT valuation scales, and check the vehicle's background on your own terms before contacting sellers.",
-      icon: (
-        <svg viewBox="0 0 240 180" className="w-full h-44 drop-shadow-sm select-none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      color: "orange",
+      themeClass: {
+        glow: "from-orange-500/10 to-amber-500/5 dark:from-orange-500/[0.04] dark:to-transparent",
+        border: "border-orange-500/30 group-hover:border-orange-500/70",
+        activeBorder: "border-orange-500 shadow-[0_0_20px_rgba(249,115,22,0.15)]",
+        text: "text-orange-500 dark:text-orange-400",
+        badge: "bg-orange-500/10 text-orange-500 border-orange-500/20"
+      }
+    },
+    {
+      number: "02",
+      title: "Document Verify & Test Ride",
+      bengaliTitle: "কাগজপত্র যাচাই ও টেস্ট রাইড",
+      description: "Instantly check the authentic Japanese auction sheet report using our verification portal. Cross-examine engine registration dockets and match physical status by scheduling a real-world test ride on open roads.",
+      color: "blue",
+      themeClass: {
+        glow: "from-blue-500/10 to-cyan-500/5 dark:from-blue-500/[0.04] dark:to-transparent",
+        border: "border-blue-500/30 group-hover:border-blue-500/70",
+        activeBorder: "border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.15)]",
+        text: "text-blue-500 dark:text-blue-400",
+        badge: "bg-blue-500/10 text-blue-500 border-blue-500/20"
+      }
+    },
+    {
+      number: "03",
+      title: "Complete Purchase & Joyful Drive",
+      bengaliTitle: "নিরাপদ ক্রয় ও আনন্দের পথচলা",
+      description: "Pay securely, sign the verified legal ownership transfer documents alongside our partner showrooms, acquire the keys, and experience the unrivaled pleasure of driving home your dream car or motorcycle with ultimate joy!",
+      color: "green",
+      themeClass: {
+        glow: "from-emerald-500/10 to-teal-500/5 dark:from-emerald-500/[0.04] dark:to-transparent",
+        border: "border-emerald-500/30 group-hover:border-emerald-500/70",
+        activeBorder: "border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.15)]",
+        text: "text-emerald-500 dark:text-emerald-400",
+        badge: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20"
+      }
+    }
+  ];
+
+  const getStepIcon = (number: string, className: string) => {
+    if (number === "01") {
+      return (
+        <svg viewBox="0 0 240 180" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Garage Structure */}
           <rect 
             x="25" 
@@ -80,15 +124,10 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
           {/* Sparkles of inspection */}
           <path d="M15 70 l4 4 M19 70 l-4 4" stroke="#fbbf24" strokeWidth="1.5" />
         </svg>
-      )
-    },
-    {
-      number: "02",
-      title: "Document Verify & Test Ride",
-      bengaliTitle: "কাগজপত্র যাচাই ও টেস্ট রাইড",
-      description: "Instantly check the authentic Japanese auction sheet report using our verification portal. Cross-examine engine registration dockets and match physical status by scheduling a real-world test ride on open roads.",
-      icon: (
-        <svg viewBox="0 0 240 180" className="w-full h-44 drop-shadow-sm select-none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      );
+    } else if (number === "02") {
+      return (
+        <svg viewBox="0 0 240 180" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Road Ground and Speed lines */}
           <path d="M10 150 h180" stroke={isDarkMode ? "#334155" : "#cbd5e1"} strokeWidth="2.5" strokeLinecap="round" />
           <path d="M15 158 h140" stroke={isDarkMode ? "#1e293b" : "#94a3b8"} strokeWidth="1.5" strokeDasharray="10 6" strokeOpacity="0.4" />
@@ -141,15 +180,10 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
           <path d="M12 95 C25 90 40 92 50 90" stroke={isDarkMode ? "#1e293b" : "#e2e8f0"} strokeWidth="1.5" strokeLinecap="round" />
           <path d="M5 105 C20 102 35 105 45 102" stroke={isDarkMode ? "#1e293b" : "#e2e8f0"} strokeWidth="1.5" strokeLinecap="round" />
         </svg>
-      )
-    },
-    {
-      number: "03",
-      title: "Complete Purchase & Joyful Drive",
-      bengaliTitle: "নিরাপদ ক্রয় ও আনন্দের পথচলা",
-      description: "Pay securely, sign the verified legal ownership transfer documents alongside our partner showrooms, acquire the keys, and experience the unrivaled pleasure of driving home your dream car or motorcycle with ultimate joy!",
-      icon: (
-        <svg viewBox="0 0 240 180" className="w-full h-44 drop-shadow-sm select-none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      );
+    } else {
+      return (
+        <svg viewBox="0 0 240 180" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Simple House Background */}
           {/* Roof */}
           <path d="M30 90 L85 45 L140 90 Z" fill="#10b981" fillOpacity="0.85" stroke="#059659" strokeWidth="2" />
@@ -208,83 +242,401 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
           <path d="M15 40 l3 3 M18 40 l-3 3 M215 110 l4 4 M219 110 l-4 4" stroke="#fbbf24" strokeWidth="2" strokeLinecap="round" />
           <circle cx="215" cy="125" r="3.5" fill="#22c55e" className="animate-pulse" />
         </svg>
-      )
+      );
     }
-  ];
+  };
 
   return (
-    <section className={`space-y-8 select-none py-10 border-y border-dashed ${
+    <section className={`relative select-none py-12 border-y border-dashed overflow-hidden ${
       isDarkMode ? 'border-slate-800/80' : 'border-slate-200'
     }`}>
-      {/* Dynamic Visual Pitch section */}
-      <div className="text-center max-w-2xl mx-auto space-y-3">
-        <h2 className={`text-2xl md:text-3xl font-black tracking-tight matches-outfit ${
-          isDarkMode ? 'text-white' : 'text-slate-900'
+      {/* Background High-Tech Grid & Radial Ambient Orbs */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none -z-20" />
+      
+      {/* Blurry Glow Orbs */}
+      <div className="absolute -top-12 -left-12 w-80 h-80 bg-orange-500/5 dark:bg-orange-500/[0.03] rounded-full filter blur-[120px] pointer-events-none -z-20" />
+      <div className="absolute -bottom-12 -right-12 w-80 h-80 bg-blue-500/5 dark:bg-blue-500/[0.03] rounded-full filter blur-[120px] pointer-events-none -z-20" />
+
+      {/* Visual Pitch section */}
+      <div className="text-center max-w-2xl mx-auto space-y-3 px-4">
+        <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full border ${
+          isDarkMode 
+            ? 'bg-slate-900/60 border-slate-800 text-orange-400' 
+            : 'bg-orange-500/5 border-orange-500/10 text-primary'
         }`}>
-          How Chaka Works
+          Simple 3-Step Process
+        </span>
+        
+        <h2 className="text-2xl md:text-4xl font-black tracking-tight leading-none mt-2">
+          How <span className="bg-gradient-to-r from-primary via-orange-500 to-rose-500 bg-clip-text text-transparent">Chaka</span> Works
         </h2>
-        <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-orange-500 mx-auto rounded-full animate-pulse" />
-        <p className={`text-xs sm:text-sm md:text-base font-semibold ${isDarkMode ? 'text-slate-400' : 'text-slate-500'} leading-relaxed`}>
+        
+        <p className={`text-xs sm:text-sm md:text-base font-semibold max-w-xl mx-auto ${
+          isDarkMode ? 'text-slate-400' : 'text-slate-500'
+        } leading-relaxed`}>
           Bangladesh's trusted self-inspection portal. We empower buyers with transparency, verified documentation, and immediate test ride flexibility.
         </p>
       </div>
 
-      {/* 3 Step Visual Board Container */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
-        {steps.map((step) => (
-          <div
-            key={step.number}
-            className={`relative p-6 sm:p-8 rounded-3xl flex flex-col justify-between transition-all duration-350 border overflow-hidden group ${
-              isDarkMode
-                ? 'bg-gradient-to-b from-slate-900/85 to-slate-950/50 border-slate-800 hover:border-orange-500/40 hover:shadow-2xl shadow-slate-950/70'
-                : 'bg-white border-slate-100 hover:border-primary/30 hover:shadow-2xl shadow-slate-200/65'
-            }`}
-          >
-            {/* Elegant large background digit identifier (watermark) */}
-            <div className={`absolute right-6 top-1/2 -translate-y-1/2 text-[110px] sm:text-[130px] font-black tracking-tighter select-none font-sans pointer-events-none z-0 ${
-              isDarkMode ? 'opacity-[0.03] text-slate-400' : 'opacity-[0.05] text-slate-300'
-            }`}>
-              {step.number}
+      {/* MOBILE COMPACT TRIANGULAR TIMELINE VIEW */}
+      <div className="block md:hidden px-3 pt-6 relative">
+        <div className={`p-4 rounded-3xl border relative overflow-hidden transition-all ${
+          isDarkMode
+            ? 'bg-slate-950/70 border-slate-900 shadow-2xl'
+            : 'bg-white/80 border-slate-100 shadow-xl shadow-slate-200/50'
+        }`}>
+          {/* Asymmetrical Curved Road Timeline Behind Cards */}
+          <div className="absolute inset-0 pointer-events-none z-0">
+            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path 
+                d="M 25,25 Q 50,10 75,25 Q 70,60 50,75" 
+                stroke={isDarkMode ? "#1e293b" : "#e2e8f0"} 
+                strokeWidth="3.5" 
+                strokeLinecap="round"
+                vectorEffect="non-scaling-stroke"
+              />
+              {/* Glowing active road timeline */}
+              <motion.path 
+                d="M 25,25 Q 50,10 75,25 Q 70,60 50,75" 
+                stroke="url(#mobile-triangle-grad)" 
+                strokeWidth="3.5" 
+                strokeLinecap="round"
+                vectorEffect="non-scaling-stroke"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: hoveredIndex === 0 ? 0.05 : hoveredIndex === 1 ? 0.55 : 1.0 }}
+                transition={{ type: "spring", stiffness: 60, damping: 15 }}
+              />
+              
+              {/* Continuous Laser Spark */}
+              <motion.path 
+                d="M 25,25 Q 50,10 75,25 Q 70,60 50,75" 
+                stroke="#fff" 
+                strokeWidth="3.5" 
+                strokeLinecap="round"
+                vectorEffect="non-scaling-stroke"
+                strokeDasharray="15, 120"
+                animate={{ strokeDashoffset: [0, -135] }}
+                transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+              />
+              
+              <defs>
+                <linearGradient id="mobile-triangle-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#ff6600" />
+                  <stop offset="50%" stopColor="#3b82f6" />
+                  <stop offset="100%" stopColor="#10b981" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          {/* Cards Layout in Inverted Triangle Structure */}
+          <div className="space-y-2.5 relative z-10">
+            {/* Row 1: Step 1 and Step 2 side-by-side */}
+            <div className="flex gap-2.5 w-full">
+              {steps.slice(0, 2).map((step, idx) => {
+                const isActive = hoveredIndex === idx;
+                return (
+                  <div 
+                    key={step.number}
+                    onClick={() => setHoveredIndex(idx)}
+                    className={`w-1/2 p-3 rounded-2xl border transition-all duration-350 flex flex-col justify-between text-left cursor-pointer relative overflow-hidden h-[120px] ${
+                      isActive
+                        ? isDarkMode
+                          ? `bg-slate-900/90 ${step.themeClass.activeBorder} scale-[1.02] z-10`
+                          : `bg-slate-50/90 ${step.themeClass.activeBorder} scale-[1.02] z-10`
+                        : isDarkMode
+                          ? 'bg-slate-950/40 border-slate-900/60 opacity-60'
+                          : 'bg-slate-50/20 border-slate-100 opacity-65'
+                    }`}
+                  >
+                    {/* Glowing background blob on active */}
+                    {isActive && (
+                      <div className={`absolute inset-0 bg-gradient-to-b ${step.themeClass.glow} pointer-events-none -z-10`} />
+                    )}
+
+                    {/* Watermark digit */}
+                    <div className={`absolute right-2 bottom-1 text-[28px] font-black select-none pointer-events-none z-0 leading-none ${
+                      isActive ? step.themeClass.text + ' opacity-[0.06]' : 'text-slate-500 opacity-[0.03]'
+                    }`}>
+                      {step.number}
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      {/* Micro illustration badge */}
+                      <div className={`w-8 h-8 rounded-xl border flex items-center justify-center p-1.5 relative overflow-hidden shrink-0 transition-all duration-300 ${
+                        isActive
+                          ? step.color === 'orange' ? 'bg-orange-500/10 border-orange-500/20 scale-105'
+                            : 'bg-blue-500/10 border-blue-500/20 scale-105'
+                          : isDarkMode 
+                            ? 'bg-slate-950/40 border-slate-900' 
+                            : 'bg-slate-55 border-slate-200/50'
+                      }`}>
+                        {getStepIcon(step.number, "w-full h-full object-contain")}
+                      </div>
+                      <div className="leading-tight">
+                        <span className={`block text-[6px] font-extrabold uppercase tracking-widest leading-none ${
+                          isActive ? step.themeClass.text : 'text-slate-500'
+                        }`}>
+                          Step {step.number}
+                        </span>
+                        <span className={`text-[7px] font-bold block leading-none mt-0.5 ${
+                          isActive ? step.themeClass.text : 'text-slate-500/70'
+                        }`}>
+                          {step.bengaliTitle}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="mt-1.5">
+                      <h3 className={`text-[9px] font-black tracking-tight leading-tight transition-colors line-clamp-1 ${
+                        isActive 
+                          ? isDarkMode ? 'text-slate-100' : 'text-slate-900 font-extrabold'
+                          : 'text-slate-500'
+                      }`}>
+                        {step.title}
+                      </h3>
+                      <p className={`text-[8px] leading-snug font-medium transition-colors mt-0.5 line-clamp-3 ${
+                        isActive 
+                          ? isDarkMode ? 'text-slate-300' : 'text-slate-600 font-semibold'
+                          : 'text-slate-500'
+                      }`}>
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
-            <div className="space-y-6 relative z-10">
-              {/* Large SVG illustration centered inside card */}
-              <div className={`w-full flex items-center justify-center py-2 relative overflow-hidden rounded-2xl p-4 shadow-inner border ${
-                isDarkMode 
-                  ? 'bg-slate-950/30 border-slate-800/20' 
-                  : 'bg-slate-50/50 border-slate-100/50'
-              }`}>
-                {step.icon}
-              </div>
+            {/* Row 2: Step 3 Centered below Row 1 */}
+            <div className="flex justify-center w-full">
+              {steps.slice(2, 3).map((step) => {
+                const isActive = hoveredIndex === 2;
+                return (
+                  <div 
+                    key={step.number}
+                    onClick={() => setHoveredIndex(2)}
+                    className={`w-[85%] p-3 rounded-2xl border transition-all duration-350 flex flex-col justify-between text-left cursor-pointer relative overflow-hidden h-[120px] ${
+                      isActive
+                        ? isDarkMode
+                          ? `bg-slate-900/90 ${step.themeClass.activeBorder} scale-[1.02] z-10`
+                          : `bg-slate-50/90 ${step.themeClass.activeBorder} scale-[1.02] z-10`
+                        : isDarkMode
+                          ? 'bg-slate-950/40 border-slate-900/60 opacity-60'
+                          : 'bg-slate-50/20 border-slate-100 opacity-65'
+                    }`}
+                  >
+                    {/* Glowing background blob on active */}
+                    {isActive && (
+                      <div className={`absolute inset-0 bg-gradient-to-b ${step.themeClass.glow} pointer-events-none -z-10`} />
+                    )}
 
-              <div className="space-y-3">
-                <div>
-                  <span className={`block text-[11px] sm:text-xs font-black uppercase tracking-widest ${
-                    isDarkMode ? 'text-orange-400' : 'text-orange-600'
-                  }`}>
-                    STEP {step.number}
-                  </span>
-                  
-                  <h3 className={`text-base sm:text-lg md:text-xl font-black tracking-tight leading-snug mt-1.5 transition-colors ${
-                    isDarkMode ? 'text-slate-100 group-hover:text-orange-400' : 'text-slate-900 group-hover:text-primary'
-                  }`}>
-                    {step.title}
-                  </h3>
-                  
-                  <span className={`text-xs sm:text-sm font-bold block mt-1 ${
-                    isDarkMode ? 'text-orange-400' : 'text-primary'
-                  }`}>
-                    {step.bengaliTitle}
-                  </span>
-                </div>
-                
-                <p className={`text-xs sm:text-[13px] leading-relaxed font-semibold ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                  {step.description}
-                </p>
-              </div>
+                    {/* Watermark digit */}
+                    <div className={`absolute right-2 bottom-1 text-[28px] font-black select-none pointer-events-none z-0 leading-none ${
+                      isActive ? step.themeClass.text + ' opacity-[0.06]' : 'text-slate-500 opacity-[0.03]'
+                    }`}>
+                      {step.number}
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      {/* Micro illustration badge */}
+                      <div className={`w-8 h-8 rounded-xl border flex items-center justify-center p-1.5 relative overflow-hidden shrink-0 transition-all duration-300 ${
+                        isActive
+                          ? 'bg-emerald-500/10 border-emerald-500/20 scale-105'
+                          : isDarkMode 
+                            ? 'bg-slate-950/40 border-slate-900' 
+                            : 'bg-slate-55 border-slate-200/50'
+                      }`}>
+                        {getStepIcon(step.number, "w-full h-full object-contain")}
+                      </div>
+                      <div className="leading-tight">
+                        <span className={`block text-[6px] font-extrabold uppercase tracking-widest leading-none ${
+                          isActive ? step.themeClass.text : 'text-slate-500'
+                        }`}>
+                          Step {step.number}
+                        </span>
+                        <span className={`text-[7px] font-bold block leading-none mt-0.5 ${
+                          isActive ? step.themeClass.text : 'text-slate-500/70'
+                        }`}>
+                          {step.bengaliTitle}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="mt-1.5">
+                      <h3 className={`text-[9px] font-black tracking-tight leading-tight transition-colors line-clamp-1 ${
+                        isActive 
+                          ? isDarkMode ? 'text-slate-100' : 'text-slate-900 font-extrabold'
+                          : 'text-slate-500'
+                      }`}>
+                        {step.title}
+                      </h3>
+                      <p className={`text-[8px] leading-snug font-medium transition-colors mt-0.5 line-clamp-3 ${
+                        isActive 
+                          ? isDarkMode ? 'text-slate-300' : 'text-slate-600 font-semibold'
+                          : 'text-slate-500'
+                      }`}>
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
-        ))}
+        </div>
+      </div>
+
+      {/* DESKTOP CONNECTED ASYMMETRICAL WAVE TIMELINE */}
+      <div className="hidden md:block pt-6 max-w-6xl mx-auto px-6">
+        <div className="relative pt-8 pb-12">
+          {/* Glowing Winding Highway SVG curves connecting the grid */}
+          <div className="absolute inset-x-0 top-0 bottom-0 pointer-events-none z-0">
+            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="highway-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#ff6600" />
+                  <stop offset="50%" stopColor="#3b82f6" />
+                  <stop offset="100%" stopColor="#10b981" />
+                </linearGradient>
+                <filter id="neon-glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              {/* Highway Base Line */}
+              <path 
+                d="M 16.6,26 Q 50,65 83.3,26" 
+                stroke={isDarkMode ? "#1e293b" : "#f1f5f9"} 
+                strokeWidth="6" 
+                strokeLinecap="round"
+                vectorEffect="non-scaling-stroke"
+              />
+
+              {/* Glowing Highway Route */}
+              <motion.path 
+                d="M 16.6,26 Q 50,65 83.3,26" 
+                stroke="url(#highway-grad)" 
+                strokeWidth="6" 
+                strokeLinecap="round"
+                filter="url(#neon-glow-filter)"
+                vectorEffect="non-scaling-stroke"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: hoveredIndex === 0 ? 0.05 : hoveredIndex === 1 ? 0.5 : 1.0 }}
+                transition={{ type: "spring", stiffness: 60, damping: 15 }}
+                className="opacity-95"
+              />
+
+              {/* Animated Laser Comet riding the Highway */}
+              <motion.path 
+                d="M 16.6,26 Q 50,65 83.3,26" 
+                stroke="#ffffff" 
+                strokeWidth="6" 
+                strokeLinecap="round"
+                vectorEffect="non-scaling-stroke"
+                strokeDasharray="25, 150"
+                animate={{ strokeDashoffset: [0, -175] }}
+                transition={{
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+              />
+            </svg>
+          </div>
+
+          {/* Asymmetrical 3-Card Deck Grid */}
+          <div className="grid grid-cols-3 gap-8 relative z-10">
+            {steps.map((step, idx) => {
+              const isCenter = idx === 1;
+              const isActive = hoveredIndex === idx;
+              return (
+                <div
+                  key={step.number}
+                  onMouseEnter={() => setHoveredIndex(idx)}
+                  className={`relative p-8 rounded-[36px] flex flex-col justify-between transition-all duration-500 border overflow-hidden group cursor-pointer ${
+                    isCenter ? 'translate-y-12' : 'translate-y-0'
+                  } ${
+                    isActive
+                      ? isDarkMode
+                        ? `bg-slate-950/95 ${step.themeClass.activeBorder} shadow-2xl scale-[1.03]`
+                        : `bg-white ${step.themeClass.activeBorder} shadow-2xl scale-[1.03]`
+                      : isDarkMode
+                        ? 'bg-gradient-to-b from-slate-900/40 to-slate-950/20 border-slate-800/80 hover:border-slate-700/60 hover:scale-[1.01] opacity-70'
+                        : 'bg-white border-slate-100 hover:border-slate-200/80 hover:scale-[1.01] shadow-md shadow-slate-100/40 opacity-75'
+                  }`}
+                >
+                  {/* Glowing background blur on active */}
+                  {isActive && (
+                    <div className={`absolute inset-0 bg-gradient-to-b ${step.themeClass.glow} pointer-events-none -z-10`} />
+                  )}
+
+                  {/* Elegant large watermark identifier */}
+                  <div className={`absolute right-8 top-1/2 -translate-y-1/2 text-[140px] font-black tracking-tighter select-none font-sans pointer-events-none z-0 transition-all duration-500 ${
+                    isActive
+                      ? step.color === 'orange' ? 'opacity-[0.06] text-orange-400 scale-105'
+                        : step.color === 'blue' ? 'opacity-[0.06] text-blue-400 scale-105'
+                        : 'opacity-[0.06] text-emerald-400 scale-105'
+                      : isDarkMode ? 'opacity-[0.02] text-slate-400' : 'opacity-[0.05] text-slate-300'
+                  }`}>
+                    {step.number}
+                  </div>
+
+                  <div className="space-y-6 relative z-10">
+                    {/* SVG Illustration Container */}
+                    <div className={`w-full flex items-center justify-center py-4 relative overflow-hidden rounded-3xl p-6 shadow-inner border transition-all duration-500 ${
+                      isActive
+                        ? step.color === 'orange' ? 'bg-orange-500/5 border-orange-500/10'
+                          : step.color === 'blue' ? 'bg-blue-500/5 border-blue-500/10'
+                          : 'bg-emerald-500/5 border-emerald-500/10'
+                        : isDarkMode 
+                          ? 'bg-slate-950/30 border-slate-850/40' 
+                          : 'bg-slate-50/50 border-slate-100/50'
+                    }`}>
+                      {getStepIcon(step.number, "w-full h-36 drop-shadow-sm select-none transition-transform duration-500 group-hover:scale-[1.03]")}
+                    </div>
+
+                    <div className="space-y-3">
+                      <div>
+                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-black uppercase tracking-widest transition-colors ${
+                          isActive ? step.themeClass.badge : 'bg-slate-500/10 text-slate-500 border border-slate-500/20'
+                        }`}>
+                          STEP {step.number}
+                        </span>
+                        
+                        <h3 className={`text-lg lg:text-xl font-black tracking-tight leading-snug mt-3 transition-colors ${
+                          isActive 
+                            ? isDarkMode ? 'text-white' : 'text-slate-900 font-extrabold'
+                            : 'text-slate-700 dark:text-slate-300'
+                        }`}>
+                          {step.title}
+                        </h3>
+                        
+                        <span className={`text-xs lg:text-sm font-bold block mt-1 transition-colors ${
+                          isActive ? step.themeClass.text : 'text-slate-500 dark:text-slate-400'
+                        }`}>
+                          {step.bengaliTitle}
+                        </span>
+                      </div>
+                      
+                      <p className={`text-[12px] lg:text-[13px] leading-relaxed font-semibold transition-colors ${
+                        isActive 
+                          ? isDarkMode ? 'text-slate-300' : 'text-slate-600'
+                          : 'text-slate-500'
+                      }`}>
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );
