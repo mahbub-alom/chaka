@@ -1,18 +1,12 @@
 "use client";
 
 import React, { useMemo } from "react";
+import { motion } from "motion/react";
 import {
-  Car,
-  Bike,
   Compass,
-  ShieldCheck,
-  Star,
   MapPin,
   LayoutGrid,
   Grid,
-  Wrench,
-  Zap,
-  Truck,
   Sparkles,
   List,
   Eye,
@@ -441,16 +435,43 @@ export default function HomeView({
           />
         </div>
       )}
-
-      <div className="space-y-4 mt-8">
-        <div>
-          <h3 className="text-sm sm:text-base md:text-lg font-black uppercase tracking-wider text-primary dark:text-orange-404 flex items-center gap-1.5 matches-outfit">
-            <Grid className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-primary" />{" "}
-            {t("Categories")}
-          </h3>
+      {/* categories section start here  */}
+      <div className="space-y-6 mt-12">
+        {/* Modern premium header */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-slate-100 dark:border-slate-800/40 pb-5 mb-5 gap-3">
+          <div className="space-y-1.5">
+            <div className="inline-flex items-center gap-1.5 text-[10px] font-black tracking-widest text-primary dark:text-orange-400 uppercase">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+              Explore Marketplace
+            </div>
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight flex items-center gap-2 matches-outfit">
+              {/* <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-800 dark:text-slate-100 flex items-center gap-2 matches-outfit"> */}
+              <Grid className="w-5 h-5 text-primary dark:text-orange-400" />
+              {t("Categories")}
+            </h2>
+            <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+              {language === "bn"
+                ? "আপনার পছন্দের যানবাহনের ক্যাটাগরি সিলেক্ট করুন"
+                : "Select a category to filter listings instantly"}
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.03,
+              },
+            },
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-10px" }}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 pt-2"
+        >
           {[
             {
               id: "car",
@@ -459,7 +480,7 @@ export default function HomeView({
               svg: (
                 <svg
                   viewBox="0 0 100 100"
-                  className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110"
+                  className="w-7 h-7 transition-colors duration-300 text-slate-555 dark:text-slate-400 group-hover:text-primary group-hover:dark:text-orange-400"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -472,12 +493,12 @@ export default function HomeView({
                     x2="90"
                     y2="75"
                     strokeWidth="1.5"
-                    className="text-slate-350 dark:text-slate-800"
+                    className="text-slate-300 dark:text-slate-800"
                   />
                   <path
                     d="M15 65 h10 c2-12 18-12 20 0 h15 c2-12 18-12 20 0 h10 c4 0 5-2 5-6 v-4 c0-4-3-8-8-9 l-12-6 c-3-1.5-8-3-12-3 H38 c-4 0-9 1.5-12 3 L14 50 c-5 1-7 5-7 9 v6 z"
                     fill="currentColor"
-                    fillOpacity="0.1"
+                    fillOpacity="0.05"
                   />
                   <path d="M38 41 h15 l8 11 M38 41 v11 M53 41 v11" />
                   <path d="M28 44 l7-3 v11" />
@@ -505,7 +526,7 @@ export default function HomeView({
               svg: (
                 <svg
                   viewBox="0 0 100 100"
-                  className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110"
+                  className="w-7 h-7 transition-colors duration-300 text-slate-555 dark:text-slate-400 group-hover:text-primary group-hover:dark:text-orange-400"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -518,28 +539,28 @@ export default function HomeView({
                     x2="90"
                     y2="75"
                     strokeWidth="1.5"
-                    className="text-slate-350 dark:text-slate-800"
+                    className="text-slate-300 dark:text-slate-800"
                   />
                   <circle
                     cx="25"
                     cy="62"
                     r="11"
                     fill="currentColor"
-                    fillOpacity="0.08"
+                    fillOpacity="0.05"
                   />
                   <circle
                     cx="75"
                     cy="62"
                     r="11"
                     fill="currentColor"
-                    fillOpacity="0.08"
+                    fillOpacity="0.05"
                   />
                   <circle cx="25" cy="62" r="4" fill="none" strokeWidth="3" />
                   <circle cx="75" cy="62" r="4" fill="none" strokeWidth="3" />
                   <path
                     d="M25 51v22M14 62h22M75 51v22M64 62h22"
                     strokeWidth="1"
-                    className="opacity-40"
+                    className="opacity-30"
                   />
                   <path d="M25 62 L42 42 L65 42 L75 62" strokeWidth="3" />
                   <path d="M75 62 L70 30 L60 30" strokeWidth="3" />
@@ -555,12 +576,12 @@ export default function HomeView({
             },
             {
               id: "commercial",
-              title: "Commercial Vehicle",
+              title: "Commercial",
               subtitle: "Truck & Pickup",
               svg: (
                 <svg
                   viewBox="0 0 100 100"
-                  className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110"
+                  className="w-7 h-7 transition-colors duration-300 text-slate-555 dark:text-slate-400 group-hover:text-primary group-hover:dark:text-orange-400"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -573,7 +594,7 @@ export default function HomeView({
                     x2="90"
                     y2="75"
                     strokeWidth="1.5"
-                    className="text-slate-350 dark:text-slate-800"
+                    className="text-slate-300 dark:text-slate-800"
                   />
                   <rect
                     x="15"
@@ -582,18 +603,18 @@ export default function HomeView({
                     height="34"
                     rx="2"
                     fill="currentColor"
-                    fillOpacity="0.1"
+                    fillOpacity="0.05"
                     strokeWidth="2.5"
                   />
                   <path
                     d="M28 28 v34 M45 28 v34"
                     strokeWidth="1.5"
-                    className="opacity-45"
+                    className="opacity-30"
                   />
                   <path
                     d="M65 37 h12 c3 0 5 1.5 6 4 l5 9 c0.5 1.5 1 3 1 5 v7 c0 1.5-1 2.5-2.5 2.5 H65 z"
                     fill="currentColor"
-                    fillOpacity="0.08"
+                    fillOpacity="0.05"
                     strokeWidth="2.5"
                   />
                   <path d="M69 41 h8 l5 9 H69 z" />
@@ -615,7 +636,7 @@ export default function HomeView({
               svg: (
                 <svg
                   viewBox="0 0 100 100"
-                  className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110"
+                  className="w-7 h-7 transition-colors duration-300 text-slate-555 dark:text-slate-400 group-hover:text-primary group-hover:dark:text-orange-400"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -628,12 +649,12 @@ export default function HomeView({
                     x2="90"
                     y2="75"
                     strokeWidth="1.5"
-                    className="text-slate-350 dark:text-slate-800"
+                    className="text-slate-300 dark:text-slate-800"
                   />
                   <path
                     d="M12 63 h12 c1-8 11-8 12 0 h28 c1-8 11-8 12 0 h12 c3 0 4-2 4-5 v-2 c0-5-3-7-7-8 L62 44 c-2-1-5-2-8-2 H34 c-3 0-6 1-8 2 L14 49 c-4 1-5 4-5 7 v2 c0 3 1 5 3 5 z"
                     fill="currentColor"
-                    fillOpacity="0.1"
+                    fillOpacity="0.05"
                   />
                   <circle cx="22" cy="63" r="5" fill="none" strokeWidth="2.5" />
                   <circle cx="22" cy="63" r="1.5" fill="currentColor" />
@@ -653,7 +674,7 @@ export default function HomeView({
                     stroke="currentColor"
                     strokeWidth="1"
                     strokeDasharray="3 5"
-                    className="opacity-40 text-primary"
+                    className="opacity-30"
                   />
                 </svg>
               ),
@@ -665,7 +686,7 @@ export default function HomeView({
               svg: (
                 <svg
                   viewBox="0 0 100 100"
-                  className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110"
+                  className="w-7 h-7 transition-colors duration-300 text-slate-555 dark:text-slate-400 group-hover:text-primary group-hover:dark:text-orange-400"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -678,12 +699,12 @@ export default function HomeView({
                     x2="90"
                     y2="75"
                     strokeWidth="1.5"
-                    className="text-slate-355 dark:text-slate-800"
+                    className="text-slate-300 dark:text-slate-800"
                   />
                   <path
                     d="M22 64 h48 c2 0 3-1.5 3-3.5 l-6-24 c-1.5-6-5-10.5-12-10.5 H34 c-5 0-9 4-11 9 L15 51 c-1.5 3-1 6.5 1 9.5 z"
                     fill="currentColor"
-                    fillOpacity="0.1"
+                    fillOpacity="0.05"
                   />
                   <path d="M25 45 l4-15 h14 v15 z" />
                   <path d="M48 30 h18 l4 15 M48 30 v28 M70 45 v13 H48" />
@@ -700,7 +721,7 @@ export default function HomeView({
               svg: (
                 <svg
                   viewBox="0 0 100 100"
-                  className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110"
+                  className="w-7 h-7 transition-colors duration-300 text-slate-555 dark:text-slate-400 group-hover:text-primary group-hover:dark:text-orange-400"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -713,7 +734,7 @@ export default function HomeView({
                     x2="90"
                     y2="75"
                     strokeWidth="1.5"
-                    className="text-slate-350 dark:text-slate-800"
+                    className="text-slate-300 dark:text-slate-800"
                   />
                   <circle
                     cx="28"
@@ -734,7 +755,7 @@ export default function HomeView({
                   <path
                     d="M28 49 v22 M17 60 h22 M72 49 v22 M61 60 h22"
                     strokeWidth="0.8"
-                    className="opacity-40"
+                    className="opacity-30"
                   />
                   <path
                     d="M28 60 L48 60 L65 42 M28 60 L44 42 L68 42 L72 60"
@@ -755,7 +776,7 @@ export default function HomeView({
               svg: (
                 <svg
                   viewBox="0 0 100 100"
-                  className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110"
+                  className="w-7 h-7 transition-colors duration-300 text-slate-555 dark:text-slate-400 group-hover:text-primary group-hover:dark:text-orange-400"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -767,7 +788,7 @@ export default function HomeView({
                     cy="50"
                     r="20"
                     fill="currentColor"
-                    fillOpacity="0.1"
+                    fillOpacity="0.05"
                     strokeWidth="2.5"
                   />
                   <circle cx="50" cy="50" r="9" fill="none" strokeWidth="2.5" />
@@ -779,7 +800,7 @@ export default function HomeView({
                   <path
                     d="M18 18 l22 22 M25 15 l10 10"
                     strokeWidth="3"
-                    className="opacity-45"
+                    className="opacity-30"
                   />
                   <circle cx="18" cy="18" r="3" fill="currentColor" />
                   <path
@@ -790,7 +811,7 @@ export default function HomeView({
                   <path
                     d="M18 78 h4M20 76v4"
                     strokeWidth="1.5"
-                    className="text-amber-500"
+                    className="text-amber-555"
                   />
                 </svg>
               ),
@@ -802,7 +823,7 @@ export default function HomeView({
               svg: (
                 <svg
                   viewBox="0 0 100 100"
-                  className="w-16 h-16 text-primary dark:text-orange-400 transition-transform duration-300 group-hover:scale-110"
+                  className="w-7 h-7 transition-colors duration-300 text-slate-555 dark:text-slate-400 group-hover:text-primary group-hover:dark:text-orange-400"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -812,13 +833,13 @@ export default function HomeView({
                   <path
                     d="M25 25 h50 v45 c0 8-15 14-25 14 C35 84 20 78 20 70 V25 z"
                     fill="currentColor"
-                    fillOpacity="0.1"
+                    fillOpacity="0.05"
                     strokeWidth="2.5"
                   />
                   <path
                     d="M38 48 l7 7 18-18"
                     strokeWidth="3.5"
-                    className="text-orange-500"
+                    className="text-orange-555"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
@@ -833,12 +854,64 @@ export default function HomeView({
             },
           ].map((cat) => {
             const count = listings.filter((l) => l.type === cat.id).length;
+            const titleText =
+              language === "bn"
+                ? cat.id === "car"
+                  ? "গাড়ি"
+                  : cat.id === "bike"
+                    ? "বাইক"
+                    : cat.id === "commercial"
+                      ? "কমার্শিয়াল গাড়ি"
+                      : cat.id === "ev"
+                        ? "ইভি (ইলেকট্রিক)"
+                        : cat.id === "threewheeler"
+                          ? "থ্রি হুইলার"
+                          : cat.id === "bicycle"
+                            ? "বাইসাইকেল"
+                            : cat.id === "parts"
+                              ? "পার্টস"
+                              : "সার্ভিস"
+                : cat.title;
+
+            const subtitleText =
+              language === "bn"
+                ? cat.id === "car"
+                  ? "সেডান ও এসইউভি"
+                  : cat.id === "bike"
+                    ? "মোটরসাইকেল ও স্কুটার"
+                    : cat.id === "commercial"
+                      ? "ট্রাক ও পিকআপ"
+                      : cat.id === "ev"
+                        ? "ব্যাটারি চালিত গাড়ি"
+                        : cat.id === "threewheeler"
+                          ? "সিএনজি ও অটো"
+                          : cat.id === "bicycle"
+                            ? "সাইকেল ও স্পেয়ার্স"
+                            : cat.id === "parts"
+                              ? "যন্ত্রাংশ ও এক্সেসরিজ"
+                              : "ওয়ার্কশপ ও সাপোর্ট"
+                : cat.subtitle;
+
             return (
-              <div
+              <motion.div
                 key={cat.id}
+                variants={{
+                  hidden: { opacity: 0, y: 12 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { type: "spring", stiffness: 100, damping: 16 },
+                  },
+                }}
+                whileHover={{
+                  y: -4,
+                  transition: { duration: 0.2, ease: "easeOut" },
+                }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() => {
                   setFilters({
                     ...filters,
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     type: cat.id as any,
                     subCategory: "all",
                     partsTarget: "all",
@@ -847,54 +920,57 @@ export default function HomeView({
                   changeView("browse");
                   showToast(`${cat.title} Category Selected!`, "success");
                 }}
-                className={`group relative overflow-hidden rounded-2xl border cursor-pointer transition-all duration-300 transform-gpu hover:scale-[1.03] active:scale-[0.98] p-2.5 flex flex-col justify-between h-[165px] ${
+                className={`group relative overflow-hidden rounded-2xl border cursor-pointer transition-all duration-300 p-3.5 flex flex-col justify-between h-[165px] z-10 ${
                   isDarkMode
-                    ? "bg-slate-900/40 border-slate-900/80 hover:border-orange-500/30 shadow-md hover:shadow-orange-500/5"
-                    : "bg-white border-slate-100 hover:border-orange-500/30 shadow-xs hover:shadow-md hover:shadow-orange-100/40"
+                    ? "bg-slate-900/20 border-slate-850/60 hover:border-orange-500/30 hover:shadow-[0_8px_24px_-4px_rgba(249,115,22,0.06)]"
+                    : "bg-slate-50/20 border-slate-150/70 hover:border-primary/25 hover:shadow-[0_8px_24px_-4px_rgba(249,115,22,0.03)] shadow-[0_4px_12px_rgba(0,0,0,0.015)]"
                 }`}
               >
-                <div className="w-full h-20 rounded-xl overflow-hidden bg-slate-50 dark:bg-slate-955/75 flex items-center justify-center p-1.5 shrink-0 relative">
-                  {cat.svg}
-                  {/* <span className="absolute top-1 right-1 text-[10px] sm:text-[11px] px-1.5 py-0.5 rounded-md font-black bg-primary/10 text-primary dark:bg-orange-500/10 dark:text-orange-400"> */}
-                  <span className="absolute top-1 right-1 text-[10px] sm:text-[11px] px-1.5 py-0.5 rounded-md bg-primary/10 text-primary dark:bg-orange-500/10 dark:text-orange-400">
-                    {count} ads
-                  </span>
+                {/* Colored Top Accent Stripe */}
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-primary/20 dark:bg-orange-500/20 group-hover:bg-primary group-hover:dark:bg-orange-400 transition-colors duration-300 pointer-events-none" />
+
+                {/* Decorative Concentric Radar Rings (Always visible, expands/glows on hover) */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10 -mt-4.5">
+                  <div className="w-15 h-15 rounded-full border border-primary/6 dark:border-orange-500/6 group-hover:border-primary/15 group-hover:dark:border-orange-500/15 group-hover:scale-115 transition-all duration-500 ease-out" />
+                  <div className="w-23 h-23 rounded-full border border-primary/3 dark:border-orange-500/3 group-hover:border-primary/10 group-hover:dark:border-orange-500/10 group-hover:scale-125 absolute transition-all duration-500 ease-out" />
                 </div>
 
-                <div className="text-center pt-2 pb-1">
-                  <h4 className="text-[12px] sm:text-xs font-black uppercase tracking-tight text-slate-800 dark:text-slate-200 group-hover:text-primary dark:group-hover:text-orange-400 transition-colors">
-                    {language === 'bn' 
-                      ? (cat.id === 'car' ? 'গাড়ি' : cat.id === 'bike' ? 'বাইক' : cat.id === 'commercial' ? 'কমার্শিয়াল গাড়ি' : cat.id === 'ev' ? 'ইভি (ইলেকট্রিক)' : cat.id === 'threewheeler' ? 'থ্রি হুইলার' : cat.id === 'bicycle' ? 'বাইসাইকেল' : cat.id === 'parts' ? 'পার্টস' : 'সার্ভিস')
-                      : cat.title
-                    }
-                  </h4>
-                  <span
-                    className={`text-[9px] sm:text-[9.5px] block  leading-none mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-500"}`}
-                  >
-                    {language === "bn"
-                      ? cat.id === "car"
-                        ? "সেডান ও এসইউভি"
-                        : cat.id === "bike"
-                          ? "মোটরসাইকেল ও স্কুটার"
-                          : cat.id === "commercial"
-                            ? "ট্রাক ও পিকআপ"
-                            : cat.id === "ev"
-                              ? "ব্যাটারি চালিত গাড়ি"
-                              : cat.id === "threewheeler"
-                                ? "সিএনজি ও অটো"
-                                : cat.id === "bicycle"
-                                  ? "সাইকেল ও স্পেয়ার্স"
-                                  : cat.id === "parts"
-                                    ? "যন্ত্রাংশ ও এক্সেসরিজ"
-                                    : "ওয়ার্কশপ ও সাপোর্ট"
-                      : cat.subtitle}
-                  </span>
+                {/* Dotted Mesh Grid Background (visible & textured by default, glowing on hover) */}
+                {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:10px_10px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-[0.25] group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-20" /> */}
+
+                {/* Subtle soft primary spotlight radial glow (visible on hover) */}
+                {/* <div className="absolute inset-0 bg-radial from-primary/3 to-transparent dark:from-orange-500/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-20" /> */}
+
+                {/* Inner container */}
+                <div className="flex flex-col justify-between h-full w-full relative">
+                  {/* Top Row: Floating count badge (tinted by default, solid brand color on hover) */}
+                  <div className="flex justify-end w-full relative">
+                    <span className="text-[9px] font-extrabold tracking-wider px-1.5 py-0.5 rounded-md border transition-all duration-300 shadow-3xs bg-primary/5 text-primary border-primary/10 dark:bg-orange-500/5 dark:text-orange-400 dark:border-orange-500/10 group-hover:bg-primary group-hover:text-white group-hover:dark:bg-orange-500 group-hover:border-transparent">
+                      {count} {language === "bn" ? "টি" : "ads"}
+                    </span>
+                  </div>
+
+                  {/* Middle Row: Floating Centered Icon container */}
+                  <div className="w-13 h-13 rounded-full flex items-center justify-center transition-all duration-300 dark:bg-[#021A40] border border-slate-200/60 dark:border-slate-800/80 group-hover:bg-primary/5 group-hover:dark:bg-orange-500/5 group-hover:scale-110 group-hover:border-primary/20 dark:group-hover:border-orange-500/20 shadow-[0_2px_8px_rgba(0,0,0,0.02)] mx-auto -mt-1 relative shrink-0">
+                    {cat.svg}
+                  </div>
+
+                  {/* Bottom Row: Centered Typography */}
+                  <div className="text-center w-full pb-0.5">
+                    <h4 className="text-[12px] sm:text-xs font-bold tracking-tight  group-hover:text-primary dark:group-hover:text-orange-400 transition-colors uppercase">
+                      {titleText}
+                    </h4>
+                    <span className="text-[9px] text-slate-400 dark:text-slate-500 block mt-0.5 line-clamp-1">
+                      {subtitleText}
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
+      {/* categories section end here  */}
 
       <HowItWorks isDarkMode={isDarkMode} />
 
