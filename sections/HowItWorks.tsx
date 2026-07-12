@@ -12,7 +12,7 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
     {
       number: "01",
       title: "Check Car & Bike Yourself",
-      bengaliTitle: "নিজে গাড়ি/বাইক পরখ করুন",
+      bengaliTitle: "নিজে গাড়ি/বাইক পরীক্ষা করুন",
       description: "Search from hundreds of certified local listings. Examine full detailed specs, browse ultra-clear high-res photos, analyze local BDT valuation scales, and check the vehicle's background on your own terms before contacting sellers.",
       color: "orange",
       themeClass: {
@@ -368,8 +368,8 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
           }`}>
             
             {/* selector bar headers */}
-            <div className="flex items-center justify-between border-b border-dashed border-slate-800/80 dark:border-slate-800/40 pb-2">
-              <div className="flex items-center gap-1.5">
+            {/* <div className="flex items-center justify-between border-b border-dashed border-slate-800/80 dark:border-slate-800/40 pb-2"> */}
+              {/* <div className="flex items-center gap-1.5">
                 <span className={`text-[7px] font-black font-mono tracking-widest px-1.5 py-0.5 rounded border transition-colors ${
                   activeStep.color === 'orange' ? 'bg-orange-500/10 text-orange-400 border-orange-500/20' : activeStep.color === 'blue' ? 'bg-blue-500/10 text-blue-400 border-blue-500/20' : 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
                 }`}>
@@ -378,18 +378,18 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
                 <span className="text-[7.5px] font-mono text-slate-500 uppercase tracking-widest font-black">
                   CHAKA_TELEMETRY
                 </span>
-              </div>
+              </div> */}
 
               {/* Status indicators */}
-              <div className="flex items-center gap-1">
+              {/* <div className="flex items-center gap-1">
                 <div className={`w-1.5 h-1.5 rounded-full transition-colors animate-pulse ${
                   activeStep.color === 'orange' ? 'bg-orange-500' : activeStep.color === 'blue' ? 'bg-blue-500' : 'bg-emerald-500'
                 }`} />
                 <span className="text-[7px] font-mono text-slate-500 font-bold uppercase tracking-wider">
                   SYS_OK
                 </span>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
 
             {/* Infotainment body */}
             <div className="flex items-start gap-3 pt-2 text-left">
@@ -430,7 +430,7 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
             </p>
 
             {/* Diagnostics checklist */}
-            <div className="grid grid-cols-2 gap-1.5 text-[7.5px] font-mono border-t border-dashed py-2 border-slate-800/80 dark:border-slate-850/40 text-slate-500 text-left mt-3">
+            {/* <div className="grid grid-cols-2 gap-1.5 text-[7.5px] font-mono border-t border-dashed py-2 border-slate-800/80 dark:border-slate-850/40 text-slate-500 text-left mt-3">
               <div className="flex items-center gap-1">
                 <span>CALIPER:</span>
                 <span className="text-slate-700 dark:text-slate-300 font-bold">{activeStep.diagnostics.caliper}</span>
@@ -449,7 +449,7 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
                   activeStep.color === 'orange' ? 'text-orange-500' : activeStep.color === 'blue' ? 'text-blue-500' : 'text-emerald-500'
                 }`}>{activeStep.diagnostics.signal}</span>
               </div>
-            </div>
+            </div> */}
 
           </div>
 
@@ -634,4 +634,3 @@ export default function HowItWorks({ isDarkMode }: HowItWorksProps) {
     </section>
   );
 }
-  
