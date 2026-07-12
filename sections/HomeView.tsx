@@ -978,7 +978,7 @@ export default function HomeView({
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-base sm:text-lg md:text-xl font-black tracking-tight flex items-center gap-2">
-              <Sparkles className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-primary animate-bounce-subtle" />{" "}
+          
               {language === "bn" ? "জনপ্রিয় ব্র্যান্ড সমূহ" : "Popular Brands"}
             </h2>
             <p
