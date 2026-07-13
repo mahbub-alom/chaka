@@ -972,25 +972,15 @@ export default function HomeView({
       </div>
       {/* categories section end here  */}
 
-      <HowItWorks isDarkMode={isDarkMode} />
-      {/* popular brands section start  */}
-      <div className="space-y-4 py-1 pb-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-base sm:text-lg md:text-xl font-black tracking-tight flex items-center gap-2">
-            {language === "bn" ? "জনপ্রিয় ব্র্যান্ড সমূহ" : "Popular Brands"}
-          </h2>
-          <p className={`text-[10px] sm:text-[11px] md:text-xs ${isDarkMode ? "text-slate-400" : "text-slate-500"}`}>
-            {language === "bn"
-              ? "আপনার পছন্দের ব্র্যান্ডটি সিলেক্ট করে চমৎকার সব লিস্টিং ইনস্ট্যান্টলি খুঁজে নিন"
-              : "Select your preferred automobile manufacturer to filter listings instantly"}
-          </p>
-        </div>
-        <div
-          className={`relative overflow-hidden w-full py-4 rounded-2xl border ${
-            isDarkMode ? "bg-slate-900/30 border-slate-800 backdrop-blur-lg" : "bg-white/80 border-slate-200 backdrop-blur-md"
-          }`}
+<HowItWorks isDarkMode={isDarkMode} />
+      {/* popular brands section start */}
+      <div className="space-y-6 py-4">
+        <h2 className="text-base sm:text-lg md:text-xl font-black tracking-tight flex items-center gap-2">
+          {language === "bn" ? "প্রচলিত ব্র্যান্ড" : "Popular Brands"}
+        </h2>
+        <div className={`relative overflow-hidden w-full rounded-2xl border ${isDarkMode ? "bg-slate-900/30 border-slate-800 backdrop-blur-xl" : "bg-white/80 border-slate-200 backdrop-blur-lg"} p-4`}
         >
-          <div className="flex gap-6 px-6 animate-marquee">
+          <div className="flex gap-8 px-8 animate-marquee">
             {[...TOP_BRANDS_SCROLL, ...TOP_BRANDS_SCROLL].map((brand, idx) => (
               <button
                 key={idx}
@@ -998,19 +988,19 @@ export default function HomeView({
                   setFilters({ ...filters, brand: brand.name, searchQuery: "", type: "all" });
                   changeView("browse");
                 }}
-                className={`flex items-center justify-center w-20 h-20 rounded-xl border ${
-                  isDarkMode ? brand.darkBorder : brand.lightBorder
-                } hover:${
-                  isDarkMode ? brand.darkHover : brand.lightHover
-                } bg-gradient-to-br ${brand.gradient} ${brand.iconColor} transition-all duration-300`}
+                className={`group flex items-center justify-center w-20 h-20 rounded-full border ${isDarkMode ? brand.darkBorder : brand.lightBorder} hover:${isDarkMode ? brand.darkHover : brand.lightHover} bg-gradient-to-br ${brand.gradient} ${brand.iconColor} transition-all duration-300 cursor-pointer`}
               >
                 {brand.logo}
+                <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 bg-primary/10 transition-opacity" />
               </button>
             ))}
           </div>
           <div className="absolute inset-0 rounded-2xl border border-white/10 pointer-events-none" />
         </div>
       </div>
+
+
+  
       {/* popular brands section ends  */}
       <div className="space-y-4">
         <div className="flex justify-between items-center sm:items-end">
