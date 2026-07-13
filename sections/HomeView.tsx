@@ -973,74 +973,45 @@ export default function HomeView({
       {/* categories section end here  */}
 
       <HowItWorks isDarkMode={isDarkMode} />
-
-      <div className="space-y-3 py-1 pb-4">
+      {/* popular brands section start  */}
+      <div className="space-y-4 py-1 pb-4">
         <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-base sm:text-lg md:text-xl font-black tracking-tight flex items-center gap-2">
-          
-              {language === "bn" ? "জনপ্রিয় ব্র্যান্ড সমূহ" : "Popular Brands"}
-            </h2>
-            <p
-              className={`text-[10px] sm:text-[11px] md:text-xs ${isDarkMode ? "text-slate-400" : "text-slate-500"}`}
-            >
-              {language === "bn"
-                ? "আপনার পছন্দের ব্র্যান্ডটি সিলেক্ট করে চমৎকার সব লিস্টিং ইনস্ট্যান্টলি খুঁজে নিন"
-                : "Select your preferred automobile manufacturer to filter listings instantly"}
-            </p>
-          </div>
+          <h2 className="text-base sm:text-lg md:text-xl font-black tracking-tight flex items-center gap-2">
+            {language === "bn" ? "জনপ্রিয় ব্র্যান্ড সমূহ" : "Popular Brands"}
+          </h2>
+          <p className={`text-[10px] sm:text-[11px] md:text-xs ${isDarkMode ? "text-slate-400" : "text-slate-500"}`}>
+            {language === "bn"
+              ? "আপনার পছন্দের ব্র্যান্ডটি সিলেক্ট করে চমৎকার সব লিস্টিং ইনস্ট্যান্টলি খুঁজে নিন"
+              : "Select your preferred automobile manufacturer to filter listings instantly"}
+          </p>
         </div>
-
         <div
-          className={`overflow-hidden relative w-full py-4 rounded-2xl border ${
-            isDarkMode
-              ? "bg-slate-900/10 border-slate-900"
-              : "bg-white border-slate-100 shadow-xs"
+          className={`relative overflow-hidden w-full py-4 rounded-2xl border ${
+            isDarkMode ? "bg-slate-900/30 border-slate-800 backdrop-blur-lg" : "bg-white/80 border-slate-200 backdrop-blur-md"
           }`}
         >
-          <div className="animate-marquee gap-5 pr-4">
-            {[
-              ...TOP_BRANDS_SCROLL,
-              ...TOP_BRANDS_SCROLL,
-              ...TOP_BRANDS_SCROLL,
-            ].map((brand, idx) => (
-              <div
+          <div className="flex gap-6 px-6 animate-marquee">
+            {[...TOP_BRANDS_SCROLL, ...TOP_BRANDS_SCROLL].map((brand, idx) => (
+              <button
                 key={idx}
                 onClick={() => {
-                  setFilters({
-                    ...filters,
-                    brand: brand.name,
-                    searchQuery: "",
-                    type: "all",
-                  });
+                  setFilters({ ...filters, brand: brand.name, searchQuery: "", type: "all" });
                   changeView("browse");
                 }}
-                className={`flex items-center gap-4 px-5 py-3 border rounded-2xl cursor-pointer select-none transition-all duration-300 whitespace-nowrap group shrink-0 ${
-                  isDarkMode
-                    ? `bg-slate-950/65 ${brand.darkBorder} ${brand.darkHover}`
-                    : `bg-white/95 ${brand.lightBorder} ${brand.lightHover}`
-                }`}
+                className={`flex items-center justify-center w-20 h-20 rounded-xl border ${
+                  isDarkMode ? brand.darkBorder : brand.lightBorder
+                } hover:${
+                  isDarkMode ? brand.darkHover : brand.lightHover
+                } bg-gradient-to-br ${brand.gradient} ${brand.iconColor} transition-all duration-300`}
               >
-                <div
-                  className={`w-14 h-12 sm:w-16 sm:h-14 rounded-2xl bg-gradient-to-br ${brand.gradient} ${brand.iconColor} flex items-center justify-center shadow-md transition-transform group-hover:scale-105 [&>svg]:w-7 [&>svg]:h-7 [&>svg]:sm:w-8 [&>svg]:sm:h-8`}
-                >
-                  {brand.logo}
-                </div>
-                <div className="flex flex-col pr-1 justify-center">
-                  <span
-                    className={`text-sm sm:text-base font-black tracking-tight transition-colors ${
-                      isDarkMode ? "text-slate-200" : "text-slate-800"
-                    } group-hover:text-primary dark:group-hover:text-orange-400`}
-                  >
-                    {brand.name}
-                  </span>
-                </div>
-              </div>
+                {brand.logo}
+              </button>
             ))}
           </div>
+          <div className="absolute inset-0 rounded-2xl border border-white/10 pointer-events-none" />
         </div>
       </div>
-
+      {/* popular brands section ends  */}
       <div className="space-y-4">
         <div className="flex justify-between items-center sm:items-end">
           <div>
