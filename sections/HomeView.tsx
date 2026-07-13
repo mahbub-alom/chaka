@@ -964,13 +964,27 @@ export default function HomeView({
 
 <HowItWorks isDarkMode={isDarkMode} />
   
+  {/* popular brands start here  */}
       <div className="space-y-6 py-4">
         <h2 className="text-base sm:text-lg md:text-xl font-black tracking-tight flex items-center gap-2">
+          {/* <Sparkles className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-primary animate-pulse" /> */}
           {language === "bn" ? "প্রচলিত ব্র্যান্ড" : "Popular Brands"}
         </h2>
-        <div className={`relative overflow-hidden w-full rounded-2xl border ${isDarkMode ? "bg-slate-900/30 border-slate-800 backdrop-blur-xl" : "bg-white/80 border-slate-200 backdrop-blur-lg"} p-4`}
+        <div className={`relative overflow-hidden w-full rounded-2xl border ${
+          isDarkMode 
+            ? "bg-slate-900/30 border-slate-800 backdrop-blur-xl" 
+            : "bg-white/80 border-slate-200 backdrop-blur-lg"
+        } py-6 px-4`}
         >
-          <div className="flex gap-8 px-8 animate-marquee">
+          {/* Edge fading gradients for premium transition */}
+          <div className={`absolute inset-y-0 left-0 w-16 pointer-events-none z-10 bg-gradient-to-r ${
+            isDarkMode ? "from-slate-950/80 to-transparent" : "from-[#faf8f5]/80 to-transparent"
+          }`} />
+          <div className={`absolute inset-y-0 right-0 w-16 pointer-events-none z-10 bg-gradient-to-l ${
+            isDarkMode ? "from-slate-950/80 to-transparent" : "from-[#faf8f5]/80 to-transparent"
+          }`} />
+
+          <div className="flex gap-6 px-8 animate-marquee">
             {[...TOP_BRANDS_SCROLL, ...TOP_BRANDS_SCROLL].map((brand, idx) => (
               <button
                 key={idx}
@@ -978,16 +992,35 @@ export default function HomeView({
                   setFilters({ ...filters, brand: brand.name, searchQuery: "", type: "all" });
                   changeView("browse");
                 }}
-                className={`group flex items-center justify-center w-20 h-20 rounded-full border ${isDarkMode ? brand.darkBorder : brand.lightBorder} hover:${isDarkMode ? brand.darkHover : brand.lightHover} bg-gradient-to-br ${brand.gradient} ${brand.iconColor} transition-all duration-300 cursor-pointer`}
+                className={`group relative flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border transition-all duration-500 cursor-pointer p-4 shrink-0 hover:-translate-y-1.5 ${
+                  isDarkMode
+                    ? "bg-slate-900/40 border-slate-800/80 hover:border-orange-500/30 hover:shadow-[0_12px_24px_rgba(249,115,22,0.08)]"
+                    : "bg-[#FAF8F5] backdrop-blur-md border-slate-200/50 hover:border-primary/30 hover:shadow-[0_12px_24px_rgba(0,0,0,0.04)]"
+                }`}
               >
-                {brand.logo}
-                <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 bg-primary/10 transition-opacity" />
+                {/* Brand-specific gradient overlay that fades in on hover */}
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${brand.gradient} transition-opacity duration-500 rounded-2xl`} />
+
+                {/* Glassmorphic border glow overlay */}
+                <div className="absolute inset-0 border border-white/5 dark:border-white/2 rounded-2xl pointer-events-none" />
+
+                {/* Inner Logo wrapper with scaling effect */}
+                <div className="relative z-10 flex items-center justify-center h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 group-hover:scale-110 ">
+                  {React.cloneElement(brand.logo as React.ReactElement<any>, {
+                    sizeClassName: "w-20 h-20 sm:w-24 sm:h-24"
+                  })}
+                </div>
+
+                {/* Dynamic mini corner accents that light up on hover */}
+                <div className="absolute top-2.5 left-2.5 w-2 h-2 border-t border-l border-transparent group-hover:border-primary/30 dark:group-hover:border-orange-500/30 transition-all duration-300" />
+                <div className="absolute bottom-2.5 right-2.5 w-2 h-2 border-b border-r border-transparent group-hover:border-primary/30 dark:group-hover:border-orange-500/30 transition-all duration-300" />
               </button>
             ))}
           </div>
           <div className="absolute inset-0 rounded-2xl border border-white/10 pointer-events-none" />
         </div>
       </div>
+  {/* popular brands ends here  */}
 
 
   

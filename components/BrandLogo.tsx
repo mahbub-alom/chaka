@@ -74,7 +74,7 @@ export default function BrandLogo({
         src={`/logos/${logo}`}
         alt={brandName}
         fill
-        sizes="16px"
+        sizes="(max-width: 640px) 80px, 96px"
         className={`object-contain ${className}`}
       />
     </div>
