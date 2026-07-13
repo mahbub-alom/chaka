@@ -136,16 +136,16 @@ export default function AdPlacement({ slot, allSlots = [], isDarkMode, onAdClose
           )}
 
           {/* Full-width ads.gif banner preserving same container height */}
-          <a 
-            href="/"
-            className="block w-full min-h-[140px] md:min-h-[160px] relative"
-          >
-            <img 
-              src="/advertisement/ads.gif" 
-              alt="Advertisement"
-              className="absolute inset-0 w-full h-full object-contain"
-            />
-          </a>
+          <a
+  href="/"
+  className="block w-full overflow-hidden"
+>
+    <img
+        src="/advertisement/ads.gif"
+        alt="Advertisement"
+        className="block w-full h-auto"
+    />
+</a>
         </motion.div>
       </AnimatePresence>
     );
@@ -218,12 +218,12 @@ export default function AdPlacement({ slot, allSlots = [], isDarkMode, onAdClose
           {/* Full-width ads.gif banner preserving same container height */}
           <a 
             href="/"
-            className="block w-full min-h-[140px] md:min-h-[160px] relative"
+            className="block w-full min-h-[80px] sm:min-h-[120px] md:min-h-[160px] relative"
           >
             <img 
               src="/advertisement/ads.gif" 
               alt="Advertisement"
-              className="absolute inset-0 w-full h-full object-contain"
+              className="absolute inset-0 w-full h-full object-cover md:object-contain"
             />
           </a>
         </motion.div>
@@ -265,7 +265,7 @@ export default function AdPlacement({ slot, allSlots = [], isDarkMode, onAdClose
           <img 
             src="/advertisement/ads.gif" 
             alt="Advertisement"
-            className="absolute inset-0 w-full h-full object-contain"
+            className="absolute inset-0 w-full h-full object-cover md:object-contain"
           />
         </a>
       </motion.div>

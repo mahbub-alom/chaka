@@ -424,7 +424,7 @@ export default function HomeView({
     <div className="space-y-6 sm:space-y-8">
       {/* Dynamic Rotating Top Sponsor Banner Slot */}
       {adSlots.some((s) => s.placement === "home-top" && s.isActive) && (
-        <div className="max-w-7xl mx-auto my-1">
+        <div className="max-w-7xl mx-auto my-0">
           <AdPlacement
             slot={
               adSlots.find((s) => s.placement === "home-top" && s.isActive) ||
