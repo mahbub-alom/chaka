@@ -240,7 +240,7 @@ export default function HomeView({
         logo: (
           <BrandLogo
             brandName="Toyota"
-            sizeClassName="w-8 h-8 sm:w-10 sm:h-10"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
           />
         ),
         lightBorder: "border-slate-200/55",
@@ -256,7 +256,7 @@ export default function HomeView({
         logo: (
           <BrandLogo
             brandName="Honda"
-            sizeClassName="w-8 h-8 sm:w-10 sm:h-10"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
           />
         ),
         lightBorder: "border-slate-200/55",
@@ -272,7 +272,7 @@ export default function HomeView({
         logo: (
           <BrandLogo
             brandName="Yamaha"
-            sizeClassName="w-8 h-8 sm:w-10 sm:h-10"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
           />
         ),
         lightBorder: "border-slate-200/55",
@@ -288,7 +288,7 @@ export default function HomeView({
         logo: (
           <BrandLogo
             brandName="Suzuki"
-            sizeClassName="w-8 h-8 sm:w-10 sm:h-10"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
           />
         ),
         lightBorder: "border-slate-200/55",
@@ -304,7 +304,7 @@ export default function HomeView({
         logo: (
           <BrandLogo
             brandName="Nissan"
-            sizeClassName="w-8 h-8 sm:w-10 sm:h-10"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
           />
         ),
         lightBorder: "border-slate-200/55",
@@ -320,7 +320,7 @@ export default function HomeView({
         logo: (
           <BrandLogo
             brandName="Hyundai"
-            sizeClassName="w-8 h-8 sm:w-10 sm:h-10"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
           />
         ),
         lightBorder: "border-slate-200/55",
@@ -334,7 +334,7 @@ export default function HomeView({
       {
         name: "BMW",
         logo: (
-          <BrandLogo brandName="BMW" sizeClassName="w-8 h-8 sm:w-10 sm:h-10" />
+          <BrandLogo brandName="BMW" sizeClassName="w-12 h-12 sm:w-14 sm:h-14" />
         ),
         lightBorder: "border-slate-200/55",
         lightHover:
@@ -347,7 +347,7 @@ export default function HomeView({
       {
         name: "Audi",
         logo: (
-          <BrandLogo brandName="Audi" sizeClassName="w-8 h-8 sm:w-10 sm:h-10" />
+          <BrandLogo brandName="Audi" sizeClassName="w-12 h-12 sm:w-14 sm:h-14" />
         ),
         lightBorder: "border-slate-200/55",
         lightHover:
@@ -362,7 +362,7 @@ export default function HomeView({
         logo: (
           <BrandLogo
             brandName="Mercedes-Benz"
-            sizeClassName="w-8 h-8 sm:w-10 sm:h-10"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
           />
         ),
         lightBorder: "border-slate-200/55",
@@ -377,7 +377,7 @@ export default function HomeView({
         logo: (
           <BrandLogo
             brandName="Royal Enfield"
-            sizeClassName="w-8 h-8 sm:w-10 sm:h-10"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
           />
         ),
         lightBorder: "border-slate-200/55",
@@ -393,7 +393,7 @@ export default function HomeView({
         logo: (
           <BrandLogo
             brandName="Bajaj"
-            sizeClassName="w-8 h-8 sm:w-10 sm:h-10"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
           />
         ),
         lightBorder: "border-slate-200/55",
@@ -407,7 +407,7 @@ export default function HomeView({
       {
         name: "TVS",
         logo: (
-          <BrandLogo brandName="TVS" sizeClassName="w-8 h-8 sm:w-10 sm:h-10" />
+          <BrandLogo brandName="TVS" sizeClassName="w-12 h-12 sm:w-14 sm:h-14" />
         ),
         lightBorder: "border-slate-200/55",
         lightHover:
