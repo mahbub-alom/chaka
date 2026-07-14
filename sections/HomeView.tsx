@@ -334,7 +334,10 @@ export default function HomeView({
       {
         name: "BMW",
         logo: (
-          <BrandLogo brandName="BMW" sizeClassName="w-12 h-12 sm:w-14 sm:h-14" />
+          <BrandLogo
+            brandName="BMW"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
+          />
         ),
         lightBorder: "border-slate-200/55",
         lightHover:
@@ -347,7 +350,10 @@ export default function HomeView({
       {
         name: "Audi",
         logo: (
-          <BrandLogo brandName="Audi" sizeClassName="w-12 h-12 sm:w-14 sm:h-14" />
+          <BrandLogo
+            brandName="Audi"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
+          />
         ),
         lightBorder: "border-slate-200/55",
         lightHover:
@@ -407,7 +413,10 @@ export default function HomeView({
       {
         name: "TVS",
         logo: (
-          <BrandLogo brandName="TVS" sizeClassName="w-12 h-12 sm:w-14 sm:h-14" />
+          <BrandLogo
+            brandName="TVS"
+            sizeClassName="w-12 h-12 sm:w-14 sm:h-14"
+          />
         ),
         lightBorder: "border-slate-200/55",
         lightHover:
@@ -526,37 +535,131 @@ export default function HomeView({
               id: "car",
               title: "Car",
               subtitle: "Sedan & SUV",
-              glowStyle: { backgroundImage: "radial-gradient(circle, rgba(244,63,94,0.15) 0%, rgba(244,63,94,0) 70%)" },
-              hoverBorder: "hover:border-rose-500/40 dark:hover:border-rose-500/30",
-              glowText: "group-hover:text-rose-500 dark:group-hover:text-rose-455",
+              glowStyle: {
+                backgroundImage:
+                  "radial-gradient(circle, rgba(244,63,94,0.15) 0%, rgba(244,63,94,0) 70%)",
+              },
+              hoverBorder:
+                "hover:border-rose-500/40 dark:hover:border-rose-500/30",
+              glowText:
+                "group-hover:text-rose-500 dark:group-hover:text-rose-455",
               svg: (
-                <svg viewBox="0 0 100 100" className="w-14 h-14 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
+                >
                   <defs>
-                    <linearGradient id="car-body" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="car-body"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#f43f5e" />
                       <stop offset="100%" stopColor="#be123c" />
                     </linearGradient>
-                    <linearGradient id="car-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <linearGradient
+                      id="car-glass"
+                      x1="0%"
+                      y1="0%"
+                      x2="0%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.8" />
-                      <stop offset="100%" stopColor="#0284c7" stopOpacity="0.2" />
+                      <stop
+                        offset="100%"
+                        stopColor="#0284c7"
+                        stopOpacity="0.2"
+                      />
                     </linearGradient>
                     <radialGradient id="car-glow" cx="50%" cy="50%" r="50%">
                       <stop offset="0%" stopColor="#f43f5e" stopOpacity="0.4" />
                       <stop offset="100%" stopColor="#f43f5e" stopOpacity="0" />
                     </radialGradient>
                   </defs>
-                  <ellipse cx="50" cy="76" rx="34" ry="7" fill="#000" opacity="0.2" />
-                  <ellipse cx="50" cy="76" rx="42" ry="12" fill="url(#car-glow)" className="opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <path d="M15 62 L18 50 C20 46 25 44 30 44 L70 44 C75 44 80 46 82 50 L85 62 C87 66 85 72 80 72 L20 72 C15 72 13 66 15 62 Z" fill="url(#car-body)" />
-                  <path d="M30 46 L36 34 C38 30 42 29 46 29 L54 29 C58 29 62 30 64 34 L70 46 Z" fill="url(#car-glass)" />
-                  <path d="M48 29 L48 46" stroke="#fff" strokeWidth="1" opacity="0.3" />
-                  <rect x="36" y="60" width="28" height="8" rx="2" fill="#1e293b" />
-                  <line x1="40" y1="64" x2="60" y2="64" stroke="#475569" strokeWidth="1" />
-                  <circle cx="24" cy="56" r="3.5" fill="#fff" filter="drop-shadow(0 0 4px #fff)" />
-                  <circle cx="76" cy="56" r="3.5" fill="#fff" filter="drop-shadow(0 0 4px #fff)" />
-                  <rect x="18" y="68" width="8" height="6" rx="1.5" fill="#0f172a" />
-                  <rect x="74" y="68" width="8" height="6" rx="1.5" fill="#0f172a" />
-                  <path d="M34 50 L42 60 M66 50 L58 60" stroke="#9f1239" strokeWidth="1.5" opacity="0.5" />
+                  <ellipse
+                    cx="50"
+                    cy="76"
+                    rx="34"
+                    ry="7"
+                    fill="#000"
+                    opacity="0.2"
+                  />
+                  <ellipse
+                    cx="50"
+                    cy="76"
+                    rx="42"
+                    ry="12"
+                    fill="url(#car-glow)"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+                  <path
+                    d="M15 62 L18 50 C20 46 25 44 30 44 L70 44 C75 44 80 46 82 50 L85 62 C87 66 85 72 80 72 L20 72 C15 72 13 66 15 62 Z"
+                    fill="url(#car-body)"
+                  />
+                  <path
+                    d="M30 46 L36 34 C38 30 42 29 46 29 L54 29 C58 29 62 30 64 34 L70 46 Z"
+                    fill="url(#car-glass)"
+                  />
+                  <path
+                    d="M48 29 L48 46"
+                    stroke="#fff"
+                    strokeWidth="1"
+                    opacity="0.3"
+                  />
+                  <rect
+                    x="36"
+                    y="60"
+                    width="28"
+                    height="8"
+                    rx="2"
+                    fill="#1e293b"
+                  />
+                  <line
+                    x1="40"
+                    y1="64"
+                    x2="60"
+                    y2="64"
+                    stroke="#475569"
+                    strokeWidth="1"
+                  />
+                  <circle
+                    cx="24"
+                    cy="56"
+                    r="3.5"
+                    fill="#fff"
+                    filter="drop-shadow(0 0 4px #fff)"
+                  />
+                  <circle
+                    cx="76"
+                    cy="56"
+                    r="3.5"
+                    fill="#fff"
+                    filter="drop-shadow(0 0 4px #fff)"
+                  />
+                  <rect
+                    x="18"
+                    y="68"
+                    width="8"
+                    height="6"
+                    rx="1.5"
+                    fill="#0f172a"
+                  />
+                  <rect
+                    x="74"
+                    y="68"
+                    width="8"
+                    height="6"
+                    rx="1.5"
+                    fill="#0f172a"
+                  />
+                  <path
+                    d="M34 50 L42 60 M66 50 L58 60"
+                    stroke="#9f1239"
+                    strokeWidth="1.5"
+                    opacity="0.5"
+                  />
                 </svg>
               ),
             },
@@ -564,13 +667,27 @@ export default function HomeView({
               id: "bike",
               title: "Bike",
               subtitle: "Motorcycle & Scooter",
-              glowStyle: { backgroundImage: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0) 70%)" },
-              hoverBorder: "hover:border-blue-500/40 dark:hover:border-blue-500/30",
-              glowText: "group-hover:text-blue-500 dark:group-hover:text-blue-455",
+              glowStyle: {
+                backgroundImage:
+                  "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0) 70%)",
+              },
+              hoverBorder:
+                "hover:border-blue-500/40 dark:hover:border-blue-500/30",
+              glowText:
+                "group-hover:text-blue-500 dark:group-hover:text-blue-455",
               svg: (
-                <svg viewBox="0 0 100 100" className="w-14 h-14 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
+                >
                   <defs>
-                    <linearGradient id="bike-body" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="bike-body"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#3b82f6" />
                       <stop offset="100%" stopColor="#1d4ed8" />
                     </linearGradient>
@@ -579,25 +696,125 @@ export default function HomeView({
                       <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
                     </radialGradient>
                   </defs>
-                  <ellipse cx="50" cy="78" rx="36" ry="6" fill="#000" opacity="0.2" />
-                  <ellipse cx="50" cy="78" rx="42" ry="10" fill="url(#bike-glow)" className="opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <path d="M30 64 L42 46 L60 46 L70 64 Z" stroke="#334155" strokeWidth="4" fill="none" strokeLinejoin="round" />
+                  <ellipse
+                    cx="50"
+                    cy="78"
+                    rx="36"
+                    ry="6"
+                    fill="#000"
+                    opacity="0.2"
+                  />
+                  <ellipse
+                    cx="50"
+                    cy="78"
+                    rx="42"
+                    ry="10"
+                    fill="url(#bike-glow)"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+                  <path
+                    d="M30 64 L42 46 L60 46 L70 64 Z"
+                    stroke="#334155"
+                    strokeWidth="4"
+                    fill="none"
+                    strokeLinejoin="round"
+                  />
                   <circle cx="48" cy="58" r="6" fill="#475569" />
-                  <path d="M38 46 C38 40 46 36 54 36 L64 42 L72 42 C76 42 78 45 76 48 L70 54 Z" fill="url(#bike-body)" />
-                  <line x1="30" y1="64" x2="22" y2="34" stroke="#64748b" strokeWidth="3" />
-                  <line x1="22" y1="34" x2="18" y2="34" stroke="#334155" strokeWidth="3" />
-                  <line x1="48" y1="58" x2="70" y2="64" stroke="#475569" strokeWidth="3.5" />
+                  <path
+                    d="M38 46 C38 40 46 36 54 36 L64 42 L72 42 C76 42 78 45 76 48 L70 54 Z"
+                    fill="url(#bike-body)"
+                  />
+                  <line
+                    x1="30"
+                    y1="64"
+                    x2="22"
+                    y2="34"
+                    stroke="#64748b"
+                    strokeWidth="3"
+                  />
+                  <line
+                    x1="22"
+                    y1="34"
+                    x2="18"
+                    y2="34"
+                    stroke="#334155"
+                    strokeWidth="3"
+                  />
+                  <line
+                    x1="48"
+                    y1="58"
+                    x2="70"
+                    y2="64"
+                    stroke="#475569"
+                    strokeWidth="3.5"
+                  />
                   <g className="animate-wheel">
-                    <circle cx="30" cy="64" r="12" fill="none" stroke="#1e293b" strokeWidth="4" />
-                    <circle cx="30" cy="64" r="9" fill="none" stroke="#60a5fa" strokeWidth="1.5" />
-                    <line x1="30" y1="52" x2="30" y2="76" stroke="#60a5fa" strokeWidth="1.5" />
-                    <line x1="18" y1="64" x2="42" y2="64" stroke="#60a5fa" strokeWidth="1.5" />
+                    <circle
+                      cx="30"
+                      cy="64"
+                      r="12"
+                      fill="none"
+                      stroke="#1e293b"
+                      strokeWidth="4"
+                    />
+                    <circle
+                      cx="30"
+                      cy="64"
+                      r="9"
+                      fill="none"
+                      stroke="#60a5fa"
+                      strokeWidth="1.5"
+                    />
+                    <line
+                      x1="30"
+                      y1="52"
+                      x2="30"
+                      y2="76"
+                      stroke="#60a5fa"
+                      strokeWidth="1.5"
+                    />
+                    <line
+                      x1="18"
+                      y1="64"
+                      x2="42"
+                      y2="64"
+                      stroke="#60a5fa"
+                      strokeWidth="1.5"
+                    />
                   </g>
                   <g className="animate-wheel">
-                    <circle cx="70" cy="64" r="12" fill="none" stroke="#1e293b" strokeWidth="4" />
-                    <circle cx="70" cy="64" r="9" fill="none" stroke="#60a5fa" strokeWidth="1.5" />
-                    <line x1="70" y1="52" x2="70" y2="76" stroke="#60a5fa" strokeWidth="1.5" />
-                    <line x1="58" y1="64" x2="82" y2="64" stroke="#60a5fa" strokeWidth="1.5" />
+                    <circle
+                      cx="70"
+                      cy="64"
+                      r="12"
+                      fill="none"
+                      stroke="#1e293b"
+                      strokeWidth="4"
+                    />
+                    <circle
+                      cx="70"
+                      cy="64"
+                      r="9"
+                      fill="none"
+                      stroke="#60a5fa"
+                      strokeWidth="1.5"
+                    />
+                    <line
+                      x1="70"
+                      y1="52"
+                      x2="70"
+                      y2="76"
+                      stroke="#60a5fa"
+                      strokeWidth="1.5"
+                    />
+                    <line
+                      x1="58"
+                      y1="64"
+                      x2="82"
+                      y2="64"
+                      stroke="#60a5fa"
+                      strokeWidth="1.5"
+                    />
                   </g>
                 </svg>
               ),
@@ -606,17 +823,37 @@ export default function HomeView({
               id: "commercial",
               title: "Commercial",
               subtitle: "Truck & Pickup",
-              glowStyle: { backgroundImage: "radial-gradient(circle, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0) 70%)" },
-              hoverBorder: "hover:border-amber-500/40 dark:hover:border-amber-500/30",
-              glowText: "group-hover:text-amber-500 dark:group-hover:text-amber-455",
+              glowStyle: {
+                backgroundImage:
+                  "radial-gradient(circle, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0) 70%)",
+              },
+              hoverBorder:
+                "hover:border-amber-500/40 dark:hover:border-amber-500/30",
+              glowText:
+                "group-hover:text-amber-500 dark:group-hover:text-amber-455",
               svg: (
-                <svg viewBox="0 0 100 100" className="w-14 h-14 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
+                >
                   <defs>
-                    <linearGradient id="cab-body" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="cab-body"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#f59e0b" />
                       <stop offset="100%" stopColor="#d97706" />
                     </linearGradient>
-                    <linearGradient id="cargo-body" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="cargo-body"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#e2e8f0" />
                       <stop offset="100%" stopColor="#cbd5e1" />
                     </linearGradient>
@@ -625,15 +862,76 @@ export default function HomeView({
                       <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
                     </radialGradient>
                   </defs>
-                  <ellipse cx="50" cy="78" rx="36" ry="6" fill="#000" opacity="0.2" />
-                  <ellipse cx="50" cy="78" rx="42" ry="10" fill="url(#comm-glow)" className="opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <rect x="36" y="32" width="46" height="34" rx="2" fill="url(#cargo-body)" stroke="#94a3b8" strokeWidth="1" />
-                  <line x1="46" y1="32" x2="46" y2="66" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
-                  <line x1="58" y1="32" x2="58" y2="66" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
-                  <line x1="70" y1="32" x2="70" y2="66" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
-                  <path d="M16 50 L20 40 C21 38 23 37 25 37 L36 37 L36 66 L16 66 Z" fill="url(#cab-body)" />
-                  <path d="M25 40 L32 40 L32 50 L20 50 Z" fill="#1e293b" opacity="0.8" />
-                  <rect x="12" y="60" width="5" height="6" rx="1" fill="#475569" />
+                  <ellipse
+                    cx="50"
+                    cy="78"
+                    rx="36"
+                    ry="6"
+                    fill="#000"
+                    opacity="0.2"
+                  />
+                  <ellipse
+                    cx="50"
+                    cy="78"
+                    rx="42"
+                    ry="10"
+                    fill="url(#comm-glow)"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+                  <rect
+                    x="36"
+                    y="32"
+                    width="46"
+                    height="34"
+                    rx="2"
+                    fill="url(#cargo-body)"
+                    stroke="#94a3b8"
+                    strokeWidth="1"
+                  />
+                  <line
+                    x1="46"
+                    y1="32"
+                    x2="46"
+                    y2="66"
+                    stroke="#94a3b8"
+                    strokeWidth="1"
+                    opacity="0.5"
+                  />
+                  <line
+                    x1="58"
+                    y1="32"
+                    x2="58"
+                    y2="66"
+                    stroke="#94a3b8"
+                    strokeWidth="1"
+                    opacity="0.5"
+                  />
+                  <line
+                    x1="70"
+                    y1="32"
+                    x2="70"
+                    y2="66"
+                    stroke="#94a3b8"
+                    strokeWidth="1"
+                    opacity="0.5"
+                  />
+                  <path
+                    d="M16 50 L20 40 C21 38 23 37 25 37 L36 37 L36 66 L16 66 Z"
+                    fill="url(#cab-body)"
+                  />
+                  <path
+                    d="M25 40 L32 40 L32 50 L20 50 Z"
+                    fill="#1e293b"
+                    opacity="0.8"
+                  />
+                  <rect
+                    x="12"
+                    y="60"
+                    width="5"
+                    height="6"
+                    rx="1"
+                    fill="#475569"
+                  />
                   <circle cx="16" cy="56" r="2.5" fill="#fef08a" />
                   <g className="animate-wheel">
                     <circle cx="28" cy="68" r="8" fill="#1e293b" />
@@ -654,13 +952,27 @@ export default function HomeView({
               id: "ev",
               title: "EV",
               subtitle: "Electric Vehicle",
-              glowStyle: { backgroundImage: "radial-gradient(circle, rgba(16,185,129,0.15) 0%, rgba(16,185,129,0) 70%)" },
-              hoverBorder: "hover:border-emerald-500/40 dark:hover:border-emerald-500/30",
-              glowText: "group-hover:text-emerald-500 dark:group-hover:text-emerald-455",
+              glowStyle: {
+                backgroundImage:
+                  "radial-gradient(circle, rgba(16,185,129,0.15) 0%, rgba(16,185,129,0) 70%)",
+              },
+              hoverBorder:
+                "hover:border-emerald-500/40 dark:hover:border-emerald-500/30",
+              glowText:
+                "group-hover:text-emerald-500 dark:group-hover:text-emerald-455",
               svg: (
-                <svg viewBox="0 0 100 100" className="w-14 h-14 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
+                >
                   <defs>
-                    <linearGradient id="ev-body" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="ev-body"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#10b981" />
                       <stop offset="100%" stopColor="#059669" />
                     </linearGradient>
@@ -669,17 +981,53 @@ export default function HomeView({
                       <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
                     </radialGradient>
                   </defs>
-                  <ellipse cx="50" cy="76" rx="34" ry="7" fill="#000" opacity="0.2" />
-                  <ellipse cx="50" cy="76" rx="42" ry="12" fill="url(#ev-glow)" className="opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <path d="M15 62 L18 50 C20 46 25 44 30 44 L70 44 C75 44 80 46 82 50 L85 62 C87 66 85 72 80 72 L20 72 C15 72 13 66 15 62 Z" fill="url(#ev-body)" opacity="0.85" />
-                  <path d="M30 46 L36 34 C38 30 42 29 46 29 L54 29 C58 29 62 30 64 34 L70 46 Z" fill="#1e293b" opacity="0.6" />
+                  <ellipse
+                    cx="50"
+                    cy="76"
+                    rx="34"
+                    ry="7"
+                    fill="#000"
+                    opacity="0.2"
+                  />
+                  <ellipse
+                    cx="50"
+                    cy="76"
+                    rx="42"
+                    ry="12"
+                    fill="url(#ev-glow)"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+                  <path
+                    d="M15 62 L18 50 C20 46 25 44 30 44 L70 44 C75 44 80 46 82 50 L85 62 C87 66 85 72 80 72 L20 72 C15 72 13 66 15 62 Z"
+                    fill="url(#ev-body)"
+                    opacity="0.85"
+                  />
+                  <path
+                    d="M30 46 L36 34 C38 30 42 29 46 29 L54 29 C58 29 62 30 64 34 L70 46 Z"
+                    fill="#1e293b"
+                    opacity="0.6"
+                  />
                   <circle cx="26" cy="70" r="7" fill="#1e293b" />
                   <circle cx="26" cy="70" r="3" fill="#a7f3d0" />
                   <circle cx="74" cy="70" r="7" fill="#1e293b" />
                   <circle cx="74" cy="70" r="3" fill="#a7f3d0" />
                   <g className="animate-ev" transform="translate(50, 52)">
-                    <circle cx="0" cy="0" r="10" fill="#047857" stroke="#10b981" strokeWidth="2" />
-                    <path d="M-2 -5 L3 -1 L-2 1 L2 6" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle
+                      cx="0"
+                      cy="0"
+                      r="10"
+                      fill="#047857"
+                      stroke="#10b981"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M-2 -5 L3 -1 L-2 1 L2 6"
+                      fill="none"
+                      stroke="#fff"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </g>
                 </svg>
               ),
@@ -688,17 +1036,37 @@ export default function HomeView({
               id: "threewheeler",
               title: "Three Wheeler",
               subtitle: "CNG & Auto",
-              glowStyle: { backgroundImage: "radial-gradient(circle, rgba(132,204,22,0.15) 0%, rgba(132,204,22,0) 70%)" },
-              hoverBorder: "hover:border-lime-500/40 dark:hover:border-lime-500/30",
-              glowText: "group-hover:text-lime-600 dark:group-hover:text-lime-455",
+              glowStyle: {
+                backgroundImage:
+                  "radial-gradient(circle, rgba(132,204,22,0.15) 0%, rgba(132,204,22,0) 70%)",
+              },
+              hoverBorder:
+                "hover:border-lime-500/40 dark:hover:border-lime-500/30",
+              glowText:
+                "group-hover:text-lime-600 dark:group-hover:text-lime-455",
               svg: (
-                <svg viewBox="0 0 100 100" className="w-14 h-14 relative z-10 transition-transform duration-500 group-hover:scale-105">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105"
+                >
                   <defs>
-                    <linearGradient id="cng-green" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="cng-green"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#059669" />
                       <stop offset="100%" stopColor="#047857" />
                     </linearGradient>
-                    <linearGradient id="cng-yellow" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="cng-yellow"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#fbbf24" />
                       <stop offset="100%" stopColor="#d97706" />
                     </linearGradient>
@@ -707,15 +1075,54 @@ export default function HomeView({
                       <stop offset="100%" stopColor="#84cc16" stopOpacity="0" />
                     </radialGradient>
                   </defs>
-                  <ellipse cx="50" cy="78" rx="32" ry="6" fill="#000" opacity="0.2" />
-                  <ellipse cx="50" cy="78" rx="38" ry="10" fill="url(#cng-glow)" className="opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <ellipse
+                    cx="50"
+                    cy="78"
+                    rx="32"
+                    ry="6"
+                    fill="#000"
+                    opacity="0.2"
+                  />
+                  <ellipse
+                    cx="50"
+                    cy="78"
+                    rx="38"
+                    ry="10"
+                    fill="url(#cng-glow)"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
                   <g className="animate-cng">
-                    <path d="M26 68 L24 48 C24 38 32 30 42 30 L58 30 C66 30 72 36 74 44 L76 68 Z" fill="url(#cng-green)" />
-                    <path d="M22 60 L78 60 C80 60 81 62 80 64 L78 68 C77 69 75 70 73 70 L27 70 C25 70 23 69 22 68 L20 64 C19 62 20 60 22 60 Z" fill="url(#cng-yellow)" />
-                    <path d="M28 46 L38 46 L38 34 L32 34 C29 34 28 38 28 41 Z" fill="#1e293b" opacity="0.75" />
-                    <path d="M42 46 L58 46 L58 34 L42 34 Z" fill="#1e293b" opacity="0.75" />
-                    <path d="M62 46 L72 46 C72 41 71 34 68 34 L62 34 Z" fill="#1e293b" opacity="0.75" />
-                    <line x1="26" y1="68" x2="20" y2="76" stroke="#475569" strokeWidth="3" />
+                    <path
+                      d="M26 68 L24 48 C24 38 32 30 42 30 L58 30 C66 30 72 36 74 44 L76 68 Z"
+                      fill="url(#cng-green)"
+                    />
+                    <path
+                      d="M22 60 L78 60 C80 60 81 62 80 64 L78 68 C77 69 75 70 73 70 L27 70 C25 70 23 69 22 68 L20 64 C19 62 20 60 22 60 Z"
+                      fill="url(#cng-yellow)"
+                    />
+                    <path
+                      d="M28 46 L38 46 L38 34 L32 34 C29 34 28 38 28 41 Z"
+                      fill="#1e293b"
+                      opacity="0.75"
+                    />
+                    <path
+                      d="M42 46 L58 46 L58 34 L42 34 Z"
+                      fill="#1e293b"
+                      opacity="0.75"
+                    />
+                    <path
+                      d="M62 46 L72 46 C72 41 71 34 68 34 L62 34 Z"
+                      fill="#1e293b"
+                      opacity="0.75"
+                    />
+                    <line
+                      x1="26"
+                      y1="68"
+                      x2="20"
+                      y2="76"
+                      stroke="#475569"
+                      strokeWidth="3"
+                    />
                     <circle cx="20" cy="74" r="6" fill="#1e293b" />
                     <circle cx="68" cy="74" r="7.5" fill="#1e293b" />
                     <circle cx="68" cy="74" r="2.5" fill="#94a3b8" />
@@ -728,13 +1135,27 @@ export default function HomeView({
               id: "bicycle",
               title: "Bicycle",
               subtitle: "Cycle & Spares",
-              glowStyle: { backgroundImage: "radial-gradient(circle, rgba(139,92,246,0.15) 0%, rgba(139,92,246,0) 70%)" },
-              hoverBorder: "hover:border-violet-500/40 dark:hover:border-violet-500/30",
-              glowText: "group-hover:text-violet-600 dark:group-hover:text-violet-455",
+              glowStyle: {
+                backgroundImage:
+                  "radial-gradient(circle, rgba(139,92,246,0.15) 0%, rgba(139,92,246,0) 70%)",
+              },
+              hoverBorder:
+                "hover:border-violet-500/40 dark:hover:border-violet-500/30",
+              glowText:
+                "group-hover:text-violet-600 dark:group-hover:text-violet-455",
               svg: (
-                <svg viewBox="0 0 100 100" className="w-14 h-14 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
+                >
                   <defs>
-                    <linearGradient id="bike-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="bike-violet"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#a78bfa" />
                       <stop offset="100%" stopColor="#7c3aed" />
                     </linearGradient>
@@ -743,21 +1164,87 @@ export default function HomeView({
                       <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0" />
                     </radialGradient>
                   </defs>
-                  <ellipse cx="50" cy="78" rx="36" ry="5" fill="#000" opacity="0.2" />
-                  <ellipse cx="50" cy="78" rx="42" ry="9" fill="url(#bi-glow)" className="opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <path d="M28 64 L48 64 L64 45 M28 60 L44 42 L66 42 L72 64 M44 42 L42 32 M66 42 L64 28 L56 28" stroke="url(#bike-violet)" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                  <line x1="38" y1="32" x2="46" y2="32" stroke="#1e293b" strokeWidth="2.5" strokeLinecap="round" />
+                  <ellipse
+                    cx="50"
+                    cy="78"
+                    rx="36"
+                    ry="5"
+                    fill="#000"
+                    opacity="0.2"
+                  />
+                  <ellipse
+                    cx="50"
+                    cy="78"
+                    rx="42"
+                    ry="9"
+                    fill="url(#bi-glow)"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+                  <path
+                    d="M28 64 L48 64 L64 45 M28 60 L44 42 L66 42 L72 64 M44 42 L42 32 M66 42 L64 28 L56 28"
+                    stroke="url(#bike-violet)"
+                    strokeWidth="3"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <line
+                    x1="38"
+                    y1="32"
+                    x2="46"
+                    y2="32"
+                    stroke="#1e293b"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                  />
                   <g className="animate-wheel">
-                    <circle cx="28" cy="64" r="12" fill="none" stroke="#1e293b" strokeWidth="2.5" />
-                    <circle cx="28" cy="64" r="10" fill="none" stroke="#a78bfa" strokeWidth="0.8" strokeDasharray="2 3" />
+                    <circle
+                      cx="28"
+                      cy="64"
+                      r="12"
+                      fill="none"
+                      stroke="#1e293b"
+                      strokeWidth="2.5"
+                    />
+                    <circle
+                      cx="28"
+                      cy="64"
+                      r="10"
+                      fill="none"
+                      stroke="#a78bfa"
+                      strokeWidth="0.8"
+                      strokeDasharray="2 3"
+                    />
                     <circle cx="28" cy="64" r="2.5" fill="#475569" />
                   </g>
                   <g className="animate-wheel">
-                    <circle cx="72" cy="64" r="12" fill="none" stroke="#1e293b" strokeWidth="2.5" />
-                    <circle cx="72" cy="64" r="10" fill="none" stroke="#a78bfa" strokeWidth="0.8" strokeDasharray="2 3" />
+                    <circle
+                      cx="72"
+                      cy="64"
+                      r="12"
+                      fill="none"
+                      stroke="#1e293b"
+                      strokeWidth="2.5"
+                    />
+                    <circle
+                      cx="72"
+                      cy="64"
+                      r="10"
+                      fill="none"
+                      stroke="#a78bfa"
+                      strokeWidth="0.8"
+                      strokeDasharray="2 3"
+                    />
                     <circle cx="72" cy="64" r="2.5" fill="#475569" />
                   </g>
-                  <circle cx="48" cy="64" r="4.5" fill="none" stroke="#334155" strokeWidth="1.5" />
+                  <circle
+                    cx="48"
+                    cy="64"
+                    r="4.5"
+                    fill="none"
+                    stroke="#334155"
+                    strokeWidth="1.5"
+                  />
                 </svg>
               ),
             },
@@ -765,13 +1252,27 @@ export default function HomeView({
               id: "parts",
               title: "Parts",
               subtitle: "Components & Spares",
-              glowStyle: { backgroundImage: "radial-gradient(circle, rgba(244,63,94,0.15) 0%, rgba(244,63,94,0) 70%)" },
-              hoverBorder: "hover:border-rose-500/40 dark:hover:border-rose-500/30",
-              glowText: "group-hover:text-rose-600 dark:group-hover:text-rose-455",
+              glowStyle: {
+                backgroundImage:
+                  "radial-gradient(circle, rgba(244,63,94,0.15) 0%, rgba(244,63,94,0) 70%)",
+              },
+              hoverBorder:
+                "hover:border-rose-500/40 dark:hover:border-rose-500/30",
+              glowText:
+                "group-hover:text-rose-600 dark:group-hover:text-rose-455",
               svg: (
-                <svg viewBox="0 0 100 100" className="w-14 h-14 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
+                >
                   <defs>
-                    <linearGradient id="parts-steel" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="parts-steel"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#f43f5e" />
                       <stop offset="100%" stopColor="#9f1239" />
                     </linearGradient>
@@ -780,14 +1281,47 @@ export default function HomeView({
                       <stop offset="100%" stopColor="#f43f5e" stopOpacity="0" />
                     </radialGradient>
                   </defs>
-                  <ellipse cx="50" cy="80" rx="26" ry="5" fill="#000" opacity="0.25" />
-                  <ellipse cx="50" cy="80" rx="34" ry="8" fill="url(#parts-glow)" className="opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <path d="M28 28 C22 36 22 48 28 58 L20 62 C12 48 12 32 20 20 Z" fill="#f43f5e" stroke="#be123c" strokeWidth="1.5" />
+                  <ellipse
+                    cx="50"
+                    cy="80"
+                    rx="26"
+                    ry="5"
+                    fill="#000"
+                    opacity="0.25"
+                  />
+                  <ellipse
+                    cx="50"
+                    cy="80"
+                    rx="34"
+                    ry="8"
+                    fill="url(#parts-glow)"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+                  <path
+                    d="M28 28 C22 36 22 48 28 58 L20 62 C12 48 12 32 20 20 Z"
+                    fill="#f43f5e"
+                    stroke="#be123c"
+                    strokeWidth="1.5"
+                  />
                   <circle cx="24" cy="34" r="2.5" fill="#fff" />
                   <circle cx="24" cy="46" r="2.5" fill="#fff" />
                   <g className="animate-wheel">
-                    <circle cx="50" cy="50" r="28" fill="none" stroke="#64748b" strokeWidth="7" />
-                    <circle cx="50" cy="50" r="28" fill="none" stroke="#cbd5e1" strokeWidth="6" />
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r="28"
+                      fill="none"
+                      stroke="#64748b"
+                      strokeWidth="7"
+                    />
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r="28"
+                      fill="none"
+                      stroke="#cbd5e1"
+                      strokeWidth="6"
+                    />
                     <circle cx="50" cy="26" r="1.2" fill="#1e293b" />
                     <circle cx="68" cy="36" r="1.2" fill="#1e293b" />
                     <circle cx="74" cy="50" r="1.2" fill="#1e293b" />
@@ -796,7 +1330,14 @@ export default function HomeView({
                     <circle cx="32" cy="64" r="1.2" fill="#1e293b" />
                     <circle cx="26" cy="50" r="1.2" fill="#1e293b" />
                     <circle cx="32" cy="36" r="1.2" fill="#1e293b" />
-                    <circle cx="50" cy="50" r="14" fill="none" stroke="url(#parts-steel)" strokeWidth="3" />
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r="14"
+                      fill="none"
+                      stroke="url(#parts-steel)"
+                      strokeWidth="3"
+                    />
                     <circle cx="50" cy="50" r="8" fill="#1e293b" />
                     <circle cx="50" cy="50" r="3" fill="#cbd5e1" />
                   </g>
@@ -807,13 +1348,27 @@ export default function HomeView({
               id: "service",
               title: "Services",
               subtitle: "Workshop & Support",
-              glowStyle: { backgroundImage: "radial-gradient(circle, rgba(14,165,233,0.15) 0%, rgba(14,165,233,0) 70%)" },
-              hoverBorder: "hover:border-sky-500/40 dark:hover:border-sky-500/30",
-              glowText: "group-hover:text-sky-600 dark:group-hover:text-sky-455",
+              glowStyle: {
+                backgroundImage:
+                  "radial-gradient(circle, rgba(14,165,233,0.15) 0%, rgba(14,165,233,0) 70%)",
+              },
+              hoverBorder:
+                "hover:border-sky-500/40 dark:hover:border-sky-500/30",
+              glowText:
+                "group-hover:text-sky-600 dark:group-hover:text-sky-455",
               svg: (
-                <svg viewBox="0 0 100 100" className="w-14 h-14 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
+                >
                   <defs>
-                    <linearGradient id="service-sky" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="service-sky"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#38bdf8" />
                       <stop offset="100%" stopColor="#0284c7" />
                     </linearGradient>
@@ -822,20 +1377,66 @@ export default function HomeView({
                       <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0" />
                     </radialGradient>
                   </defs>
-                  <ellipse cx="50" cy="80" rx="30" ry="5" fill="#000" opacity="0.2" />
-                  <ellipse cx="50" cy="80" rx="36" ry="8" fill="url(#serv-glow)" className="opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <ellipse
+                    cx="50"
+                    cy="80"
+                    rx="30"
+                    ry="5"
+                    fill="#000"
+                    opacity="0.2"
+                  />
+                  <ellipse
+                    cx="50"
+                    cy="80"
+                    rx="36"
+                    ry="8"
+                    fill="url(#serv-glow)"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
                   <g className="animate-wheel">
-                    <circle cx="50" cy="46" r="18" fill="none" stroke="#64748b" strokeWidth="4" strokeDasharray="6 4" />
+                    <circle
+                      cx="50"
+                      cy="46"
+                      r="18"
+                      fill="none"
+                      stroke="#64748b"
+                      strokeWidth="4"
+                      strokeDasharray="6 4"
+                    />
                     <circle cx="50" cy="46" r="12" fill="#e2e8f0" />
                     <circle cx="50" cy="46" r="7" fill="#f8fafc" />
                   </g>
                   <g className="animate-wrench">
-                    <path d="M26 66 L56 36" stroke="url(#service-sky)" strokeWidth="6" strokeLinecap="round" />
+                    <path
+                      d="M26 66 L56 36"
+                      stroke="url(#service-sky)"
+                      strokeWidth="6"
+                      strokeLinecap="round"
+                    />
                     <circle cx="26" cy="66" r="8" fill="url(#service-sky)" />
-                    <path d="M21 64 L26 69" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
-                    <rect x="23" y="63" width="6" height="6" fill="#1e293b" transform="rotate(45, 26, 66)" />
+                    <path
+                      d="M21 64 L26 69"
+                      stroke="#fff"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                    <rect
+                      x="23"
+                      y="63"
+                      width="6"
+                      height="6"
+                      fill="#1e293b"
+                      transform="rotate(45, 26, 66)"
+                    />
                     <circle cx="56" cy="36" r="8" fill="url(#service-sky)" />
-                    <rect x="53" y="33" width="6" height="6" fill="#1e293b" transform="rotate(45, 56, 36)" />
+                    <rect
+                      x="53"
+                      y="33"
+                      width="6"
+                      height="6"
+                      fill="#1e293b"
+                      transform="rotate(45, 56, 36)"
+                    />
                   </g>
                 </svg>
               ),
@@ -899,7 +1500,6 @@ export default function HomeView({
                 onClick={() => {
                   setFilters({
                     ...filters,
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     type: cat.id as any,
                     subCategory: "all",
                     partsTarget: "all",
@@ -915,8 +1515,8 @@ export default function HomeView({
                 }`}
               >
                 {/* Spotlight glowing aura */}
-                <div 
-                  className="absolute -inset-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -z-10" 
+                <div
+                  className="absolute -inset-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -z-10"
                   style={cat.glowStyle}
                 />
 
@@ -926,28 +1526,31 @@ export default function HomeView({
                 {/* Inner layout container */}
                 <div className="flex flex-col justify-between h-full w-full relative">
                   {/* Top Row: Title & Floating Pill Count Badge */}
-                  <div className="flex items-start justify-between w-full">
+                  {/* <div className="flex items-start justify-between w-full">
                     <span className="text-[10px] font-black tracking-widest text-slate-400 dark:text-slate-500 group-hover:text-slate-850 dark:group-hover:text-slate-250 uppercase transition-colors duration-300">
-                      {/* {cat.id} */}
+                      {cat.id}
                     </span>
-                    <span className={`text-[9px] font-extrabold tracking-wider px-2 py-0.5 rounded-full border transition-all duration-300 shadow-3xs flex items-center gap-1 ${
-                      isDarkMode
-                        ? "bg-slate-850/80 text-slate-300 border-slate-800/80 group-hover:bg-orange-500 group-hover:text-slate-950 group-hover:border-transparent"
-                        : "bg-slate-50 text-slate-600 border-slate-100 group-hover:bg-primary group-hover:text-white group-hover:border-transparent"
-                    }`}>
+                    <span
+                      className={`text-[9px] font-extrabold tracking-wider px-2 py-0.5 rounded-full border transition-all duration-300 shadow-3xs flex items-center gap-1 ${
+                        isDarkMode
+                          ? "bg-slate-850/80 text-slate-300 border-slate-800/80 group-hover:bg-orange-500 group-hover:text-slate-950 group-hover:border-transparent"
+                          : "bg-slate-50 text-slate-600 border-slate-100 group-hover:bg-primary group-hover:text-white group-hover:border-transparent"
+                      }`}
+                    >
                       <span className="h-1 w-1 rounded-full bg-emerald-500 animate-pulse" />
                       {count} {language === "bn" ? "টি" : "ads"}
                     </span>
-                  </div>
+                  </div> */}
 
                   {/* Middle Row: Hover-Animated Mini Graphic Illustration */}
                   <div className="flex items-center justify-center h-16 w-full relative shrink-0">
                     {cat.svg}
                   </div>
 
-                  {/* Bottom Row: Typography Info */}
                   <div className="text-center w-full">
-                    <h4 className={`text-[12px] sm:text-xs font-black tracking-widest uppercase transition-colors duration-300 ${cat.glowText} matches-outfit`}>
+                    <h4
+                      className={`text-[12px] sm:text-xs font-black tracking-widest uppercase transition-colors duration-300 ${cat.glowText} matches-outfit`}
+                    >
                       {titleText}
                     </h4>
                     <span className="text-[9.5px] text-slate-400 dark:text-slate-500 font-medium block mt-0.5 line-clamp-1 group-hover:text-slate-500 dark:group-hover:text-slate-400 transition-colors duration-300">
@@ -962,69 +1565,8 @@ export default function HomeView({
       </div>
       {/* categories section end here  */}
 
-<HowItWorks isDarkMode={isDarkMode} />
-  
-  {/* popular brands start here  */}
-      <div className="space-y-6 py-4">
-        <h2 className="text-base sm:text-lg md:text-xl font-black tracking-tight flex items-center gap-2">
-          {/* <Sparkles className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-primary animate-pulse" /> */}
-          {language === "bn" ? "প্রচলিত ব্র্যান্ড" : "Popular Brands"}
-        </h2>
-        <div className={`relative overflow-hidden w-full rounded-2xl border ${
-          isDarkMode 
-            ? "bg-slate-900/30 border-slate-800 backdrop-blur-xl" 
-            : "bg-white/80 border-slate-200 backdrop-blur-lg"
-        } py-6 px-4`}
-        >
-          {/* Edge fading gradients for premium transition */}
-          <div className={`absolute inset-y-0 left-0 w-16 pointer-events-none z-10 bg-gradient-to-r ${
-            isDarkMode ? "from-slate-950/80 to-transparent" : "from-[#faf8f5]/80 to-transparent"
-          }`} />
-          <div className={`absolute inset-y-0 right-0 w-16 pointer-events-none z-10 bg-gradient-to-l ${
-            isDarkMode ? "from-slate-950/80 to-transparent" : "from-[#faf8f5]/80 to-transparent"
-          }`} />
+      <HowItWorks isDarkMode={isDarkMode} />
 
-          <div className="flex gap-6 px-8 animate-marquee">
-            {[...TOP_BRANDS_SCROLL, ...TOP_BRANDS_SCROLL].map((brand, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  setFilters({ ...filters, brand: brand.name, searchQuery: "", type: "all" });
-                  changeView("browse");
-                }}
-                className={`group relative flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border transition-all duration-500 cursor-pointer p-4 shrink-0 hover:-translate-y-1.5 ${
-                  isDarkMode
-                    ? "bg-slate-900/40 border-slate-800/80 hover:border-orange-500/30 hover:shadow-[0_12px_24px_rgba(249,115,22,0.08)]"
-                    : "bg-[#FAF8F5] backdrop-blur-md border-slate-200/50 hover:border-primary/30 hover:shadow-[0_12px_24px_rgba(0,0,0,0.04)]"
-                }`}
-              >
-                {/* Brand-specific gradient overlay that fades in on hover */}
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${brand.gradient} transition-opacity duration-500 rounded-2xl`} />
-
-                {/* Glassmorphic border glow overlay */}
-                <div className="absolute inset-0 border border-white/5 dark:border-white/2 rounded-2xl pointer-events-none" />
-
-                {/* Inner Logo wrapper with scaling effect */}
-                <div className="relative z-10 flex items-center justify-center h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 group-hover:scale-110 ">
-                  {React.cloneElement(brand.logo as React.ReactElement<any>, {
-                    sizeClassName: "w-20 h-20 sm:w-24 sm:h-24"
-                  })}
-                </div>
-
-                {/* Dynamic mini corner accents that light up on hover */}
-                <div className="absolute top-2.5 left-2.5 w-2 h-2 border-t border-l border-transparent group-hover:border-primary/30 dark:group-hover:border-orange-500/30 transition-all duration-300" />
-                <div className="absolute bottom-2.5 right-2.5 w-2 h-2 border-b border-r border-transparent group-hover:border-primary/30 dark:group-hover:border-orange-500/30 transition-all duration-300" />
-              </button>
-            ))}
-          </div>
-          <div className="absolute inset-0 rounded-2xl border border-white/10 pointer-events-none" />
-        </div>
-      </div>
-  {/* popular brands ends here  */}
-
-
-  
-   
       <div className="space-y-4">
         <div className="flex justify-between items-center sm:items-end">
           <div>
@@ -1245,6 +1787,80 @@ export default function HomeView({
           })}
         </div>
       </div>
+
+      {/* popular brands start here  */}
+      <div className="space-y-6 py-4">
+        <h2 className="text-base sm:text-lg md:text-xl font-black tracking-tight flex items-center gap-2">
+          {/* <Sparkles className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-primary animate-pulse" /> */}
+          {language === "bn" ? "প্রচলিত ব্র্যান্ড" : "Popular Brands"}
+        </h2>
+        <div
+          className={`relative overflow-hidden w-full rounded-2xl border ${
+            isDarkMode
+              ? "bg-slate-900/30 border-slate-800 backdrop-blur-xl"
+              : "bg-white/80 border-slate-200 backdrop-blur-lg"
+          } py-6 px-4`}
+        >
+          {/* Edge fading gradients for premium transition */}
+          <div
+            className={`absolute inset-y-0 left-0 w-16 pointer-events-none z-10 bg-gradient-to-r ${
+              isDarkMode
+                ? "from-slate-950/80 to-transparent"
+                : "from-[#faf8f5]/80 to-transparent"
+            }`}
+          />
+          <div
+            className={`absolute inset-y-0 right-0 w-16 pointer-events-none z-10 bg-gradient-to-l ${
+              isDarkMode
+                ? "from-slate-950/80 to-transparent"
+                : "from-[#faf8f5]/80 to-transparent"
+            }`}
+          />
+
+          <div className="flex gap-6 px-8 animate-marquee">
+            {[...TOP_BRANDS_SCROLL, ...TOP_BRANDS_SCROLL].map((brand, idx) => (
+              <button
+                key={idx}
+                onClick={() => {
+                  setFilters({
+                    ...filters,
+                    brand: brand.name,
+                    searchQuery: "",
+                    type: "all",
+                  });
+                  changeView("browse");
+                }}
+                className={`group relative flex items-center justify-center w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border transition-all duration-500 cursor-pointer p-4 shrink-0 hover:-translate-y-1.5 ${
+                  isDarkMode
+                    ? "bg-slate-900/40 border-slate-800/80 hover:border-orange-500/30 hover:shadow-[0_12px_24px_rgba(249,115,22,0.08)]"
+                    : "bg-[#FAF8F5] backdrop-blur-md border-slate-200/50 hover:border-primary/30 hover:shadow-[0_12px_24px_rgba(0,0,0,0.04)]"
+                }`}
+              >
+                {/* Brand-specific gradient overlay that fades in on hover */}
+                <div
+                  className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${brand.gradient} transition-opacity duration-500 rounded-2xl`}
+                />
+
+                {/* Glassmorphic border glow overlay */}
+                <div className="absolute inset-0 border border-white/5 dark:border-white/2 rounded-2xl pointer-events-none" />
+
+                {/* Inner Logo wrapper with scaling effect */}
+                <div className="relative z-10 flex items-center justify-center h-20 w-20 sm:h-24 sm:w-24 transition-transform duration-500 group-hover:scale-110 ">
+                  {React.cloneElement(brand.logo as React.ReactElement<any>, {
+                    sizeClassName: "w-20 h-20 sm:w-24 sm:h-24",
+                  })}
+                </div>
+
+                {/* Dynamic mini corner accents that light up on hover */}
+                <div className="absolute top-2.5 left-2.5 w-2 h-2 border-t border-l border-transparent group-hover:border-primary/30 dark:group-hover:border-orange-500/30 transition-all duration-300" />
+                <div className="absolute bottom-2.5 right-2.5 w-2 h-2 border-b border-r border-transparent group-hover:border-primary/30 dark:group-hover:border-orange-500/30 transition-all duration-300" />
+              </button>
+            ))}
+          </div>
+          <div className="absolute inset-0 rounded-2xl border border-white/10 pointer-events-none" />
+        </div>
+      </div>
+      {/* popular brands ends here  */}
     </div>
   );
 }
