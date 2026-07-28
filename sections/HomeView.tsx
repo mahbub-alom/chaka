@@ -233,14 +233,14 @@ const CATEGORIES_LIST = [
       "hover:border-rose-500/40 dark:hover:border-rose-500/30",
     glowText:
       "group-hover:text-rose-500 dark:group-hover:text-rose-455",
-    svg: (
+    svg: (prefix: string) => (
       <svg
         viewBox="0 0 100 100"
         className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
       >
         <defs>
           <linearGradient
-            id="car-body"
+            id={`${prefix}-car-body`}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -250,7 +250,7 @@ const CATEGORIES_LIST = [
             <stop offset="100%" stopColor="#be123c" />
           </linearGradient>
           <linearGradient
-            id="car-glass"
+            id={`${prefix}-car-glass`}
             x1="0%"
             y1="0%"
             x2="0%"
@@ -263,7 +263,7 @@ const CATEGORIES_LIST = [
               stopOpacity="0.2"
             />
           </linearGradient>
-          <radialGradient id="car-glow" cx="50%" cy="50%" r="50%">
+          <radialGradient id={`${prefix}-car-glow`} cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#f43f5e" stopOpacity="0.4" />
             <stop offset="100%" stopColor="#f43f5e" stopOpacity="0" />
           </radialGradient>
@@ -281,16 +281,16 @@ const CATEGORIES_LIST = [
           cy="76"
           rx="42"
           ry="12"
-          fill="url(#car-glow)"
+          fill={`url(#${prefix}-car-glow)`}
           className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
         <path
           d="M15 62 L18 50 C20 46 25 44 30 44 L70 44 C75 44 80 46 82 50 L85 62 C87 66 85 72 80 72 L20 72 C15 72 13 66 15 62 Z"
-          fill="url(#car-body)"
+          fill={`url(#${prefix}-car-body)`}
         />
         <path
           d="M30 46 L36 34 C38 30 42 29 46 29 L54 29 C58 29 62 30 64 34 L70 46 Z"
-          fill="url(#car-glass)"
+          fill={`url(#${prefix}-car-glass)`}
         />
         <path
           d="M48 29 L48 46"
@@ -366,14 +366,14 @@ const CATEGORIES_LIST = [
       "hover:border-blue-500/40 dark:hover:border-blue-500/30",
     glowText:
       "group-hover:text-blue-500 dark:group-hover:text-blue-455",
-    svg: (
+    svg: (prefix: string) => (
       <svg
         viewBox="0 0 100 100"
         className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
       >
         <defs>
           <linearGradient
-            id="bike-body"
+            id={`${prefix}-bike-body`}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -382,7 +382,7 @@ const CATEGORIES_LIST = [
             <stop offset="0%" stopColor="#3b82f6" />
             <stop offset="100%" stopColor="#1d4ed8" />
           </linearGradient>
-          <radialGradient id="bike-glow" cx="50%" cy="50%" r="50%">
+          <radialGradient id={`${prefix}-bike-glow`} cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.4" />
             <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
           </radialGradient>
@@ -400,7 +400,7 @@ const CATEGORIES_LIST = [
           cy="78"
           rx="42"
           ry="10"
-          fill="url(#bike-glow)"
+          fill={`url(#${prefix}-bike-glow)`}
           className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
         <path
@@ -413,7 +413,7 @@ const CATEGORIES_LIST = [
         <circle cx="48" cy="58" r="6" fill="#475569" />
         <path
           d="M38 46 C38 40 46 36 54 36 L64 42 L72 42 C76 42 78 45 76 48 L70 54 Z"
-          fill="url(#bike-body)"
+          fill={`url(#${prefix}-bike-body)`}
         />
         <line
           x1="30"
@@ -523,14 +523,14 @@ const CATEGORIES_LIST = [
       "hover:border-amber-500/40 dark:hover:border-amber-500/30",
     glowText:
       "group-hover:text-amber-500 dark:group-hover:text-amber-455",
-    svg: (
+    svg: (prefix: string) => (
       <svg
         viewBox="0 0 100 100"
         className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
       >
         <defs>
           <linearGradient
-            id="cab-body"
+            id={`${prefix}-cab-body`}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -540,7 +540,7 @@ const CATEGORIES_LIST = [
             <stop offset="100%" stopColor="#d97706" />
           </linearGradient>
           <linearGradient
-            id="cargo-body"
+            id={`${prefix}-cargo-body`}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -549,7 +549,7 @@ const CATEGORIES_LIST = [
             <stop offset="0%" stopColor="#e2e8f0" />
             <stop offset="100%" stopColor="#cbd5e1" />
           </linearGradient>
-          <radialGradient id="comm-glow" cx="50%" cy="50%" r="50%">
+          <radialGradient id={`${prefix}-comm-glow`} cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.4" />
             <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
           </radialGradient>
@@ -567,7 +567,7 @@ const CATEGORIES_LIST = [
           cy="78"
           rx="42"
           ry="10"
-          fill="url(#comm-glow)"
+          fill={`url(#${prefix}-comm-glow)`}
           className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
         <rect
@@ -576,7 +576,7 @@ const CATEGORIES_LIST = [
           width="46"
           height="34"
           rx="2"
-          fill="url(#cargo-body)"
+          fill={`url(#${prefix}-cargo-body)`}
           stroke="#94a3b8"
           strokeWidth="1"
         />
@@ -609,7 +609,7 @@ const CATEGORIES_LIST = [
         />
         <path
           d="M16 50 L20 40 C21 38 23 37 25 37 L36 37 L36 66 L16 66 Z"
-          fill="url(#cab-body)"
+          fill={`url(#${prefix}-cab-body)`}
         />
         <path
           d="M25 40 L32 40 L32 50 L20 50 Z"
@@ -653,14 +653,14 @@ const CATEGORIES_LIST = [
       "hover:border-emerald-500/40 dark:hover:border-emerald-500/30",
     glowText:
       "group-hover:text-emerald-500 dark:group-hover:text-emerald-455",
-    svg: (
+    svg: (prefix: string) => (
       <svg
         viewBox="0 0 100 100"
         className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
       >
         <defs>
           <linearGradient
-            id="ev-body"
+            id={`${prefix}-ev-body`}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -669,7 +669,7 @@ const CATEGORIES_LIST = [
             <stop offset="0%" stopColor="#10b981" />
             <stop offset="100%" stopColor="#059669" />
           </linearGradient>
-          <radialGradient id="ev-glow" cx="50%" cy="50%" r="50%">
+          <radialGradient id={`${prefix}-ev-glow`} cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#10b981" stopOpacity="0.4" />
             <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
           </radialGradient>
@@ -687,12 +687,12 @@ const CATEGORIES_LIST = [
           cy="76"
           rx="42"
           ry="12"
-          fill="url(#ev-glow)"
+          fill={`url(#${prefix}-ev-glow)`}
           className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
         <path
           d="M15 62 L18 50 C20 46 25 44 30 44 L70 44 C75 44 80 46 82 50 L85 62 C87 66 85 72 80 72 L20 72 C15 72 13 66 15 62 Z"
-          fill="url(#ev-body)"
+          fill={`url(#${prefix}-ev-body)`}
           opacity="0.85"
         />
         <path
@@ -738,14 +738,14 @@ const CATEGORIES_LIST = [
       "hover:border-lime-500/40 dark:hover:border-lime-500/30",
     glowText:
       "group-hover:text-lime-600 dark:group-hover:text-lime-455",
-    svg: (
+    svg: (prefix: string) => (
       <svg
         viewBox="0 0 100 100"
         className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105"
       >
         <defs>
           <linearGradient
-            id="cng-green"
+            id={`${prefix}-cng-green`}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -755,7 +755,7 @@ const CATEGORIES_LIST = [
             <stop offset="100%" stopColor="#047857" />
           </linearGradient>
           <linearGradient
-            id="cng-yellow"
+            id={`${prefix}-cng-yellow`}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -764,7 +764,7 @@ const CATEGORIES_LIST = [
             <stop offset="0%" stopColor="#fbbf24" />
             <stop offset="100%" stopColor="#d97706" />
           </linearGradient>
-          <radialGradient id="cng-glow" cx="50%" cy="50%" r="50%">
+          <radialGradient id={`${prefix}-cng-glow`} cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#84cc16" stopOpacity="0.4" />
             <stop offset="100%" stopColor="#84cc16" stopOpacity="0" />
           </radialGradient>
@@ -782,17 +782,17 @@ const CATEGORIES_LIST = [
           cy="78"
           rx="38"
           ry="10"
-          fill="url(#cng-glow)"
+          fill={`url(#${prefix}-cng-glow)`}
           className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
         <g className="animate-cng">
           <path
             d="M26 68 L24 48 C24 38 32 30 42 30 L58 30 C66 30 72 36 74 44 L76 68 Z"
-            fill="url(#cng-green)"
+            fill={`url(#${prefix}-cng-green)`}
           />
           <path
             d="M22 60 L78 60 C80 60 81 62 80 64 L78 68 C77 69 75 70 73 70 L27 70 C25 70 23 69 22 68 L20 64 C19 62 20 60 22 60 Z"
-            fill="url(#cng-yellow)"
+            fill={`url(#${prefix}-cng-yellow)`}
           />
           <path
             d="M28 46 L38 46 L38 34 L32 34 C29 34 28 38 28 41 Z"
@@ -838,14 +838,14 @@ const CATEGORIES_LIST = [
       "hover:border-violet-500/40 dark:hover:border-violet-500/30",
     glowText:
       "group-hover:text-violet-600 dark:group-hover:text-violet-455",
-    svg: (
+    svg: (prefix: string) => (
       <svg
         viewBox="0 0 100 100"
         className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
       >
         <defs>
           <linearGradient
-            id="bike-violet"
+            id={`${prefix}-bike-violet`}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -854,7 +854,7 @@ const CATEGORIES_LIST = [
             <stop offset="0%" stopColor="#a78bfa" />
             <stop offset="100%" stopColor="#7c3aed" />
           </linearGradient>
-          <radialGradient id="bi-glow" cx="50%" cy="50%" r="50%">
+          <radialGradient id={`${prefix}-bi-glow`} cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.4" />
             <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0" />
           </radialGradient>
@@ -872,12 +872,12 @@ const CATEGORIES_LIST = [
           cy="78"
           rx="42"
           ry="9"
-          fill="url(#bi-glow)"
+          fill={`url(#${prefix}-bi-glow)`}
           className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
         <path
           d="M28 64 L48 64 L64 45 M28 60 L44 42 L66 42 L72 64 M44 42 L42 32 M66 42 L64 28 L56 28"
-          stroke="url(#bike-violet)"
+          stroke={`url(#${prefix}-bike-violet)`}
           strokeWidth="3"
           fill="none"
           strokeLinecap="round"
@@ -956,14 +956,14 @@ const CATEGORIES_LIST = [
       "hover:border-rose-500/40 dark:hover:border-rose-500/30",
     glowText:
       "group-hover:text-rose-600 dark:group-hover:text-rose-455",
-    svg: (
+    svg: (prefix: string) => (
       <svg
         viewBox="0 0 100 100"
         className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
       >
         <defs>
           <linearGradient
-            id="parts-steel"
+            id={`${prefix}-parts-steel`}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -972,7 +972,7 @@ const CATEGORIES_LIST = [
             <stop offset="0%" stopColor="#f43f5e" />
             <stop offset="100%" stopColor="#9f1239" />
           </linearGradient>
-          <radialGradient id="parts-glow" cx="50%" cy="50%" r="50%">
+          <radialGradient id={`${prefix}-parts-glow`} cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#f43f5e" stopOpacity="0.4" />
             <stop offset="100%" stopColor="#f43f5e" stopOpacity="0" />
           </radialGradient>
@@ -990,7 +990,7 @@ const CATEGORIES_LIST = [
           cy="80"
           rx="34"
           ry="8"
-          fill="url(#parts-glow)"
+          fill={`url(#${prefix}-parts-glow)`}
           className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
         <path
@@ -1031,7 +1031,7 @@ const CATEGORIES_LIST = [
             cy="50"
             r="14"
             fill="none"
-            stroke="url(#parts-steel)"
+            stroke={`url(#${prefix}-parts-steel)`}
             strokeWidth="3"
           />
           <circle cx="50" cy="50" r="8" fill="#1e293b" />
@@ -1053,14 +1053,14 @@ const CATEGORIES_LIST = [
       "hover:border-sky-500/40 dark:hover:border-sky-500/30",
     glowText:
       "group-hover:text-sky-600 dark:group-hover:text-sky-455",
-    svg: (
+    svg: (prefix: string) => (
       <svg
         viewBox="0 0 100 100"
         className="w-20 h-20 relative z-10 transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1"
       >
         <defs>
           <linearGradient
-            id="service-sky"
+            id={`${prefix}-service-sky`}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -1069,7 +1069,7 @@ const CATEGORIES_LIST = [
             <stop offset="0%" stopColor="#38bdf8" />
             <stop offset="100%" stopColor="#0284c7" />
           </linearGradient>
-          <radialGradient id="serv-glow" cx="50%" cy="50%" r="50%">
+          <radialGradient id={`${prefix}-serv-glow`} cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#0ea5e9" stopOpacity="0.4" />
             <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0" />
           </radialGradient>
@@ -1087,7 +1087,7 @@ const CATEGORIES_LIST = [
           cy="80"
           rx="36"
           ry="8"
-          fill="url(#serv-glow)"
+          fill={`url(#${prefix}-serv-glow)`}
           className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
         <g className="animate-wheel">
@@ -1106,11 +1106,11 @@ const CATEGORIES_LIST = [
         <g className="animate-wrench">
           <path
             d="M26 66 L56 36"
-            stroke="url(#service-sky)"
+            stroke={`url(#${prefix}-service-sky)`}
             strokeWidth="6"
             strokeLinecap="round"
           />
-          <circle cx="26" cy="66" r="8" fill="url(#service-sky)" />
+          <circle cx="26" cy="66" r="8" fill={`url(#${prefix}-service-sky)`} />
           <path
             d="M21 64 L26 69"
             stroke="#fff"
@@ -1125,7 +1125,7 @@ const CATEGORIES_LIST = [
             fill="#1e293b"
             transform="rotate(45, 26, 66)"
           />
-          <circle cx="56" cy="36" r="8" fill="url(#service-sky)" />
+          <circle cx="56" cy="36" r="8" fill={`url(#${prefix}-service-sky)`} />
           <rect
             x="53"
             y="33"
@@ -1538,9 +1538,9 @@ export default function HomeView({
              
                 <div className="flex flex-col justify-between h-full w-full relative">
            
-                  {/* <div className="flex items-center justify-center h-16 w-full relative shrink-0">
-                    {cat.svg}
-                  </div> */}
+                  <div className="flex items-center justify-center h-16 w-full relative shrink-0">
+                    {cat.svg("desktop")}
+                  </div>
 
                   <div className="text-center w-full">
                     <h4
@@ -1675,7 +1675,7 @@ export default function HomeView({
                   className={`absolute w-24 h-24  pointer-events-none select-none transition-all duration-500 group-hover/item:scale-110 [&_svg]:w-full [&_svg]:h-full [&_svg]:block ${isEven ? "right-2 top-1" : "left-2 top-1"
                     }`}
                 >
-                  {cat.svg}
+                  {cat.svg("mobile")}
                 </div>
 
 
