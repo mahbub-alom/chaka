@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary: #ff6600;
+  --primary-hover: #eb5e00;
+  --secondary: #0f172a;
+}
+
+@theme {
+  --font-sans: "Inter", "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", "Hind Siliguri", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-logo: "Fredoka", sans-serif;
+  --font-bangla: "Hind Siliguri", sans-serif;
+  
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Eliminate focus outlines altogether to maintain clean visual aesthetics */
+*:focus {
+  outline: none !important;
+}
+*:focus-visible {
+  outline: none !important;
+}
+
+/* Custom bounce subtle animation for icons and sparkles */
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.5px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 3s ease-in-out infinite;
+}
+
+/* Premium dark mode select and option override to guarantee legibility across custom desktop configurations */
+.dark select {
+  background-color: #020617 !important; /* bg-slate-950 */
+  color: #e2e8f0 !important; /* text-slate-200 */
+}
+
+.dark select option {
+  background-color: #090d16 !important; /* premium ultra-dark blue slate */
+  color: #f1f5f9 !important; /* pure legible slate text */
+  padding: 8px 12px !important;
+}
+
+/* Custom premium scrollbar for immersive light/dark styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6600;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #ff6600;
+}
+
+/* Hide scrollbars for sliders */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
