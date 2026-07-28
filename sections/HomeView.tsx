@@ -1438,7 +1438,7 @@ export default function HomeView({
         </div>
 
 
-        {/* Desktop Version: Grid */}
+      
         <motion.div
           variants={{
             hidden: { opacity: 0 },
@@ -1526,21 +1526,21 @@ export default function HomeView({
                     : `bg-white/70 backdrop-blur-md border-slate-200/50 hover:shadow-[0_12px_30px_-6px_rgba(0,0,0,0.08)] shadow-[0_4px_12px_rgba(0,0,0,0.01)] ${cat.hoverBorder}`
                   }`}
               >
-                {/* Spotlight glowing aura */}
+               
                 <div
                   className="absolute -inset-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -z-10"
                   style={cat.glowStyle}
                 />
 
-                {/* Glassmorphic border glow overlay */}
+                
                 <div className="absolute inset-0 border border-white/5 dark:border-white/2 rounded-2xl pointer-events-none -z-10" />
 
-                {/* Inner layout container */}
+             
                 <div className="flex flex-col justify-between h-full w-full relative">
-                  {/* Middle Row: Hover-Animated Mini Graphic Illustration */}
-                  <div className="flex items-center justify-center h-16 w-full relative shrink-0">
+           
+                  {/* <div className="flex items-center justify-center h-16 w-full relative shrink-0">
                     {cat.svg}
-                  </div>
+                  </div> */}
 
                   <div className="text-center w-full">
                     <h4
@@ -1558,7 +1558,7 @@ export default function HomeView({
           })}
         </motion.div>
 
-        {/* Mobile Version: Showcase Arrow Timeline Layout */}
+     
         <motion.div
           variants={{
             hidden: { opacity: 0 },
@@ -1647,7 +1647,7 @@ export default function HomeView({
                 className={`flex items-center gap-6 py-5 cursor-pointer select-none relative overflow-hidden group/item ${isEven ? "flex-row text-left" : "flex-row-reverse text-right"
                   }`}
               >
-                {/* Arrow Icon replacing the original small SVG icon */}
+                
                 <div className="w-10 h-10 flex items-center justify-center shrink-0">
                   <ChevronRight className={`w-5 h-5 text-slate-400 dark:text-slate-655 transition-all duration-300 ${isEven
                       ? "group-hover/item:text-primary group-hover/item:translate-x-1"
@@ -1655,7 +1655,7 @@ export default function HomeView({
                     }`} />
                 </div>
 
-                {/* Editorial Typography Text Stack */}
+                
                 <div className="flex-1 flex flex-col justify-center min-w-0 z-10">
                   <h4
                     className={`text-[13.5px] font-black tracking-widest uppercase matches-outfit truncate transition-colors duration-300 group-hover/item:text-primary ${isDarkMode ? "text-slate-200" : "text-slate-800"
@@ -1671,13 +1671,15 @@ export default function HomeView({
                   </span>
                 </div>
 
-                {/* Big size SVG icon absolute-positioned in the background */}
                 <div
-                  className={`absolute w-24 h-24 opacity-[0.06] dark:opacity-[0.03] pointer-events-none select-none transition-all duration-500 group-hover/item:scale-110 group-hover/item:opacity-[0.12] dark:group-hover/item:opacity-[0.06] [&_svg]:w-full [&_svg]:h-full [&_svg]:block ${isEven ? "right-2 top-1" : "left-2 top-1"
+                  className={`absolute w-24 h-24  pointer-events-none select-none transition-all duration-500 group-hover/item:scale-110 [&_svg]:w-full [&_svg]:h-full [&_svg]:block ${isEven ? "right-2 top-1" : "left-2 top-1"
                     }`}
                 >
                   {cat.svg}
                 </div>
+
+
+                 
               </motion.div>
             );
           })}
